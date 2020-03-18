@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>用Hexo和GitHub创建属于自己的博客吧 · Tracy&#39;s Studio</title>
+    <title>多目标进化计算 · Tracy&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Tracy&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">用Hexo和GitHub创建属于自己的博客吧</a>
+                <a href="#" class="post-name">多目标进化计算</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            用Hexo和GitHub创建属于自己的博客吧
+            多目标进化计算
             <!-- 404 -->
             
         </h1>
@@ -264,14 +264,20 @@ height:50vh;
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
+    
+</div>
+                
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">523</span>Reading time: <span class="post-count reading-time">2 min</span></span>
+                        <span>Word count: <span class="post-count word-count">1.5k</span>Reading time: <span class="post-count reading-time">5 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/03/16</span>
+                    <span class="post-intro-time">2020/03/18</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -395,49 +401,72 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>由于很久没有使用自己的博客，已经忘记了当初的搭建过程和<code>hexo</code>的指令，用这篇博客来温习一下自己搭建博客的过程和遇到的问题。  </p>
-<p>在写博客的文件右击鼠标-&gt;<code>git bash here</code>，使用<code>hexo</code>指令的时候出现了指令不存在的情况。可以通过以下三个步骤进行排查：  </p>
-<p><code>node -v</code></p>
-<p><code>npm -v</code></p>
-<p>检查本机的环境变量中的系统变量中的path是否包含了与<code>_config.yml</code>在同一个目录的<code>node_modeles</code>文件夹中的.bin文件夹。</p>
-<p>我的电脑里的文件目录是：<code>D:\blog\node_modules\.bin</code></p>
-<p>好了，下面说一下安装过程：</p>
-<h1 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h1><p>下载git，<a href="https://git-scm.com/download/win(到此页面后，稍微等一下会有下载弹框)" target="_blank" rel="noopener">https://git-scm.com/download/win(到此页面后，稍微等一下会有下载弹框)</a></p>
-<h1 id="安装Node"><a href="#安装Node" class="headerlink" title="安装Node"></a>安装Node</h1><p>下载node.js：</p>
-<p>下载方式一：<a href="http://nodejs.org/download/" target="_blank" rel="noopener">http://nodejs.org/download/</a></p>
-<p>下载方式二：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></p>
-<p>下载方式三：<a href="http://download.csdn.net/download/ainuser/9952074" target="_blank" rel="noopener">http://download.csdn.net/download/ainuser/9952074</a></p>
-<h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><p>安装Hexo，在自己要写博客的文件夹右击打开git命令框，输入npm install -g hexo</p>
-<p>hexo初始化：hexo init</p>
-<p>启动服务(npm install –&gt;hexo server –&gt;hexo clean –&gt;hexo generate –&gt;hexo deploy)</p>
-<p><strong><em>重新部署更新</em></strong></p>
-<p><strong><em>下面这条命令会经常用到</em></strong></p>
-<p><strong>(</strong>hexo clean –&gt;hexo generate –&gt;hexo deploy)</p>
-<p>对于github的部分，可以参照这个博客链接：</p>
-<p><a href="https://blog.csdn.net/AinUser/article/details/77609180" target="_blank" rel="noopener">https://blog.csdn.net/AinUser/article/details/77609180</a></p>
-<p>hexo主题：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
-<p>hexo生成博文插入图片：<a href="https://blog.csdn.net/qq_37497322/article/details/80628713" target="_blank" rel="noopener">https://blog.csdn.net/qq_37497322/article/details/80628713</a></p>
-<p>next主题个性化设置：<a href="https://www.cnblogs.com/liziczh/p/9318656.html" target="_blank" rel="noopener">https://www.cnblogs.com/liziczh/p/9318656.html</a></p>
-<p><a href="https://www.cnblogs.com/fengxiongZz/p/7707568.html" target="_blank" rel="noopener">https://www.cnblogs.com/fengxiongZz/p/7707568.html</a></p>
-<p><a href="https://www.cnblogs.com/liziczh/p/9318652.html" target="_blank" rel="noopener">https://www.cnblogs.com/liziczh/p/9318652.html</a></p>
-<p>我的Hexo主题：<a href="https://github.com/fi3ework/hexo-theme-archer/blob/master/README.md" target="_blank" rel="noopener">https://github.com/fi3ework/hexo-theme-archer/blob/master/README.md</a></p>
-<h2 id="遇到的一些问题（持续更新）"><a href="#遇到的一些问题（持续更新）" class="headerlink" title="遇到的一些问题（持续更新）"></a>遇到的一些问题（持续更新）</h2><p><strong>插入的图片无法显示</strong></p>
-<p>设置图片路径时用到的斜杠为/</p>
-<p><strong>博文发布以后出现can not read a block mapping entry; a multiline key may not be an implicit key …并且无法在页面上显示:</strong></p>
-<p>设置tag的时候，需要谨记加一个空格</p>
-<p><strong>忘记了新建博客的指令</strong></p>
-<p>hexo new “title”</p>
-<p><strong>不要把<code>{</code>和<code>{</code>放在一起写</strong></p>
-<p>中间加一个空格</p>
+        <h4 id="Pareto改善"><a href="#Pareto改善" class="headerlink" title="Pareto改善"></a>Pareto改善</h4><p>给定固有的一群人和可分配的资源，从一种分配的状态到另一种状态的变化中，在没有人变坏的情况下，使得至少一个人变得更好。</p>
+<p>也就是说资源分配的理想状态是不可能再有更多的Pareto改善的状态。</p>
+<h4 id="Pareto解"><a href="#Pareto解" class="headerlink" title="Pareto解"></a>Pareto解</h4><p>在有多个目标时，由于存在目标之间的冲突无法进行比较的情况，一个解在某个目标上是最好的，在其他目标上可能是最差的，一组目标函数最优解的集合是Pareto最优集，形成的曲面为Pareto前沿面。</p>
+<h2 id="进化计算"><a href="#进化计算" class="headerlink" title="进化计算"></a>进化计算</h2><p>达尔文在进化论中提出了这样一个概念——<u>物竞天择，适者生存</u>。</p>
+<p>进化计算是基于群体的启发式搜索优化问题。</p>
+<h2 id="遗传算法"><a href="#遗传算法" class="headerlink" title="遗传算法"></a>遗传算法</h2><p>约翰·霍兰德提出了遗传算法，是进化算法的一种。</p>
+<p>Step1:     ① 种群中个体随机初始化；</p>
+<pre><code>② 每个个体通过评价得到一个适应度值；</code></pre><p>​               ③ 适应度大的个体有更大的概率留下来；</p>
+<p>​               ④适应度大的个体交叉变异产生新的个体；</p>
+<p>Step2：不断迭代②~④</p>
+<p>经过足够多次的迭代后，最终能够得到好的解。</p>
+<p><img src="//tracywoo.cn/2020/03/18/多目标进化计算/blog/source/_posts/%E5%A4%9A%E7%9B%AE%E6%A0%87%E8%BF%9B%E5%8C%96%E8%AE%A1%E7%AE%97/GA.png" alt="GA"></p>
+<h4 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h4><p>编码具有三个特点：完备性，健全性，非冗余性。</p>
+<p>每个特征都与编码结果一一对应。</p>
+<h4 id="适应度评价"><a href="#适应度评价" class="headerlink" title="适应度评价"></a>适应度评价</h4><p>位串（个体）-&gt;适应度-&gt;目标函数。</p>
+<p>适应度是用于评价目标函数的一个自定义的函数，优化的方向为适应度增大的方向，对于最小化问题：</p>
+<p><img src="//tracywoo.cn/2020/03/18/多目标进化计算/D:%5Cblog%5Csource_posts%5C%E5%A4%9A%E7%9B%AE%E6%A0%87%E8%BF%9B%E5%8C%96%E8%AE%A1%E7%AE%97%5Ce1.PNG" alt="e1"></p>
+<p>其中$\{ {C_ {\max } } }$可以是自己设定的值或者是当代的最大值。</p>
+<p>相应的，对于最大化问题：<br>$$<br>f(x) = \left { {\begin{array}{ * { 20 } { c } } {g(x) - {C_{ \min } } } &amp; {g(x) &gt; {C_{\min } } }\0 &amp; {else} \end{array} } \right.<br>$$</p>
+<h4 id="遗传操作"><a href="#遗传操作" class="headerlink" title="遗传操作"></a>遗传操作</h4><h5 id="选择-selection-复制-reproduction"><a href="#选择-selection-复制-reproduction" class="headerlink" title="选择(selection)/复制(reproduction)"></a>选择(selection)/复制(reproduction)</h5><p>选择算子：选择适应度高的个体放入交配池。</p>
+<h5 id="交叉"><a href="#交叉" class="headerlink" title="交叉"></a>交叉</h5><p>模仿有性繁殖中的基因重组</p>
+<p>$\{P_c}$为交叉概率，随机选择k个交叉位置，根据$\{P_c}$实行交叉操作。</p>
+<p>$\{P_c}$一般比较大，比如0.8.</p>
+<h5 id="变异"><a href="#变异" class="headerlink" title="变异"></a>变异</h5><p>模拟有性繁殖中的基因突变。</p>
+<p>按$\{P_m}$反转某位的二进制字符，一般比较小，比如0.005.</p>
+<h2 id="多目标进化"><a href="#多目标进化" class="headerlink" title="多目标进化"></a>多目标进化</h2><h4 id="多目标进化-1"><a href="#多目标进化-1" class="headerlink" title="多目标进化"></a>多目标进化</h4><p>一种常见的优化策略的问题。</p>
+<h4 id="凸空间与凹空间"><a href="#凸空间与凹空间" class="headerlink" title="凸空间与凹空间"></a>凸空间与凹空间</h4><p><strong>凸集(convexity)</strong>:一个集合S的任意两个点的连线上的点仍为S中的点。</p>
+<p><strong>凹集</strong>：与凸集的定义相反。</p>
+<h4 id="基于Pareto多目标进化算法的一般框架"><a href="#基于Pareto多目标进化算法的一般框架" class="headerlink" title="基于Pareto多目标进化算法的一般框架"></a>基于Pareto多目标进化算法的一般框架</h4><p><img src="//tracywoo.cn/2020/03/18/多目标进化计算/blog/source/_posts/%E5%A4%9A%E7%9B%AE%E6%A0%87%E8%BF%9B%E5%8C%96%E8%AE%A1%E7%AE%97/MOEA.png" alt="moea"></p>
+<h4 id="多目标Pareto最优解集构造方法"><a href="#多目标Pareto最优解集构造方法" class="headerlink" title="多目标Pareto最优解集构造方法"></a>多目标Pareto最优解集构造方法</h4><h5 id="简单方法"><a href="#简单方法" class="headerlink" title="简单方法"></a>简单方法</h5><p>通过个体与个体的比较，依次删除被支配的个体。</p>
+<h5 id="庄家法"><a href="#庄家法" class="headerlink" title="庄家法"></a>庄家法</h5><p>初始化创造集Q，每取出一个个体，就在Q中去除这个个体，去除由这个个体支配的所有个体，若这个个体不被任何一个个体支配，则把它放入NDset。</p>
+<h5 id="擂台法"><a href="#擂台法" class="headerlink" title="擂台法"></a>擂台法</h5><p>每一轮选出一个擂主，与其他个体进行比较，败者出局，胜者称为新的擂主。</p>
+<p>注意需要保留与前一个擂主不相关的个体的比较。</p>
+<h5 id="递归法"><a href="#递归法" class="headerlink" title="递归法"></a>递归法</h5><h5 id="快速排序方法"><a href="#快速排序方法" class="headerlink" title="快速排序方法"></a>快速排序方法</h5><p><strong>个体之间的关系</strong>：若x和y不存在支配关系，那么如果y支配x，那么x支配z或者x和z不相关。</p>
+<p>快速排序中使用到了一个符号$\{ \succ _{\rm{d}}}$，按照这个关系进行快速排序：$\{\rm{x}} \succ y$或者x与y不相关。</p>
+<p>每一次拿出一个个体，将群体分为两个部分，一部分是被个体支配的个体，另一部分是由个体支配的个体，被个体支配的个体被清除，进入下一轮比较。</p>
+<h4 id="多目标群体的分布性"><a href="#多目标群体的分布性" class="headerlink" title="多目标群体的分布性"></a>多目标群体的分布性</h4><p><strong>小生境</strong>：把特定环境中有共同特性的组织称为物种。（物以类聚）</p>
+<p><strong>基于预选择机制(preselection)</strong>:若子代的适应度高于父代的适应度，那么可以用子代代替父代。</p>
+<p><strong>基于排挤机制(crowding)</strong>:设置排挤因子CF，选择规模为1/CF的子集为一个排挤子集，计算相似性，用新个体代替相似个体。</p>
+<p><strong>基于共享机制(sharing):</strong></p>
+<p>定义共享函数$\{S_i} = \sum\limits_{j \in pop} {sh[d(i,j)]} $，其中$\{d(i,j)}$为个体i和个体j的相似度。</p>
+<p>则个体i的共享适应度为$\fitness(i)/{S_i}$</p>
+<p>设置共享半径，只计算共享半径以内的个体相似程度<br>$$<br>\begin{array} {l} {m_i} = \sum\limits_{j \in pop} {sh[d(i,j)]} \sh[d] = \begin{array}{ * {20} {c} }{0,} &amp; {d &gt; {\sigma _{share} } }\{1,} &amp; {else}\end{array}\end{array}<br>$$</p>
+<h5 id="多目标进化中的适应度"><a href="#多目标进化中的适应度" class="headerlink" title="多目标进化中的适应度"></a>多目标进化中的适应度</h5><p><strong>目标函数组合法</strong><br>$$<br>fitness(i) = \begin{array} { * {20}{c} }{ {\rm{0} } } &amp; { {\rm{nondominated} } }\{\prod\limits_{j = 1}^r { { {(fi{t_j}(i))}^2} } } &amp; {else}\end{array}<br>$$</p>
+<p><strong>简单支配关系法</strong><br>$$<br>fitness(i) = 1 + {n_i}<br>$$<br>$\{n_i}$为支配i的个体数</p>
+<p><strong>复合支配关系法</strong><br>$$<br>fitness(i) = \begin{array} { * {20}{c} }{ { {\rm{n} }<em>i}/N + 1} &amp; {D,N = {\rm{|pop|} } }\{1 + \sum\limits</em>{i \in NDset} {fitness(i)} } &amp; {ND}\end{array}<br>$$</p>
+<h5 id="用聚类方法保持分布性"><a href="#用聚类方法保持分布性" class="headerlink" title="用聚类方法保持分布性"></a>用聚类方法保持分布性</h5><p>个体的相似度计算可以分为</p>
+<h6 id="实数编码"><a href="#实数编码" class="headerlink" title="实数编码"></a>实数编码</h6><p><strong>欧几里得距离</strong>：向量各位差的平方和的开方。</p>
+<p><strong>曼哈顿距离</strong>：向量各位差的绝对值之和。</p>
+<p><strong>明考斯基距离</strong>：向量各位差的q次方和的开q次方。</p>
+<h6 id="二进制编码"><a href="#二进制编码" class="headerlink" title="二进制编码"></a>二进制编码</h6><p><strong>海明距离</strong>：向量各位差的平方和的开方。</p>
+<h6 id="符号编码"><a href="#符号编码" class="headerlink" title="符号编码"></a>符号编码</h6><p>一般用asc2表示各位。</p>
+<h5 id="聚类分析"><a href="#聚类分析" class="headerlink" title="聚类分析"></a>聚类分析</h5><h5 id="基于中心点"><a href="#基于中心点" class="headerlink" title="基于中心点"></a>基于中心点</h5><p>将群体分为m类，选择m个个体为初始中心点</p>
+<p>① 计算选出的点与其他点的距离</p>
+<p>② 将与选出的点最相似的个体指派到相应的类中，计算评价函数的值$\E = \sum\limits_{i = 1}^m {\sum\limits_{p \in {x_i} } { { { ( {o_i} - p)} ^2 } } }$</p>
+<p>③ 分别在各类中随机选择一个非中心点重复①②，计算E’，若优于E，则代替中心点，重新调整类。</p>
+<h5 id="类距离"><a href="#类距离" class="headerlink" title="类距离"></a>类距离</h5><p>把n个个体当成n个类，将具有最大相似度的个体聚集到同一类。</p>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>Author：<a href="http://tracywoo.cn">Tracy</a>
-            <p>原文链接：<a href="http://tracywoo.cn/2020/03/16/用Hexo和GitHub创建属于自己的博客吧/">http://tracywoo.cn/2020/03/16/用Hexo和GitHub创建属于自己的博客吧/</a>
-            <p>发表日期：<a href="http://tracywoo.cn/2020/03/16/用Hexo和GitHub创建属于自己的博客吧/">March 16th 2020, 4:50:57 pm</a>
-            <p>更新日期：<a href="http://tracywoo.cn/2020/03/16/用Hexo和GitHub创建属于自己的博客吧/">March 18th 2020, 10:38:33 am</a>
+            <p>原文链接：<a href="http://tracywoo.cn/2020/03/18/多目标进化计算/">http://tracywoo.cn/2020/03/18/多目标进化计算/</a>
+            <p>发表日期：<a href="http://tracywoo.cn/2020/03/18/多目标进化计算/">March 18th 2020, 10:02:02 am</a>
+            <p>更新日期：<a href="http://tracywoo.cn/2020/03/18/多目标进化计算/">March 18th 2020, 10:33:54 am</a>
             <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使�?4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -445,17 +474,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/03/18/多目标进化计算/" title= "多目标进化计算">
-                    <div class="nextTitle">多目标进化计算</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2019/08/29/排序算法/" title= "排序算法">
-                    <div class="prevTitle">排序算法</div>
+                <a href= "/2020/03/16/用Hexo和GitHub创建属于自己的博客吧/" title= "用Hexo和GitHub创建属于自己的博客吧">
+                    <div class="prevTitle">用Hexo和GitHub创建属于自己的博客吧</div>
                 </a>
             
         </li>
@@ -567,7 +591,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装git"><span class="toc-number">1.</span> <span class="toc-text">安装git</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装Node"><span class="toc-number">2.</span> <span class="toc-text">安装Node</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装Hexo"><span class="toc-number">3.</span> <span class="toc-text">安装Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#遇到的一些问题（持续更新）"><span class="toc-number">3.1.</span> <span class="toc-text">遇到的一些问题（持续更新）</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Pareto改善"><span class="toc-number">1.</span> <span class="toc-text">Pareto改善</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Pareto解"><span class="toc-number">2.</span> <span class="toc-text">Pareto解</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进化计算"><span class="toc-number"></span> <span class="toc-text">进化计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#遗传算法"><span class="toc-number"></span> <span class="toc-text">遗传算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#编码"><span class="toc-number">1.</span> <span class="toc-text">编码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#适应度评价"><span class="toc-number">2.</span> <span class="toc-text">适应度评价</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#遗传操作"><span class="toc-number">3.</span> <span class="toc-text">遗传操作</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#选择-selection-复制-reproduction"><span class="toc-number">3.1.</span> <span class="toc-text">选择(selection)/复制(reproduction)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#交叉"><span class="toc-number">3.2.</span> <span class="toc-text">交叉</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#变异"><span class="toc-number">3.3.</span> <span class="toc-text">变异</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多目标进化"><span class="toc-number"></span> <span class="toc-text">多目标进化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#多目标进化-1"><span class="toc-number">1.</span> <span class="toc-text">多目标进化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#凸空间与凹空间"><span class="toc-number">2.</span> <span class="toc-text">凸空间与凹空间</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基于Pareto多目标进化算法的一般框架"><span class="toc-number">3.</span> <span class="toc-text">基于Pareto多目标进化算法的一般框架</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#多目标Pareto最优解集构造方法"><span class="toc-number">4.</span> <span class="toc-text">多目标Pareto最优解集构造方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#简单方法"><span class="toc-number">4.1.</span> <span class="toc-text">简单方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#庄家法"><span class="toc-number">4.2.</span> <span class="toc-text">庄家法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#擂台法"><span class="toc-number">4.3.</span> <span class="toc-text">擂台法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#递归法"><span class="toc-number">4.4.</span> <span class="toc-text">递归法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#快速排序方法"><span class="toc-number">4.5.</span> <span class="toc-text">快速排序方法</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#多目标群体的分布性"><span class="toc-number">5.</span> <span class="toc-text">多目标群体的分布性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#多目标进化中的适应度"><span class="toc-number">5.1.</span> <span class="toc-text">多目标进化中的适应度</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#用聚类方法保持分布性"><span class="toc-number">5.2.</span> <span class="toc-text">用聚类方法保持分布性</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#实数编码"><span class="toc-number">5.2.1.</span> <span class="toc-text">实数编码</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#二进制编码"><span class="toc-number">5.2.2.</span> <span class="toc-text">二进制编码</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#符号编码"><span class="toc-number">5.2.3.</span> <span class="toc-text">符号编码</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#聚类分析"><span class="toc-number">5.3.</span> <span class="toc-text">聚类分析</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#基于中心点"><span class="toc-number">5.4.</span> <span class="toc-text">基于中心点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#类距离"><span class="toc-number">5.5.</span> <span class="toc-text">类距离</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
