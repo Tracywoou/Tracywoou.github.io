@@ -408,7 +408,8 @@ height:50vh;
 <p>进化计算是基于群体的启发式搜索优化问题。</p>
 <h2 id="遗传算法"><a href="#遗传算法" class="headerlink" title="遗传算法"></a>遗传算法</h2><p>约翰·霍兰德提出了遗传算法，是进化算法的一种。</p>
 <p>Step1:     ① 种群中个体随机初始化；</p>
-<pre><code>② 每个个体通过评价得到一个适应度值；</code></pre><p>​               ③ 适应度大的个体有更大的概率留下来；</p>
+<p>​               ② 每个个体通过评价得到一个适应度值；</p>
+<p>​               ③ 适应度大的个体有更大的概率留下来；</p>
 <p>​               ④适应度大的个体交叉变异产生新的个体；</p>
 <p>Step2：不断迭代②~④</p>
 <p>经过足够多次的迭代后，最终能够得到好的解。</p>
@@ -417,16 +418,16 @@ height:50vh;
 <p>每个特征都与编码结果一一对应。</p>
 <h4 id="适应度评价"><a href="#适应度评价" class="headerlink" title="适应度评价"></a>适应度评价</h4><p>位串（个体）-&gt;适应度-&gt;目标函数。</p>
 <p>适应度是用于评价目标函数的一个自定义的函数，优化的方向为适应度增大的方向，对于最小化问题：</p>
-<p><img src="//tracywoo.cn/2020/03/18/多目标进化计算/%E5%A4%9A%E7%9B%AE%E6%A0%87%E8%BF%9B%E5%8C%96%E8%AE%A1%E7%AE%97%5Ce1.PNG" alt="e1"></p>
-<p>其中$\{ {C_ {\max } } }$可以是自己设定的值或者是当代的最大值。</p>
+<p><img src="//tracywoo.cn/2020/03/18/多目标进化计算/e1.PNG" alt="e1"></p>
+<p>其中C_max可以是自己设定的值或者是当代的最大值。</p>
 <p>相应的，对于最大化问题：</p>
-<p><img src="//tracywoo.cn/2020/03/18/多目标进化计算/%E5%A4%9A%E7%9B%AE%E6%A0%87%E8%BF%9B%E5%8C%96%E8%AE%A1%E7%AE%97%5Ce2.PNG" alt="e2"></p>
+<p><img src="//tracywoo.cn/2020/03/18/多目标进化计算/e2.PNG" alt="e2"></p>
 <h4 id="遗传操作"><a href="#遗传操作" class="headerlink" title="遗传操作"></a>遗传操作</h4><h5 id="选择-selection-复制-reproduction"><a href="#选择-selection-复制-reproduction" class="headerlink" title="选择(selection)/复制(reproduction)"></a>选择(selection)/复制(reproduction)</h5><p>选择算子：选择适应度高的个体放入交配池。</p>
 <h5 id="交叉"><a href="#交叉" class="headerlink" title="交叉"></a>交叉</h5><p>模仿有性繁殖中的基因重组</p>
-<p><img src="//tracywoo.cn/2020/03/18/多目标进化计算/%E5%A4%9A%E7%9B%AE%E6%A0%87%E8%BF%9B%E5%8C%96%E8%AE%A1%E7%AE%97%5Cpc.PNG" alt="pc">)为交叉概率，随机选择k个交叉位置，根据<img src="//tracywoo.cn/2020/03/18/多目标进化计算/%E5%A4%9A%E7%9B%AE%E6%A0%87%E8%BF%9B%E5%8C%96%E8%AE%A1%E7%AE%97%5Cpc.PNG" alt="pc">实行交叉操作。</p>
-<p><img src="//tracywoo.cn/2020/03/18/多目标进化计算/%E5%A4%9A%E7%9B%AE%E6%A0%87%E8%BF%9B%E5%8C%96%E8%AE%A1%E7%AE%97%5Cpc.PNG" alt="pc">一般比较大，比如0.8.</p>
+<p><img src="//tracywoo.cn/2020/03/18/多目标进化计算/pc.PNG" alt="pc">)为交叉概率，随机选择k个交叉位置，根据<img src="//tracywoo.cn/2020/03/18/多目标进化计算/pc.PNG" alt="pc">实行交叉操作。</p>
+<p><img src="//tracywoo.cn/2020/03/18/多目标进化计算/pc.PNG" alt="pc">一般比较大，比如0.8.</p>
 <h5 id="变异"><a href="#变异" class="headerlink" title="变异"></a>变异</h5><p>模拟有性繁殖中的基因突变。</p>
-<p>按<img src="//tracywoo.cn/2020/03/18/多目标进化计算/%E5%A4%9A%E7%9B%AE%E6%A0%87%E8%BF%9B%E5%8C%96%E8%AE%A1%E7%AE%97%5Cpm.PNG" alt="pm">反转某位的二进制字符，一般比较小，比如0.005.</p>
+<p>按<img src="//tracywoo.cn/2020/03/18/多目标进化计算/pm.PNG" alt="pm">反转某位的二进制字符，一般比较小，比如0.005.</p>
 <h2 id="多目标进化"><a href="#多目标进化" class="headerlink" title="多目标进化"></a>多目标进化</h2><h4 id="多目标进化-1"><a href="#多目标进化-1" class="headerlink" title="多目标进化"></a>多目标进化</h4><p>一种常见的优化策略的问题。</p>
 <h4 id="凸空间与凹空间"><a href="#凸空间与凹空间" class="headerlink" title="凸空间与凹空间"></a>凸空间与凹空间</h4><p><strong>凸集(convexity)</strong>:一个集合S的任意两个点的连线上的点仍为S中的点。</p>
 <p><strong>凹集</strong>：与凸集的定义相反。</p>
@@ -436,22 +437,22 @@ height:50vh;
 <h5 id="擂台法"><a href="#擂台法" class="headerlink" title="擂台法"></a>擂台法</h5><p>每一轮选出一个擂主，与其他个体进行比较，败者出局，胜者称为新的擂主。</p>
 <p>注意需要保留与前一个擂主不相关的个体的比较。</p>
 <h5 id="递归法"><a href="#递归法" class="headerlink" title="递归法"></a>递归法</h5><h5 id="快速排序方法"><a href="#快速排序方法" class="headerlink" title="快速排序方法"></a>快速排序方法</h5><p><strong>个体之间的关系</strong>：若x和y不存在支配关系，那么如果y支配x，那么x支配z或者x和z不相关。</p>
-<p>快速排序中使用到了一个符号<img src="//tracywoo.cn/2020/03/18/多目标进化计算/%E5%A4%9A%E7%9B%AE%E6%A0%87%E8%BF%9B%E5%8C%96%E8%AE%A1%E7%AE%97%5Cbxg.PNG" alt="bxg">，按照这个关系进行快速排序：x支配y或者x与y不相关。</p>
+<p>快速排序中使用到了一个符号<img src="//tracywoo.cn/2020/03/18/多目标进化计算/bxg.PNG" alt="bxg">，按照这个关系进行快速排序：x支配y或者x与y不相关。</p>
 <p>每一次拿出一个个体，将群体分为两个部分，一部分是被个体支配的个体，另一部分是由个体支配的个体，被个体支配的个体被清除，进入下一轮比较。</p>
 <h4 id="多目标群体的分布性"><a href="#多目标群体的分布性" class="headerlink" title="多目标群体的分布性"></a>多目标群体的分布性</h4><p><strong>小生境</strong>：把特定环境中有共同特性的组织称为物种。（物以类聚）</p>
 <p><strong>基于预选择机制(preselection)</strong>:若子代的适应度高于父代的适应度，那么可以用子代代替父代。</p>
 <p><strong>基于排挤机制(crowding)</strong>:设置排挤因子CF，选择规模为1/CF的子集为一个排挤子集，计算相似性，用新个体代替相似个体。</p>
 <p><strong>基于共享机制(sharing):</strong></p>
-<p>定义共享函数<img src="//tracywoo.cn/2020/03/18/多目标进化计算/%E5%A4%9A%E7%9B%AE%E6%A0%87%E8%BF%9B%E5%8C%96%E8%AE%A1%E7%AE%97%5Cshare.PNG" alt="share">)，其中的d(i,j)为个体i和个体j的相似度。</p>
+<p>定义共享函数<img src="//tracywoo.cn/2020/03/18/多目标进化计算/share.PNG" alt="share">)，其中的d(i,j)为个体i和个体j的相似度。</p>
 <p>则个体i的共享适应度为<img src="//tracywoo.cn/2020/03/18/多目标进化计算/%E5%A4%9A%E7%9B%AE%E6%A0%87%E8%BF%9B%E5%8C%96%E8%AE%A1%E7%AE%97%5Csf.PNG" alt="sf"></p>
 <p>设置共享半径，只计算共享半径以内的个体相似程度</p>
-<p><img src="//tracywoo.cn/2020/03/18/多目标进化计算/%E5%A4%9A%E7%9B%AE%E6%A0%87%E8%BF%9B%E5%8C%96%E8%AE%A1%E7%AE%97%5Csr.PNG" alt="sr"></p>
+<p><img src="//tracywoo.cn/2020/03/18/多目标进化计算/sr.PNG" alt="sr"></p>
 <h5 id="多目标进化中的适应度"><a href="#多目标进化中的适应度" class="headerlink" title="多目标进化中的适应度"></a>多目标进化中的适应度</h5><p><strong>目标函数组合法</strong></p>
-<p><img src="//tracywoo.cn/2020/03/18/多目标进化计算/%E5%A4%9A%E7%9B%AE%E6%A0%87%E8%BF%9B%E5%8C%96%E8%AE%A1%E7%AE%97%5C11.PNG" alt="11"></p>
+<p><img src="//tracywoo.cn/2020/03/18/多目标进化计算/11.PNG" alt="11"></p>
 <p><strong>简单支配关系法</strong></p>
-<p><img src="//tracywoo.cn/2020/03/18/多目标进化计算/%E5%A4%9A%E7%9B%AE%E6%A0%87%E8%BF%9B%E5%8C%96%E8%AE%A1%E7%AE%97%5Cs2.PNG" alt="s2"></p>
+<p><img src="//tracywoo.cn/2020/03/18/多目标进化计算/s2.PNG" alt="s2"></p>
 <p><strong>复合支配关系法</strong></p>
-<p><img src="//tracywoo.cn/2020/03/18/多目标进化计算/%E5%A4%9A%E7%9B%AE%E6%A0%87%E8%BF%9B%E5%8C%96%E8%AE%A1%E7%AE%97%5Cc3.PNG" alt="c3"></p>
+<p><img src="//tracywoo.cn/2020/03/18/多目标进化计算/c3.PNG" alt="c3"></p>
 <h5 id="用聚类方法保持分布性"><a href="#用聚类方法保持分布性" class="headerlink" title="用聚类方法保持分布性"></a>用聚类方法保持分布性</h5><p>个体的相似度计算可以分为</p>
 <h6 id="实数编码"><a href="#实数编码" class="headerlink" title="实数编码"></a>实数编码</h6><p><strong>欧几里得距离</strong>：向量各位差的平方和的开方。</p>
 <p><strong>曼哈顿距离</strong>：向量各位差的绝对值之和。</p>
@@ -460,7 +461,7 @@ height:50vh;
 <h6 id="符号编码"><a href="#符号编码" class="headerlink" title="符号编码"></a>符号编码</h6><p>一般用asc2表示各位。</p>
 <h5 id="聚类分析"><a href="#聚类分析" class="headerlink" title="聚类分析"></a>聚类分析</h5><h5 id="基于中心点"><a href="#基于中心点" class="headerlink" title="基于中心点"></a>基于中心点</h5><p>将群体分为m类，选择m个个体为初始中心点</p>
 <p>① 计算选出的点与其他点的距离</p>
-<p>② 将与选出的点最相似的个体指派到相应的类中，计算评价函数的值<img src="//tracywoo.cn/2020/03/18/多目标进化计算/%E5%A4%9A%E7%9B%AE%E6%A0%87%E8%BF%9B%E5%8C%96%E8%AE%A1%E7%AE%97%5CE.PNG" alt="E"></p>
+<p>② 将与选出的点最相似的个体指派到相应的类中，计算评价函数的值<img src="//tracywoo.cn/2020/03/18/多目标进化计算/E.PNG" alt="E"></p>
 <p>③ 分别在各类中随机选择一个非中心点重复①②，计算E’，若优于E，则代替中心点，重新调整类。</p>
 <h5 id="类距离"><a href="#类距离" class="headerlink" title="类距离"></a>类距离</h5><p>把n个个体当成n个类，将具有最大相似度的个体聚集到同一类。</p>
 
@@ -471,7 +472,7 @@ height:50vh;
             <p>Author：<a href="http://tracywoo.cn">Tracy</a>
             <p>原文链接：<a href="http://tracywoo.cn/2020/03/18/多目标进化计算/">http://tracywoo.cn/2020/03/18/多目标进化计算/</a>
             <p>发表日期：<a href="http://tracywoo.cn/2020/03/18/多目标进化计算/">March 18th 2020, 10:02:02 am</a>
-            <p>更新日期：<a href="http://tracywoo.cn/2020/03/18/多目标进化计算/">March 18th 2020, 10:52:24 am</a>
+            <p>更新日期：<a href="http://tracywoo.cn/2020/03/18/多目标进化计算/">March 18th 2020, 10:57:03 am</a>
             <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使�?4.0 国际许可协议</a>进行许可</p>
         </div>
     
