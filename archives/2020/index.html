@@ -351,7 +351,11 @@
                 <span>VAE_变分自编码器</span>
         </a>
         <div class="abstract-content">
-            
+            简介VAE(Variational Auto-Encoder，VAE)是一种生成网络。
+假如我们有一个带有解卷积层的网络，我们设置输入为值全为1的向量，输出为一张图像。然后，我们可以训练这个网络去减小重构图像和原始图像的平均平方误差。那么训练完后，这个图像的信息就被保留在了网络的参数中。
+
+这次我们用one-hot向量而不是全1向量。我们用[1, 0, 0, 0]代表猫，用[0, 1, 0, 0]代表狗。虽然这要没什么问题，但是我们最多只能储存4张图片。当然，我们也可以增加向量的长度和网络的参数，那么我们可以获得更多的图片。
+但是，这样的向量很稀疏。为了解决这个问题，我们想使用实数值向量...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -359,6 +363,12 @@
                 <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
             </div>
             <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "ML">ML</a>
+    
+</div>
             
         </div>
     </article>
@@ -726,6 +736,8 @@ npm -v
         <span class="sidebar-tag-name" data-tags="others"><span class="iconfont-archer">&#xe606;</span>others</span>
     
         <span class="sidebar-tag-name" data-tags="MOEA"><span class="iconfont-archer">&#xe606;</span>MOEA</span>
+    
+        <span class="sidebar-tag-name" data-tags="ML"><span class="iconfont-archer">&#xe606;</span>ML</span>
     
         <span class="sidebar-tag-name" data-tags="博客"><span class="iconfont-archer">&#xe606;</span>博客</span>
     
