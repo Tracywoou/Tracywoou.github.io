@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="default">
+    <!-- title -->
+
+
+
+
+<!-- keywords -->
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="author" content="Tracy">
+    <meta name="renderer" content="webkit">
+    <meta name="copyright" content="Tracy">
+    
+    <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
+    
+    <meta name="description" content>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>platEMO_多目标优化工具箱 · Tracy&#39;s Studio</title>
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s infinite;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+</style>
+
+    <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/ -->
+<script>
+(function( w ){
+	"use strict";
+	// rel=preload support test
+	if( !w.loadCSS ){
+		w.loadCSS = function(){};
+	}
+	// define on the loadCSS obj
+	var rp = loadCSS.relpreload = {};
+	// rel=preload feature support test
+	// runs once and returns a function for compat purposes
+	rp.support = (function(){
+		var ret;
+		try {
+			ret = w.document.createElement( "link" ).relList.supports( "preload" );
+		} catch (e) {
+			ret = false;
+		}
+		return function(){
+			return ret;
+		};
+	})();
+
+	// if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+	// then change that media back to its intended value on load
+	rp.bindMediaToggle = function( link ){
+		// remember existing media attr for ultimate state, or default to 'all'
+		var finalMedia = link.media || "all";
+
+		function enableStylesheet(){
+			link.media = finalMedia;
+		}
+
+		// bind load handlers to enable media
+		if( link.addEventListener ){
+			link.addEventListener( "load", enableStylesheet );
+		} else if( link.attachEvent ){
+			link.attachEvent( "onload", enableStylesheet );
+		}
+
+		// Set rel and non-applicable media type to start an async request
+		// note: timeout allows this to happen async to let rendering continue in IE
+		setTimeout(function(){
+			link.rel = "stylesheet";
+			link.media = "only x";
+		});
+		// also enable media after 3 seconds,
+		// which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+		setTimeout( enableStylesheet, 3000 );
+	};
+
+	// loop through link elements in DOM
+	rp.poly = function(){
+		// double check this to prevent external calls from running
+		if( rp.support() ){
+			return;
+		}
+		var links = w.document.getElementsByTagName( "link" );
+		for( var i = 0; i < links.length; i++ ){
+			var link = links[ i ];
+			// qualify links to those with rel=preload and as=style attrs
+			if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+				// prevent rerunning on link
+				link.setAttribute( "data-loadcss", true );
+				// bind listeners to toggle media back
+				rp.bindMediaToggle( link );
+			}
+		}
+	};
+
+	// if unsupported, run the polyfill
+	if( !rp.support() ){
+		// run once at least
+		rp.poly();
+
+		// rerun poly on an interval until onload
+		var run = w.setInterval( rp.poly, 500 );
+		if( w.addEventListener ){
+			w.addEventListener( "load", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		} else if( w.attachEvent ){
+			w.attachEvent( "onload", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		}
+	}
+
+
+	// commonjs
+	if( typeof exports !== "undefined" ){
+		exports.loadCSS = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ) );
+</script>
+
+    <link rel="icon" href="/assets/Tracyw.ico">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" as="script">
+    <link rel="preload" href="/scripts/main.js" as="script">
+    <link rel="preload" as="font" href="/font/Oswald-Regular.ttf" crossorigin>
+    <link rel="preload" as="font" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin>
+    
+    <!-- fancybox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+</head>
+
+    
+        <body class="post-body">
+    
+    
+<header class="header">
+
+    <div class="read-progress"></div>
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Tracy&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">platEMO_多目标优化工具箱</a>
+            </div>
+    </div>
+    
+    <a class="home-link" href=/>Tracy's Studio.</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro" style="
+
+
+
+
+
+
+
+height:50vh;
+">
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
+            
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            platEMO_多目标优化工具箱
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">3.8k</span>Reading time: <span class="post-count reading-time">14 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/07/10</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        
+    </div>
+</div>
+        <script>
+ 
+  // get user agent
+  var browser = {
+    versions: function () {
+      var u = window.navigator.userAgent;
+      return {
+        userAgent: u,
+        trident: u.indexOf('Trident') > -1, //IE内核
+        presto: u.indexOf('Presto') > -1, //opera内核
+        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+        iPad: u.indexOf('iPad') > -1, //是否为iPad
+        webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+        weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+        uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
+      };
+    }()
+  }
+  console.log("userAgent:" + browser.versions.userAgent);
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded');
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
+      document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
+      var postIntros = document.getElementsByClassName('post-intros')[0]
+      if (postIntros) {
+        postIntros.classList.add('post-fade-in');
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb(){
+    if (browser.versions.uc) {
+      console.log("UCBrowser");
+      fontLoaded();
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular']
+        },
+        loading: function () {  //所有字体开始加载
+          // console.log('loading');
+        },
+        active: function () {  //所有字体已渲染
+          fontLoaded();
+        },
+        inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout');
+          fontLoaded();
+        },
+        timeout: 5000 // Set the timeout to two seconds
+      });
+    }
+  }
+
+  function asyncErr(){
+    console.warn('script load from CDN failed, will load local script')
+  }
+
+  // load webfont-loader async, and add callback function
+  function async(u, cb, err) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (cb) { o.addEventListener('load', function (e) { cb(null, e); }, false); }
+    if (err) { o.addEventListener('error', function (e) { err(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  var asyncLoadWithFallBack = function(arr, success, reject) {
+      var currReject = function(){
+        reject()
+        arr.shift()
+        if(arr.length)
+          async(arr[0], success, currReject)
+        }
+
+      async(arr[0], success, currReject)
+  }
+
+  asyncLoadWithFallBack([
+    "https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js", 
+    "https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js",
+    "/lib/webfontloader.min.js"
+  ], asyncCb, asyncErr)
+</script>        
+        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+        <div class="container container-unloaded">
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>platEMO是Ye Tian等学者写的一款基于MATLAB的多目标优化工具。</p>
+<p>这款工具主要具有以下的几个特点：<br>1.完全由MATLAB开发，不需要任何其它库。<br>2.用户可以显示各种图形，包括结果的pareto front，真实的pareto front等等。<br>3.强大友好的GUI，可以不用编辑任何代码，直接调用主函数main.m即可。<br>4.可以直接生成Excel或者LaTex。</p>
+<h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p><a href="https://github.com/BIMK/PlatEMO" target="_blank" rel="noopener">github</a></p>
+<p>该平台使用的详细信息可以在platEMO中的manual.pdf中读取。</p>
+<p><a href="http://bimk.ahu.edu.cn/index.php?s=/Index/Software/index.html" target="_blank" rel="noopener">实验室主页</a> </p>
+<p>下载后，将matlab运行目录设置为该文件夹即可。</p>
+<h1 id="文件夹结构"><a href="#文件夹结构" class="headerlink" title="文件夹结构"></a>文件夹结构</h1><p><img src="//tracywoo.cn/2020/07/10/platEMO-多目标优化工具箱/D:%5Cblog%5Csource_posts%5CplatEMO-%E5%A4%9A%E7%9B%AE%E6%A0%87%E4%BC%98%E5%8C%96%E5%B7%A5%E5%85%B7%E7%AE%B1%5C%E6%96%87%E4%BB%B6.png" alt="文件夹"></p>
+<p><strong>Algorithm：</strong></p>
+<p>包括现有的90个流行的MOEAs，包括遗传算法、差分进化、粒子群优化、模因算法、分布估计算法和基于代理模型的算法。其中大多数是2010年以后在顶级期刊上发表的代表性算法。</p>
+<p><strong>Data：</strong></p>
+<p>包括120多个benchmark MOPs。</p>
+<p><strong>GUI：</strong></p>
+<p>用于存储平台界面的源代码。</p>
+<p><strong>Metrics：</strong></p>
+<p>用于存储所有性能指标的源代码。</p>
+<p><strong>Operators:</strong></p>
+<p>用于存储所有算子的源代码。</p>
+<p><strong>Problems:</strong></p>
+<p>用于存储所有多目标优化问题的源代码。</p>
+<p><strong>Public:</strong></p>
+<p>用于存储所有类和实例的函数。</p>
+<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><h2 id="命令行使用platEMO"><a href="#命令行使用platEMO" class="headerlink" title="命令行使用platEMO"></a>命令行使用platEMO</h2><p>用户可以通过调用带有输入参数的接口函数main（）来运行PlatEMO的命令模式。</p>
+<p>如果main（）在没有任何输入参数的情况下被调用，则GUI模式将运行。</p>
+<p>下表列出了main（）的所有可接受参数。注意，用户不需要分配所有参数，因为每个参数都有一个默认值。</p>
+<p><img src="//tracywoo.cn/2020/07/10/platEMO-多目标优化工具箱/D:%5Cblog%5Csource_posts%5CplatEMO-%E5%A4%9A%E7%9B%AE%E6%A0%87%E4%BC%98%E5%8C%96%E5%B7%A5%E5%85%B7%E7%AE%B1%5Cparameter.png" alt="参数"></p>
+<p><strong>-algorithm.</strong> 要执行的MOEA的函数。<br><strong>-problem.</strong> 待解决的MOP。<br><strong>-N.</strong> MOEA的种群规模。注意，它被固定在某些MOEAs(例如moead .m)中的某些特定值上，因此这些MOEAs的实际种群大小可能并不完全等于这个参数。<br><strong>-M.</strong> MOP的目标数目。注意，在不可伸缩的MOPs(例如ZDT1.m)中，目标的数量是恒定的，因此这个参数对于这些MOPs是无效的。<br><strong>-D.</strong> MOP决策变量的个数。注意，在某些MOP中，决策变量的数量是常量或固定到某些特定整数上的(例如：ZDT5.m)，因此决策变量的实际数量可能并不完全等于这个参数。<br><strong>-evaluation.</strong> 函数评价的最大数目。<br><strong>-run.</strong> 运行数。如果用户希望为相同的算法、问题、M和D参数保存多个结果，则在每次运行时修改此参数，使结果的文件名不同。<br><strong>-save.</strong> 保存的种群。如果将该参数设置为0(默认值)，则会在终止后显示结果图;否则，在进化过程中获得的种群将保存在一个名为Data\algorithm\algorithm_problem_M_D_run.mat的文件中。例如：如果save为5并且evaluation是20000，评价数量为4000、8000、12000、16000、20000时得到的种群将被保存。<br><strong>-outputFcn.</strong> 每次生成后调用的函数，通常不需要修改。</p>
+<p>例如：使用下面的命令在WFG1上运行RVEA，其种群大小为200和10个目标，最终结果将显示出来：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">main(<span class="string">'-algorithm'</span>,@RVEA,<span class="string">'-problem'</span>,@WFG1,<span class="string">'-N'</span>,<span class="number">200</span>,<span class="string">'-M'</span>,<span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+
+<p>使用以下命令在WFG2上运行KnEA，并在KnEA和WFG2中设置参数:</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">main(<span class="string">'-algorithm'</span>,&#123;@KnEA,<span class="number">0.4</span>&#125;,<span class="string">'-problem'</span>,&#123;@WFG2,<span class="number">6</span>&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>每个MOEA和MOP的具体参数可以在对应函数头部的注释中找到。使用以下命令在DTLZ5上运行AR-MOEA10次，最终保存种群：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> r = <span class="number">1</span> : <span class="number">10</span></span><br><span class="line">     main(<span class="string">'-algorithm'</span>,@ARMOEA,<span class="string">'-problem'</span>,@DTLZ5,<span class="string">'-save'</span>,<span class="number">1</span>, <span class="string">'-run'</span>,r);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用带GUI的platEMO"><a href="#使用带GUI的platEMO" class="headerlink" title="使用带GUI的platEMO"></a>使用带GUI的platEMO</h2><p>用户可以通过以下命令运行PlatEMO的GUI模式：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">main();</span><br></pre></td></tr></table></figure>
+
+<p>然后在GUI上可以看到两个模块，即测试模块和实验模块。测试模块用于每次在MOP上执行一个MOEA，结果将以图的形式显示。实验模块将同时在几个MOPs上执行多个MOEAs。统计结果将列在表格中。</p>
+<p><img src="//tracywoo.cn/2020/07/10/platEMO-多目标优化工具箱/D:%5Cblog%5Csource_posts%5CplatEMO-%E5%A4%9A%E7%9B%AE%E6%A0%87%E4%BC%98%E5%8C%96%E5%B7%A5%E5%85%B7%E7%AE%B1%5CSTRU.png" alt="结构"></p>
+<p>A: 选择执行的算法和多目标优化问题。</p>
+<p>B: 设置所选MOEA和MOP的参数。每个参数的值应该是一个标量。注意这里的公共参数N,M,D和evaluation都视为MOP的参数。如果将参数设置为空，则该参数将等于其默认值。</p>
+<p>C: 根据当前配置执行MOEA。</p>
+<p>D: 显示光标移动到的区域B中的参数的介绍。</p>
+<p>E: 显示优化过程中的当前种群。</p>
+<p>F: 放大，缩小，平移或旋转E区域的轴。</p>
+<p>G: 在新的标准MATLAB图中打开E区域的坐标轴，可以对坐标轴进行更多的操作，例如保存坐标轴。</p>
+<p>H: 选择要显示在E区域轴线上的数据，包含种群的pareto front，种群的pareto集合，MOP的真实pareto front和任何性能度量的收敛轮廓。</p>
+<img src="//tracywoo.cn/2020/07/10/platEMO-多目标优化工具箱/blog\source\_posts\platEMO-多目标优化工具箱\K.png" alt="H" style="zoom:50%;">
+
+<p>I: 控制优化过程，即，开始，暂停，停止，后退和前进。<br>J: 显示其中一个历史结果。<br>K: 显示结果的最终种群的性能度量值。<br>L: 显示执行的详细信息。<br>用户打开测试模块后，首先选择要在A区域执行的MOEA和MOP，并在B区域设置参数，然后按下区域C按钮执行算法。实时种群将显示在E区域的轴线上，用户可以使用I区域的按钮来控制优化过程。算法结束后，通过选择J区域的弹出菜单，可以重新显示所有的历史结果。</p>
+<p><img src="//tracywoo.cn/2020/07/10/platEMO-多目标优化工具箱/D:%5Cblog%5Csource_posts%5CplatEMO-%E5%A4%9A%E7%9B%AE%E6%A0%87%E4%BC%98%E5%8C%96%E5%B7%A5%E5%85%B7%E7%AE%B1%5CTEST.png" alt="TEST"></p>
+<p>PlatEMO实验模块界面如上图所示。各区域管制的职能如下：<br>Region A. 选择要执行的MOEA和MOP。<br>Region B.设置所选MOEA和MOP的参数。MOPs里的每个参数的值都可以是一个向量。因此，MOEAs可以在相同的MOP上以不同的设置执行。<br>Region C.设置每个文件中保存的种群数量。例如，如果种群大小为5，评估的数量为20000，评价数量为4000，8000，12000，16000和20000时的种群被保存。<br>Region D.设置每个MOP上每个MOEA的运行次数。<br>Region E.设置保存实验设置的文件路径。用户还可以打开现有的配置文件来加载实验设置。所有结果都将保存在文件路径的同一文件夹中。<br>Region F.按顺序或并行执行实验。<br>Region G.显示实验的统计结果。<br>Region H.指定表中显示的数据类型。<br>Region I.将表格保存为Excel或LaTeX格式。<br>Region J.选择表中显示的数据，包括最终总体的任何性能度量值。<br>Region K.控制优化过程，即，开始，暂停，停止。<br>Region L.右键单击一个单元格，以显示种群的Pareto front，种群的pareto集合，或度量值的收敛轮廓。</p>
+<p>用户打开实验模块后，首先选择在区域A中执行的MOEAs和MOPs，并在区域B中设置它们的参数，在区域C中设置保存的种群数量，在区域D中设置运行的数量。然后按下F区域的两个按钮中的一个开始实验。统计结果将显示在G区域的表格中，用户可以使用K区域的按钮来控制优化过程。实验结束后，按下I区按钮，可以将表中数据以Excel或LaTeX格式保存。<br>或者，用户可以通过按区域K中的按钮加载现有配置，然后开始实验。如果在E区域给定的文件夹中已经存在任何结果文件，则将加载结果文件，而不是执行算法。</p>
+<h1 id="扩展platEMO"><a href="#扩展platEMO" class="headerlink" title="扩展platEMO"></a>扩展platEMO</h1><h2 id="platEMO的结构"><a href="#platEMO的结构" class="headerlink" title="platEMO的结构"></a>platEMO的结构</h2><p><img src="//tracywoo.cn/2020/07/10/platEMO-多目标优化工具箱/D:%5Cblog%5Csource_posts%5CplatEMO-%E5%A4%9A%E7%9B%AE%E6%A0%87%E4%BC%98%E5%8C%96%E5%B7%A5%E5%85%B7%E7%AE%B1%5Carch.png" alt="结构"></p>
+<p>进行platEMO平台的实现的三个类是：GLOBAL, INDIVIDUAL和PROBLEMS。其中每个算法都是一个函数，ALGORITHM不是一个类，而是所有算法函数的统一接口。</p>
+<p>GLOBAL表示当前运行的配置，其源代码和详细注释可在Public\GLOBAL.m中找到。在每次执行,维护一个GLOBAL对象来存储所有的参数设置和结果,包括执行的函数处理MOEA和MOP,种群规模,目标的数量,数量的决策变量,函数的最大数量评估,评估个体的数量,等等。GLOBAL还提供了一些MOEAs可以调用的方法，例如，GLOBAL.Initialization()可以生成一个随机的种群初始化，并且GLOBAL.NotTermination()可以检查是否应该终止算法。<br>INDIVIDUAL代表一个个体，源代码及其详细注释可以在Public\INDIVIDUAL.m中找到。一个INDIVIDUAL目标储存决策变量dec、目标值obj、约束违反con和一个个体的附加属性值。在调用构造函数时分配dec和add的值，然后自动计算obj和con的值。上面的每一个性质都是一个行向量，p.decs，P.objs, P.cons或P.adds表示一个决策变量的矩阵，分别为目标值、违反约束或单个INDIVIDUAL对象P数组的附加属性值，其中矩阵的每一行表示一个个体，每一列表示值的一维。当实例化的INDIVIDUAL对象数量超过函数GLOBAL.evaluation计算的最大数量时，算法将被迫终止。<br>PROBLEM是所有问题类的超类。它包含几个方法，即，PROBLEM.Init()用于生成初始种群，PROBLEM.CalDec()用于修复不可行的决策变量，PROBLEM.CalObj()用于计算目标值，PROBLEM.CalCon()用于计算约束违反情况，以及PROBLEM.PF()用于在真正的帕累托前沿采样参考点。每个问题都应该作为PROBLEM的子类来编写，并重载上面的方法。</p>
+<h2 id="增加算法"><a href="#增加算法" class="headerlink" title="增加算法"></a>增加算法</h2><p>MOEA函数由PlatEMO中的一个.m文件表示，该文件应放在“算法”文件夹中。例如，NSGAII.m的源代码是</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">NSGAII</span><span class="params">(Global)</span> </span></span><br><span class="line">  Population = Global.Initialization(); </span><br><span class="line">  [~,FrontNo,CrowdDis] = EnvironmentalSelection(Population,Global.N); </span><br><span class="line">  <span class="keyword">while</span> Global.NotTermination(Population) </span><br><span class="line">      MatingPool = TournamentSelection(<span class="number">2</span>,Global.N,FrontNo, -CrowdDis); </span><br><span class="line">      Offspring = GA(Population(MatingPool)); </span><br><span class="line">      [Population,FrontNo,CrowdDis] = EnvironmentalSelection([Population,Offspring], Global.N); </span><br><span class="line">  <span class="keyword">end</span> </span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p>首先，用全局变量进行初始化，生成一个初始种群。</p>
+<p>一个多目标进化算法至少有三步：通过Global.Initialization()全局初始化，通过 Global.NotTermination()检查优化是否结束，通过算子（例如GA()）得到子代，EnvironmentalSelection() 是NSGAⅡ特有的算法，  NDSort() 和<br>TournamentSelection()是存储在Public中的实例函数。</p>
+<p>对于基于分解的MOEAs，需要预先生成一组参考点。例如，在MOEAD.m中，使用以下命令生成参考点：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[W,Global.N] = UniformPoint(Global.N,Global.M);</span><br></pre></td></tr></table></figure>
+
+<p>其中UniformPoint（）是Public文件夹中的一个实例函数，用于在单元超平面上生成具有Global.M目标的Global.N均匀分布点。W是参考点集，总体规模全局。N重置为W中参考点的数量。</p>
+<p>MOEA函数（以及MOP函数）头部应该以指定的形式编写，以便GUI能够识别。例如，在gfmmea.m中，函数头中的注释是</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">GFMMOEA</span><span class="params">(Global)</span> </span></span><br><span class="line"><span class="comment">% &lt;algorithm&gt; &lt;G&gt; </span></span><br><span class="line"><span class="comment">% Generic front modeling based MOEA </span></span><br><span class="line"><span class="comment">% theta --- 0.2 --- Penalty parameter </span></span><br><span class="line"><span class="comment">% fPFE  --- 0.1 --- Frequency of generic front modeling</span></span><br></pre></td></tr></table></figure>
+
+<p>第2行给出了函数的两个标签，第一个标签&lt;algorithm&gt;表示这是一个MOEA函数（&lt;problem&gt; 和 &lt;metric&gt; 分别表示多目标优化问题和指标）。第二个标签&lt;G&gt;可以是任意字符串。第3行给出了MOEA的全名。第4-5行是GFM-MOEA的参数，其中参数的名称位于每一行的第一列。默认值位于第二列，简介位于第三列；这些列用“-”分隔。然后，GFM-MOEA通过以下命令接收用户的参数设置：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[theta,fPFE] = Global.ParameterSet(<span class="number">0.2</span>,<span class="number">0.1</span>);</span><br></pre></td></tr></table></figure>
+
+<p>可以在Public\GLOBAL.m中找到Global.ParameterSet()的详细介绍。对于代理辅助的MOEA，可以使用以下命令根据父母的决策变量生成新的决策变量，没有INDIVIDUAL对象会被实例化，并且被评估的个体的数量GLOBAL.evaluated不会增加。</p>
+<p><code>OffDec = GA(Population(MatingPool).decs);</code></p>
+<p>对于函数GA（），如果输入是INDIVIDUAL 对象的数组，则输出也是INDIVIDUAL 对象的数组。如果输入是决策变量的矩阵，那么输出也是决策变量的矩阵。</p>
+<h2 id="增加问题"><a href="#增加问题" class="headerlink" title="增加问题"></a>增加问题</h2><p>MOP函数由PlatEMO中的一个.m文件表示，该文件应该放在文件夹Problems中。<br>例如，DTLZ2的源代码.m是</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="keyword">classdef</span> DTLZ2 &lt; PROBLEM</span><br><span class="line"><span class="number">2.</span>     <span class="keyword">methods</span></span><br><span class="line"><span class="number">3.</span>         <span class="function"><span class="keyword">function</span> <span class="title">obj</span> = <span class="title">DTLZ2</span><span class="params">()</span></span></span><br><span class="line"><span class="number">4.</span>             <span class="keyword">if</span> <span class="built_in">isempty</span>(obj.Global.M)</span><br><span class="line"><span class="number">5.</span>                 obj.Global.M = <span class="number">3</span>;</span><br><span class="line"><span class="number">6.</span>             <span class="keyword">end</span></span><br><span class="line"><span class="number">7.</span>             <span class="keyword">if</span> <span class="built_in">isempty</span>(obj.Global.D)</span><br><span class="line"><span class="number">8.</span>                 obj.Global.D = obj.Global.M + <span class="number">9</span>;</span><br><span class="line"><span class="number">9.</span>             <span class="keyword">end</span></span><br><span class="line"><span class="number">10.</span>            obj.Global.lower = <span class="built_in">zeros</span>(<span class="number">1</span>,obj.Global.D);</span><br><span class="line"><span class="number">11.</span>            obj.Global.upper = <span class="built_in">ones</span>(<span class="number">1</span>,obj.Global.D);</span><br><span class="line"><span class="number">12.</span>            obj.Global.encoding = <span class="string">'real'</span>;</span><br><span class="line"><span class="number">13.</span>         <span class="keyword">end</span></span><br><span class="line"><span class="number">14.</span>         <span class="function"><span class="keyword">function</span> <span class="title">PopObj</span> = <span class="title">CalObj</span><span class="params">(obj,PopDec)</span></span></span><br><span class="line"><span class="number">15.</span>             M = obj.Global.M;</span><br><span class="line"><span class="number">16.</span>             g = sum((PopDec(:,M:<span class="keyword">end</span>)<span class="number">-0.5</span>).^<span class="number">2</span>,<span class="number">2</span>);</span><br><span class="line"><span class="number">17.</span>             PopObj = <span class="built_in">repmat</span>(<span class="number">1</span>+g,<span class="number">1</span>,M).*<span class="built_in">fliplr</span>(cumprod([<span class="built_in">ones</span> (<span class="built_in">size</span>(g,<span class="number">1</span>),<span class="number">1</span>),<span class="built_in">cos</span>(PopDec(:,<span class="number">1</span>:M1)*<span class="built_in">pi</span>/<span class="number">2</span>)],<span class="number">2</span>)).					[<span class="built_in">ones</span>(<span class="built_in">size</span>(g,<span class="number">1</span>),<span class="number">1</span>),<span class="built_in">sin</span>(PopDec(:,M<span class="number">-1</span>:<span class="number">-1</span>:<span class="number">1</span>)*<span class="built_in">pi</span>/<span class="number">2</span>)];</span><br><span class="line"><span class="number">18.</span>         <span class="keyword">end</span></span><br><span class="line"><span class="number">19.</span>         <span class="function"><span class="keyword">function</span> <span class="title">P</span> = <span class="title">PF</span><span class="params">(obj,N)</span></span></span><br><span class="line"><span class="number">20.</span>             P = UniformPoint(N,obj.Global.M);</span><br><span class="line"><span class="number">21.</span>             P = P./<span class="built_in">repmat</span>(<span class="built_in">sqrt</span>(sum(P.^<span class="number">2</span>,<span class="number">2</span>)),<span class="number">1</span>,obj.Global.M);</span><br><span class="line"><span class="number">22.</span>         <span class="keyword">end</span></span><br><span class="line"><span class="number">23.</span>     <span class="keyword">end</span></span><br><span class="line"><span class="number">24.</span> <span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p>首先，DTLZ2是问题的子类，每个操作都是一个重载方法。在DTLZ2.DTLZ2()构造函数中设置目标个数的值GLOBAL.M，决策变量的数量GLOBAL.D，决策变量的下界GLOBAL.lower，决策变量的上界GLOBAL.upper，和编码GLOBAL.encoding。在DTLZ2.CalObj()中，计算种群的目标值。在DTLZ2.PF()中，真实的帕累托前沿选取一组参考点。</p>
+<p>值得注意的是，决策变量在三种情况下可能是不可行的。首先，对于连续MOPs，它可能大于全局上界（GLOBAL.upper）或小于下界（GLOBAL.lower）。在这种情况下，它将被INDIVIDUAL的类设置为边界值，而MOP类不需要处理这种情况。其次，它可能没有满足约束(一个正的约束违背表明这个约束没有被满足)，在这种情况下，约束违背应该通过重载方法PROBLEM.CalCon()来计算，例如在C1_DTLZ1.m中：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="function"><span class="keyword">function</span> <span class="title">PopCon</span> = <span class="title">CalCon</span><span class="params">(obj,PopDec)</span></span></span><br><span class="line"><span class="number">2.</span>     PopObj = obj.CalObj(PopDec);</span><br><span class="line"><span class="number">3.</span>     PopCon = PopObj(:,<span class="keyword">end</span>)/<span class="number">0.6</span>+sum(PopObj(:,<span class="number">1</span>:<span class="keyword">end</span><span class="number">-1</span>)/<span class="number">0.5</span>,<span class="number">2</span>)<span class="number">-1</span>;</span><br><span class="line"><span class="number">4.</span> <span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p>第三，对于组合MOPs，它可能是一个非法字符，在这种情况下，它应该通过重载方法PROBLEM.CalDec()来修复，例如在MOKP.m中：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="function"><span class="keyword">function</span> <span class="title">PopDec</span> = <span class="title">CalDec</span><span class="params">(obj,PopDec)</span></span></span><br><span class="line"><span class="number">2.</span>     C = sum(obj.W,<span class="number">2</span>)/<span class="number">2</span>;</span><br><span class="line"><span class="number">3.</span>     [~,rank] = <span class="built_in">sort</span>(<span class="built_in">max</span>(obj.P./obj.W));</span><br><span class="line"><span class="number">4.</span>     <span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span> : <span class="built_in">size</span>(PopDec,<span class="number">1</span>)</span><br><span class="line"><span class="number">5.</span>         <span class="keyword">while</span> any(obj.W*PopDec(<span class="built_in">i</span>,:)’&gt;C)</span><br><span class="line"><span class="number">6.</span>             k = <span class="built_in">find</span>(PopDec(<span class="built_in">i</span>,rank),<span class="number">1</span>);</span><br><span class="line"><span class="number">7.</span>             PopDec(<span class="built_in">i</span>,rank(k)) = <span class="number">0</span>;</span><br><span class="line"><span class="number">8.</span>         <span class="keyword">end</span></span><br><span class="line"><span class="number">9.</span>     <span class="keyword">end</span></span><br><span class="line"><span class="number">10.</span> <span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p>与MOEA函数类似，MOP类可以接收用户的参数设置，例如在WFG1.m中，以下命令用于接收参数设置：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> obj.K = obj.Global.ParameterSet(obj.Global.M<span class="number">-1</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="增加性能度量"><a href="#增加性能度量" class="headerlink" title="增加性能度量"></a>增加性能度量</h2><p>性能度量函数由PlatEMO中的.m文件表示，该文件应该放在Metrics文件夹中。例如，IGD.m的源代码是</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="function"><span class="keyword">function</span> <span class="title">score</span> = <span class="title">IGD</span>(<span class="params">PopObj,PF</span>)</span></span><br><span class="line">2. % &lt;metric&gt; &lt;min&gt;</span><br><span class="line"><span class="number">3.</span>     score = mean(min(pdist2(PF,PopObj),[],<span class="number">2</span>);</span><br><span class="line"><span class="number">4.</span> end</span><br></pre></td></tr></table></figure>
+
+<p>首先，性能度量函数有两个输入参数和一个输出参数，其中PopObj表示种群目标值矩阵，PF表示在真实Pareto前沿采样的一组参考点，并且score表示性能度量值。注意，第2行中的注释是GUI标识所必需的，其中第一个标签表示这是一个性能度量函数，第二个标签表示度量值越小性能越好。相反，如果第二个标签是，则表示度量值越大，性能越好。</p>
+
+    </article>
+    <!-- license  -->
+    
+        <div class="license-wrapper">
+            <p>Author：<a href="http://tracywoo.cn">Tracy</a>
+            <p>原文链接：<a href="http://tracywoo.cn/2020/07/10/platEMO-多目标优化工具箱/">http://tracywoo.cn/2020/07/10/platEMO-多目标优化工具箱/</a>
+            <p>发表日期：<a href="http://tracywoo.cn/2020/07/10/platEMO-多目标优化工具箱/">July 10th 2020, 9:14:11 pm</a>
+            <p>更新日期：<a href="http://tracywoo.cn/2020/07/10/platEMO-多目标优化工具箱/">July 11th 2020, 10:31:57 am</a>
+            <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使�?4.0 国际许可协议</a>进行许可</p>
+        </div>
+    
+    <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2020/07/10/VAE-变分自编码器/" title= "VAE_变分自编码器">
+                    <div class="prevTitle">VAE_变分自编码器</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
+    
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="mailto:tracywoo5@163.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/Tracywoou" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+    <div class="busuanzi-container">
+    
+     
+    <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span> :)</span>
+    
+    </div>
+    
+</footer>
+    </div>
+    <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#下载地址"><span class="toc-number">2.</span> <span class="toc-text">下载地址</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件夹结构"><span class="toc-number">3.</span> <span class="toc-text">文件夹结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用方法"><span class="toc-number">4.</span> <span class="toc-text">使用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#命令行使用platEMO"><span class="toc-number">4.1.</span> <span class="toc-text">命令行使用platEMO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用带GUI的platEMO"><span class="toc-number">4.2.</span> <span class="toc-text">使用带GUI的platEMO</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#扩展platEMO"><span class="toc-number">5.</span> <span class="toc-text">扩展platEMO</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#platEMO的结构"><span class="toc-number">5.1.</span> <span class="toc-text">platEMO的结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增加算法"><span class="toc-number">5.2.</span> <span class="toc-text">增加算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增加问题"><span class="toc-number">5.3.</span> <span class="toc-text">增加问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增加性能度量"><span class="toc-number">5.4.</span> <span class="toc-text">增加性能度量</span></a></li></ol></li></ol>
+    </div>
+    
+    <div class="back-top iconfont-archer">&#xe639;</div>
+    <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-panel-archives">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-and-search">
+        <div class="total-archive">
+        Total : 8
+        </div>
+        <!-- search  -->
+        
+    </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2020 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/10</span><a class="archive-post-title" href= "/2020/07/10/platEMO-多目标优化工具箱/" >platEMO_多目标优化工具箱</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/10</span><a class="archive-post-title" href= "/2020/07/10/VAE-变分自编码器/" >VAE_变分自编码器</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/10</span><a class="archive-post-title" href= "/2020/07/10/博客的重新配置/" >博客的重新配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/18</span><a class="archive-post-title" href= "/2020/03/18/NSGA2/" >NSGA2</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/18</span><a class="archive-post-title" href= "/2020/03/18/多目标进化计算/" >多目标进化计算</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/16</span><a class="archive-post-title" href= "/2020/03/16/用Hexo和GitHub创建属于自己的博客吧/" >用Hexo和GitHub创建属于自己的博客吧</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/29</span><a class="archive-post-title" href= "/2019/08/29/排序算法/" >排序算法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2019/08/28/Hello-Hexo/" >Hello,Hexo</a>
+        </li>
+    
+    </div>
+  </div>
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name" data-tags="MOEA"><span class="iconfont-archer">&#xe606;</span>MOEA</span>
+    
+        <span class="sidebar-tag-name" data-tags="others"><span class="iconfont-archer">&#xe606;</span>others</span>
+    
+        <span class="sidebar-tag-name" data-tags="ML"><span class="iconfont-archer">&#xe606;</span>ML</span>
+    
+        <span class="sidebar-tag-name" data-tags="博客"><span class="iconfont-archer">&#xe606;</span>博客</span>
+    
+        <span class="sidebar-tag-name" data-tags="算法"><span class="iconfont-archer">&#xe606;</span>算法</span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #787878; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: true
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var siteMeta = {
+        root: "/",
+        author: "Tracy"
+    }
+</script>
+    <!-- CDN failover -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.$ === 'undefined')
+        {
+            console.warn('jquery load from jsdelivr failed, will load local script')
+            document.write('<script src="/lib/jquery.min.js">\x3C/script>')
+        }
+    </script>
+    <script src="/scripts/main.js"></script>
+    <!-- algolia -->
+    
+    <!-- busuanzi  -->
+    
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    <!-- CNZZ  -->
+    
+    </div>
+    <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
+     
+    </body>
+</html>
+
+
