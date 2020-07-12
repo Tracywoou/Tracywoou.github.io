@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tracywoo.cn/"/>
-  <updated>2020-07-12T00:29:49.282Z</updated>
+  <updated>2020-07-12T01:00:31.565Z</updated>
   <id>http://tracywoo.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MOEA测试函数</title>
+    <link href="http://tracywoo.cn/2020/07/12/MOEA%E6%B5%8B%E8%AF%95%E5%87%BD%E6%95%B0/"/>
+    <id>http://tracywoo.cn/2020/07/12/MOEA%E6%B5%8B%E8%AF%95%E5%87%BD%E6%95%B0/</id>
+    <published>2020-07-12T00:34:57.000Z</published>
+    <updated>2020-07-12T01:00:31.565Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="MOEA测试的基本问题"><a href="#MOEA测试的基本问题" class="headerlink" title="MOEA测试的基本问题"></a>MOEA测试的基本问题</h1><blockquote><p><strong>MOEA测试的具体内容</strong></p><p>多目标优化问题的一个测试函数或者一组测试函数，或一个实际应用问题可以构成对MOEA的测试。</p></blockquote><blockquote><p><strong>如何找到合适的MOEA测试函数</strong></p><p>从已知的MOEA文献或者他人提出和总结的构造测试函数的方法，或者为人熟知的实际问题中找到一个合适的MOEA测试。</p></blockquote><blockquote><p><strong>何时对MOEA进行测试</strong></p><p>在MOEA设计与实现的过程不断地对它进行测试，也可以在一个MOEA完全实现后再对它进行测试</p></blockquote><h1 id="选择MOP时需要考虑的特征"><a href="#选择MOP时需要考虑的特征" class="headerlink" title="选择MOP时需要考虑的特征"></a>选择MOP时需要考虑的特征</h1><ol><li>连续的或非连续的或离散的；</li><li>可导的或不可导的；</li><li>凸的或凹的；</li><li>函数的形态（单峰的，多峰的）；</li><li>数值函数或包含字母与数字的函数；</li><li>二次方的或非二次方的；</li><li>约束条件的类型（等式、不等式、线性的、非线性的）；</li><li>低维的或高维的（基因型、表现型）；</li><li>欺骗问题或非欺骗问题；</li><li>相对真实PF时候有偏好。</li></ol><h1 id="常见的测试函数集"><a href="#常见的测试函数集" class="headerlink" title="常见的测试函数集"></a>常见的测试函数集</h1><h2 id="ZDT"><a href="#ZDT" class="headerlink" title="ZDT"></a>ZDT</h2><p><img src="//tracywoo.cn/2020/07/12/MOEA测试函数/ZDT.png" alt="ZDT"></p><p>其他的测试函数还有DTLZ和WGF系列。（填坑）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;MOEA测试的基本问题&quot;&gt;&lt;a href=&quot;#MOEA测试的基本问题&quot; class=&quot;headerlink&quot; title=&quot;MOEA测试的基本问题&quot;&gt;&lt;/a&gt;MOEA测试的基本问题&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;MOEA测试的具体内容&lt;/
+      
+    
+    </summary>
+    
+    
+      <category term="MOEA" scheme="http://tracywoo.cn/categories/MOEA/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Archer主题扩展使用</title>

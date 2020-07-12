@@ -78,8 +78,6 @@
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
     
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -204,8 +202,10 @@
 </head>
 
     
+        <body class="home-body">
     
-<header class="header">
+    
+<header class="header index-header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
@@ -221,21 +221,34 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 文章页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            Tracy's Studio.
+            <!-- 文章页  -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
+            
+            
+                it's better to burn out than to fade away
+            
+            <!-- 文章页  -->
             
         </p>
         <!-- 文章页meta -->
@@ -347,324 +360,120 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/12/MOEA测试函数/" >
+        <a class="abstract-title" href = "/2019/08/28/Hello-Hexo/" >
             
-                <span>MOEA测试函数</span>
+                <span>Hello,Hexo</span>
         </a>
         <div class="abstract-content">
-            MOEA测试的基本问题
-MOEA测试的具体内容
-多目标优化问题的一个测试函数或者一组测试函数，或一个实际应用问题可以构成对MOEA的测试。
-
-
-如何找到合适的MOEA测试函数
-从已知的MOEA文献或者他人提出和总结的构造测试函数的方法，或者为人熟知的实际问题中找到一个合适的MOEA测试。
-
-
-何时对MOEA进行测试
-在MOEA设计与实现的过程不断地对它进行测试，也可以在一个MOEA完全实现后再对它进行测试
-
-选择MOP时需要考虑的特征
-连续的或非连续的或离散的；
-可导的或不可导的；
-凸的或凹的；
-函数的形态（单峰的，多峰的）；
-数值函数或包含字母与数字的函数；
-二次方的或非二次方的；
-约...
+            ##2019/08/28
+1printf("hello,world!\n");
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/12</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/12/Archer主题扩展使用/" >
-            
-                <span>Archer主题扩展使用</span>
-        </a>
-        <div class="abstract-content">
-            自定义文章页头图通过配置每篇文章(即.md文件)的头部的header_image字段来修改，如果不填写将采用主题配置中的post_header_image字段，如果post_header_image字段未填写则采用site_header_image字段。
-123456789---title: Tagsdate: 2013-12-24 23:29:53tags:- Foo- Bar- Bazheader_image: /intro/post-bg.jpg---
-
-将 Unsplash 随机图片作为头图API 参数页面：https://source.unsplash.com/
-在 arche...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/12</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/11/多目标优化算法评价指标/" >
-            
-                <span>多目标优化算法评价指标</span>
-        </a>
-        <div class="abstract-content">
-            对于MOEA的评价主要考虑两个指标：MOEA的效果（它所求得的Pareto最优解集的质量，主要是MOEA的收敛效果和分布效果）和MOEA的效率（CPU时间以及占用的空间资源）。在对于算法进行评价时，通常使用benchmark test problem(有已知解的问题)作为测试用例。
-实验过程通常可以采用实验的方法对于MOEA的性能进行测试和分析。一个好的实验过程包含下列步骤：
-① 确定实验的目的；
-
-针对相同的测试问题对不同的MOEA进行比较实验；
-针对某个MOEA关于它的性能特征进行实验。
-
-所采用的MOEA应具有代表性，如NSGAⅡ、SPEA2、MOEA/D等。
-② 选取合适的MOE...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/11</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/28</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "others">others</a>
     
 </div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/10/platEMO-多目标优化工具箱/" >
-            
-                <span>platEMO_多目标优化工具箱</span>
-        </a>
-        <div class="abstract-content">
-            简介platEMO是Ye Tian等学者写的一款基于MATLAB的多目标优化工具。
-这款工具主要具有以下的几个特点：1.完全由MATLAB开发，不需要任何其它库。2.用户可以显示各种图形，包括结果的pareto front，真实的pareto front等等。3.强大友好的GUI，可以不用编辑任何代码，直接调用主函数main.m即可。4.可以直接生成Excel或者LaTex。
-下载地址github
-该平台使用的详细信息可以在platEMO中的manual.pdf中读取。
-实验室主页 
-下载后，将matlab运行目录设置为该文件夹即可。
-文件夹结构
-Algorithm：
-包括现有的90个流...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/10/VAE-变分自编码器/" >
-            
-                <span>VAE_变分自编码器</span>
-        </a>
-        <div class="abstract-content">
-            简介VAE(Variational Auto-Encoder，VAE)是一种生成网络。
-假如我们有一个带有解卷积层的网络，我们设置输入为值全为1的向量，输出为一张图像。然后，我们可以训练这个网络去减小重构图像和原始图像的平均平方误差。那么训练完后，这个图像的信息就被保留在了网络的参数中。
-
-这次我们用one-hot向量而不是全1向量。我们用[1, 0, 0, 0]代表猫，用[0, 1, 0, 0]代表狗。虽然这要没什么问题，但是我们最多只能储存4张图片。当然，我们也可以增加向量的长度和网络的参数，那么我们可以获得更多的图片。
-但是，这样的向量很稀疏。为了解决这个问题，我们想使用实数值向量...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "ML">ML</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/10/博客的重新配置/" >
-            
-                <span>博客的重新配置</span>
-        </a>
-        <div class="abstract-content">
-            前言换了电脑以后一直没有鼓起勇气重新安装各种软件（怕麻烦本人哈哈哈），阿里云的email提醒我域名该续费了，续完费发现自己又把之前的操作什么的忘得一干二净=-=，于是又开始配置。痛定思痛，以后要好好写博客记录自己的所学所想哈哈哈哈，奥里给，冲鸭！
-问题如何将之前的博客部署到新的电脑上？我是把之前的与博客的相关文件直接复制到新电脑上，重新安装了Git和Node.js，但是此时进入blog文件夹进行hexo部署时一直报错：
-Please make sure you have the correct access rights and the repository exist
-The auth...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "hexo">hexo</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "git">git</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "node">node</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "markdown">markdown</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/18/NSGA2/" >
-            
-                <span>NSGA2</span>
-        </a>
-        <div class="abstract-content">
-            NSGA2(Non-dominated sorting in genetic algorithm2)
-相比较NSGA从以下三个部分进行了改善：保留了最优个体；不用设置共享参数；构造Pareto最优解集的时间复杂度有所降低。
-算法的时间开销由三部分组成：
-构造分类子集(Non-dominated sort) O(r(2N)^2)
-计算聚集距离
-构造偏序集：个体之间的偏序 
-非支配集的构造方法为每一个个体p设置两个性质：np记录p支配个体的数目，sp记录被p支配的个体的集合。
-
-通过一个二重循环计算每个个体的np和sp，则
-
-
-构造非支配集的过程
-1234567891011121314151...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/18/多目标进化计算/" >
-            
-                <span>多目标进化计算</span>
-        </a>
-        <div class="abstract-content">
-            Pareto改善给定固有的一群人和可分配的资源，从一种分配的状态到另一种状态的变化中，在没有人变坏的情况下，使得至少一个人变得更好。
-也就是说资源分配的理想状态是不可能再有更多的Pareto改善的状态。
-Pareto解在有多个目标时，由于存在目标之间的冲突无法进行比较的情况，一个解在某个目标上是最好的，在其他目标上可能是最差的，一组目标函数最优解的集合是Pareto最优集，形成的曲面为Pareto前沿面。
-进化计算达尔文在进化论中提出了这样一个概念——物竞天择，适者生存。
-进化计算是基于群体的启发式搜索优化问题。
-遗传算法约翰·霍兰德提出了遗传算法，是进化算法的一种。
-Step1:   ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/16/用Hexo和GitHub创建属于自己的博客吧/" >
-            
-                <span>用Hexo和GitHub创建属于自己的博客吧</span>
-        </a>
-        <div class="abstract-content">
-            由于很久没有使用自己的博客，已经忘记了当初的搭建过程和hexo的指令，用这篇博客来温习一下自己搭建博客的过程和遇到的问题。  
-在写博客的文件右击鼠标-&gt;git bash here，使用hexo指令的时候出现了指令不存在的情况。可以通过以下三个步骤进行排查：  
-node -v
-npm -v
-检查本机的环境变量中的系统变量中的path是否包含了与_config.yml在同一个目录的node_modeles文件夹中的.bin文件夹。
-我的电脑里的文件目录是：D:\blog\node_modules\.bin
-好了，下面说一下安装过程：
-安装git下载git，https://git-s...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/16</span>
-            </div>
-            <!-- tags  -->
             
         </div>
     </article>
     
     <!-- paginator  -->
     
+    <nav class="page-nav">
+        <a class="extend prev" rel="prev" href="/">&#60; PREV</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+    
 </main>
             <!-- profile -->
+            
+            <div class="profile">
+    <img class="profile-avatar" alt="avatar" src= /avatar/Tracyw.jpg >
+    <div class="profile-name">Tracy</div>
+    
+    <div class="profile-signature">
+        Sigo sí o sí
+    </div>
+    
+    
+    <div class="profile-social">
+        
+    
+        
+            
+                <a href="mailto:tracywoo5@163.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/Tracywoou" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    
+        <div class="friends">
+            <div>FRIENDS</div>
+            
+                
+            
+                
+            
+                
+            
+        </div>
+    
+    
+        <div class="about-me">
+            <a href = "/about" >ABOUT ME</a>
+        </div>
+    
+</div>
             
         </div>
         <footer class="footer footer-unloaded">
