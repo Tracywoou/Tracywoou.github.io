@@ -360,6 +360,46 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/12/GAN-生成对抗网络/" >
+            
+                <span>GAN_生成对抗网络</span>
+        </a>
+        <div class="abstract-content">
+            GAN的基本思想图像生成：向量-&gt;图像。
+条件生成：控制输出图像的类型。
+Generator： 向量-&gt;生成器-&gt;图像
+Discriminator：图像-&gt;判别器-&gt;分数
+在GAN的训练过程中，通过生成器和判别器的拮抗作用进行物竞天择。
+
+
+可以把生成器比做成学生，判别器作为老师，学生给老师交作业，通过老师的修改和反馈不断修改自己的作业，直到交出一份完美的答卷。
+算法：
+
+
+在每次迭代中，从数据库中采样一些样本。
+s1: 固定生成器G，更新判别器D；
+s2: 固定判别器D，更新生成器G。
+生成器需要学着去愚弄判别器。
+
+
+可以把GAN看成结构学习算法，结构学...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/12</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/07/12/MOEA测试函数/" >
             
                 <span>MOEA测试函数</span>
@@ -674,39 +714,6 @@ npm -v
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/08/29/排序算法/" >
-            
-                <span>排序算法</span>
-        </a>
-        <div class="abstract-content">
-            排序算法排序算法的稳定性：两个相等的数据前后顺序不发生改变。
-冒泡排序每次排序能够确定最后一个元素的位置（将最大的元素移到最后一个位置）算法思想 
-
-代码
-123456789101112131415void Bubble_sort(int *A, int n) &#123;	int flag = 0;	for (int i = n - 1; i &gt;= 0; i--) &#123;		for (int j = 0; j &lt; i; j++) &#123;			if (A[j] &gt; A[j + 1]) &#123;				int temp = A[j];				A[j] = ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/29</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "算法">算法</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
@@ -996,9 +1003,20 @@ npm -v
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 11
+        Total : 12
         </div>
         <!-- search  -->
         
@@ -1014,12 +1032,17 @@ npm -v
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/MOEA测试函数/" >MOEA测试函数</a>
+            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/GAN-生成对抗网络/" >GAN_生成对抗网络</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/Archer主题扩展使用/" >Archer主题扩展使用</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/MOEA测试函数/" >MOEA测试函数</a>
         </li>
     
     
@@ -1081,9 +1104,9 @@ npm -v
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="MOEA"><span class="iconfont-archer">&#xe606;</span>MOEA</span>
-    
         <span class="sidebar-tag-name" data-tags="others"><span class="iconfont-archer">&#xe606;</span>others</span>
+    
+        <span class="sidebar-tag-name" data-tags="MOEA"><span class="iconfont-archer">&#xe606;</span>MOEA</span>
     
         <span class="sidebar-tag-name" data-tags="ML"><span class="iconfont-archer">&#xe606;</span>ML</span>
     
@@ -1130,9 +1153,11 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="MOEA"><span class="iconfont-archer">&#xe60a;</span>MOEA</span>
+        <span class="sidebar-category-name" data-categories="ML"><span class="iconfont-archer">&#xe60a;</span>ML</span>
     
         <span class="sidebar-category-name" data-categories="博客"><span class="iconfont-archer">&#xe60a;</span>博客</span>
+    
+        <span class="sidebar-category-name" data-categories="MOEA"><span class="iconfont-archer">&#xe60a;</span>MOEA</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>

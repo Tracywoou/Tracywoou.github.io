@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tracywoo.cn/"/>
-  <updated>2020-07-12T01:00:31.565Z</updated>
+  <updated>2020-07-12T01:27:39.331Z</updated>
   <id>http://tracywoo.cn/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GAN_生成对抗网络</title>
+    <link href="http://tracywoo.cn/2020/07/12/GAN-%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/"/>
+    <id>http://tracywoo.cn/2020/07/12/GAN-%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/</id>
+    <published>2020-07-12T01:09:07.000Z</published>
+    <updated>2020-07-12T01:27:39.331Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="GAN的基本思想"><a href="#GAN的基本思想" class="headerlink" title="GAN的基本思想"></a>GAN的基本思想</h1><p>图像生成：向量-&gt;图像。</p><p>条件生成：控制输出图像的类型。</p><p><strong>Generator：</strong> 向量-&gt;生成器-&gt;图像</p><p><strong>Discriminator：</strong>图像-&gt;判别器-&gt;分数</p><p>在GAN的训练过程中，通过生成器和判别器的拮抗作用进行物竞天择。</p><img src="//tracywoo.cn/2020/07/12/GAN-生成对抗网络/basic.png" alt="bi" style="zoom:67%;"><p>可以把生成器比做成学生，判别器作为老师，学生给老师交作业，通过老师的修改和反馈不断修改自己的作业，直到交出一份完美的答卷。</p><p>算法：</p><img src="//tracywoo.cn/2020/07/12/GAN-生成对抗网络/blog\source\_posts\GAN-生成对抗网络\al2.png" alt="al" style="zoom:67%;"><p>在每次迭代中，从数据库中采样一些样本。</p><p>s1: 固定生成器G，更新判别器D；</p><p>s2: 固定判别器D，更新生成器G。</p><p>生成器需要学着去愚弄判别器。</p><img src="//tracywoo.cn/2020/07/12/GAN-生成对抗网络/blog\source\_posts\GAN-生成对抗网络\AL3.png" alt="AL" style="zoom:67%;"><p>可以把GAN看成结构学习算法，结构学习中的数据往往不是一个简单的数值，如在机器翻译中得到的结果是一段话，在图像生成中得到的结果是一张图像。往往得到的结果都是未出现过的。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;GAN的基本思想&quot;&gt;&lt;a href=&quot;#GAN的基本思想&quot; class=&quot;headerlink&quot; title=&quot;GAN的基本思想&quot;&gt;&lt;/a&gt;GAN的基本思想&lt;/h1&gt;&lt;p&gt;图像生成：向量-&amp;gt;图像。&lt;/p&gt;
+&lt;p&gt;条件生成：控制输出图像的类型。&lt;/p&gt;
+&lt;p&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="ML" scheme="http://tracywoo.cn/categories/ML/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>MOEA测试函数</title>
