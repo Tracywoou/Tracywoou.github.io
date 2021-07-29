@@ -273,7 +273,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">928</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">236</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -445,16 +445,9 @@ height:50vh;
 </table>
 </div>
 <p>此时行数是确定的，即<script type="math/tex">2^8</script>行，这是一个枚举的方法，但是要求我们的数据集需要有足够大的规模，那么才能把每一种可能情况的概率计算出来。</p>
-<script type="math/tex; mode=display">X$$和$$Y$$可能存在的关系有相关、独立、依赖、因果。
-
-“Many of them can be measured by **one number summary**”
-
-## 变量关系的度量方法
-
-#### 皮尔森相关(Pearson's correlation)
-
-皮尔森相关系数：
-
+<p><script type="math/tex">X</script>和<script type="math/tex">Y</script>可能存在的关系有相关、独立、依赖、因果。</p>
+<p>“Many of them can be measured by <strong>one number summary</strong>”</p>
+<h2 id="变量关系的度量方法"><a href="#变量关系的度量方法" class="headerlink" title="变量关系的度量方法"></a>变量关系的度量方法</h2><h4 id="皮尔森相关-Pearson’s-correlation"><a href="#皮尔森相关-Pearson’s-correlation" class="headerlink" title="皮尔森相关(Pearson’s correlation)"></a>皮尔森相关(Pearson’s correlation)</h4><p>皮尔森相关系数：</p>
 
 $$
 \begin{array}{l}
@@ -464,88 +457,12 @@ $$
 \end{array}
 $$
 
-
-变量之间的线性相关，从$$X$$到$$Y$$的线性回归：
-
+<p>变量之间的线性相关，从<script type="math/tex">X</script>到<script type="math/tex">Y</script>的线性回归：</p>
 
 $$
 \beta  = \frac{{Cov(X,Y)}}{{Var(X)}}
 $$
 
-
-属性：
-
-相关系数的大小直接决定了线性相关性的高低；但是只能刻画线性相关关系；不能断定因果关系。
-
-$$X,Y$$独立，则$$\rho (X,Y) = 0$$，而$$\rho (X,Y) = 0$$不能推出$$X,Y$$独立。
-
-反例：$$y=x^2,x \in [-1,1]$$，该函数是非线性的。
-
-
-
-#### 互信息(Mutual information)
-
-计算两个分布之间的距离，可以用**KL散度**(Kullback-Leibler divergence)
-
-（讨论：reverse KL）
-
-
-$$
-\begin{array}{l}
-KL(P,Q) = \int\limits_{x \in X} {P(x)\log \frac{{P(x)}}{{Q(x)}}dx}
-\end{array}
-$$
-
-
-**互信息**：
-
-计算两种特殊情况的差异。</script><p>I(X,Y) = KL({P_{XY}},{P_X}{P_Y})</p>
-<script type="math/tex; mode=display">
-当且仅当$$I(X,Y)=0$$时，$$X$$和$$Y$$相互独立。
-
-
-
-#### 希尔伯特-施密特独立性准则
-
-#### (Hilbert-Schmidt Independence Criterion, HSIC)
-
-主要目的是衡量**两个变量的分布差异**，这一点类似于协方差（方差），而对于其本身也是依赖于协方差而构建。</script><p>HSIC(X,Y) = MMD({P_{XY}},{P_X}{P_Y})\\<br>MMD(P,Q) = \parallel {\mu _k}(P) - {\mu _k}(Q){\parallel _}\\<br>{\mu _k}(P) = {E_{Z-P}}[\phi (Z)]</p>
-<script type="math/tex; mode=display">
-
-
-$$P$$的kernal embedding
-
-$$\phi (Z)$$ 核$$k$$的特征图
-
-当且仅当$$HSIC(X,Y)=0$$时，$$X$$和$$Y$$相互独立。
-
-
-
-#### 偏相关(Partial correlation)
-
-举例：构造一个图模型
-
-$$X=$$孩子的身高
-
-$$Y=$$孩子的词汇量
-
-$$Z=$$孩子的年龄
-
-我们会发现我们会在变量之间两两构造联系，但是按照我们的经验构造的图将会是孩子的年龄决定身高和词汇量，这才是可解释的。以上介绍的方法都只能得到前者而不能得到后者，是因为他们只考虑了一对变量之间的联合概率分布。
-
-偏相关就是计算给定随机向量$$Z$$时$$X$$和$$Y$$之间的偏相关。</script><p>\begin{array}{l}<br>\rho (X,Y|Z) = \frac{ {Cov({e_X},{e_Y})} }{ {\sqrt {Var({e_X})} \sqrt {Var({e_Y})} } }\\<br>{e_X} = X - (\beta _X^TZ + {\rm{int}}ercep{t_X})\\<br>{e_Y} = X - (\beta _Y^TZ + {\rm{int}}ercep{t_Y})<br>\end{array}</p>
-<p>$$<br>实质是一个给定条件的皮尔森相关系数。</p>
-<p>如果假设每个维度变量都是高斯分布的，可以简化计算。</p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p><img src="//tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/blog\source\_posts\概率图模型CMU-Lecture1-概率图模型简介\image-20210126162056714.png" alt="image-20210126162056714"></p>
-<h2 id="Preview"><a href="#Preview" class="headerlink" title="Preview"></a>Preview</h2><h4 id="Lecture-2-条件独立图"><a href="#Lecture-2-条件独立图" class="headerlink" title="Lecture 2 条件独立图"></a>Lecture 2 条件独立图</h4><p>别名：条件独立图，马尔可夫网，马尔可夫随机场，无向图。</p>
-<p>应用：模拟围棋。</p>
-<h4 id="Lecture-3-有向图模型"><a href="#Lecture-3-有向图模型" class="headerlink" title="Lecture 3 有向图模型"></a>Lecture 3 有向图模型</h4><p>别名：有向图、有向无环图、贝叶斯网络、</p>
-<p>Structural equation models、Structural casual models</p>
-<p>应用：家族的族谱。</p>
-<h4 id="Lecture-4-13-推理学习"><a href="#Lecture-4-13-推理学习" class="headerlink" title="Lecture 4-13 推理学习"></a>Lecture 4-13 推理学习</h4><p>推理：边缘/条件分布、采样</p>
-<p>学习：统计参数估计、模型选择</p>
-<h4 id="Lecture-5-end-现有的图模型"><a href="#Lecture-5-end-现有的图模型" class="headerlink" title="Lecture 5-end 现有的图模型"></a>Lecture 5-end 现有的图模型</h4><p>DL和图模型的关系、深度生成模型、强化学习做概率推理、无参数贝叶斯网络、大规模算法和系统</p>
-<h2 id="图模型是什么"><a href="#图模型是什么" class="headerlink" title="图模型是什么"></a>图模型是什么</h2><p>一种用于交流(domain knowledge)、计算和发展的语言。</p>
 
     </article>
     <!-- license  -->
@@ -554,7 +471,7 @@ $$Z=$$孩子的年龄
             <p>原文作者：<a href="http://tracywoo.cn">Tracy</a>
             <p>原文链接：<a href="http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/">http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/</a>
             <p>发表日期：<a href="http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/">July 29th 2021, 10:06:25 am</a>
-            <p>更新日期：<a href="http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/">July 29th 2021, 11:25:38 am</a>
+            <p>更新日期：<a href="http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/">July 29th 2021, 11:27:03 am</a>
             <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用4.0国际许可协议</a>进行许可</p>
         </div>
     
@@ -679,7 +596,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#PGM-lecture1-简介"><span class="toc-number">1.</span> <span class="toc-text">PGM lecture1 简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#统计基础"><span class="toc-number">1.1.</span> <span class="toc-text">统计基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#总结"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Preview"><span class="toc-number">1.2.</span> <span class="toc-text">Preview</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Lecture-2-条件独立图"><span class="toc-number">1.2.0.1.</span> <span class="toc-text">Lecture 2 条件独立图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Lecture-3-有向图模型"><span class="toc-number">1.2.0.2.</span> <span class="toc-text">Lecture 3 有向图模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Lecture-4-13-推理学习"><span class="toc-number">1.2.0.3.</span> <span class="toc-text">Lecture 4-13 推理学习</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Lecture-5-end-现有的图模型"><span class="toc-number">1.2.0.4.</span> <span class="toc-text">Lecture 5-end 现有的图模型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图模型是什么"><span class="toc-number">1.3.</span> <span class="toc-text">图模型是什么</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#PGM-lecture1-简介"><span class="toc-number">1.</span> <span class="toc-text">PGM lecture1 简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#统计基础"><span class="toc-number">1.1.</span> <span class="toc-text">统计基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量关系的度量方法"><span class="toc-number">1.2.</span> <span class="toc-text">变量关系的度量方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#皮尔森相关-Pearson’s-correlation"><span class="toc-number">1.2.0.1.</span> <span class="toc-text">皮尔森相关(Pearson’s correlation)</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
