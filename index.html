@@ -462,163 +462,6 @@ Word2VecSkip-g...
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2021/02/25/启发式算法/" >
-            
-                <span>[Untitled Post]</span>
-        </a>
-        <div class="abstract-content">
-            启发式算法cost function：即在算法中的优化目标
-值域：可行域搜索的范围。
-随机搜索算法最简单的优化算法，只适用于cost function在值域范围内没有任何变化规律的情况，找不到使得cost function下降的梯度和极小值点。步骤是在值域范围内生成足够多的可行解，分别计算每个可行解的代价，根据代价选择一个最小的可行解作为随机搜索的最优解。
-
-爬山法知乎上的回答：
-假想将解空间依照深度搜索序列的顺序为y轴，以解的权为x轴作图。
-
-
-我们可以认为得到一系列山峰与峡谷的剖面图。爬山算法就是在这个图上进行爬山，找到第一个山峰或者第一个符合要求高度的山峰就停止。具体来说，就是算法...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/25</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2021/02/25/latex/" >
-            
-                <span>[Untitled Post]</span>
-        </a>
-        <div class="abstract-content">
-            入门英文格式在cmd命令行下进行tex文件的创建和编译。
-mkdir: 创建目录
-notepad test.tex 新建tex文件
-\document{article}论文格式的文档类
-{}表示命令的参数
-这里给一个案例
-1234567\documentclass&#123;article&#125;\begin&#123;document&#125;Hello \LaTeX.\end&#123;document&#125;
-
-编译时可以新建一个.bat文件
-123latex test.texdvipdfmx test.dvidel *.aux *.dvi *.log
-
-最后的pdf结果...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/25</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2021/02/25/EDA分布估计算法/" >
-            
-                <span>[Untitled Post]</span>
-        </a>
-        <div class="abstract-content">
-            EDA分布估计算法解决问题的基本步骤
-生成候选解；
-评估生成解；
-依据评估更新生成的候选解。
-
-EDA的主要类型基于种群的EDA根据所有可行解的均匀分布随机生成一个种群。每次迭代首先使用选择算子创建一个有希望的候选解的总体，这将优先选择高质量的解。任何流行的进化算法选择方法都可以使用，如截断或锦标赛选择。可以使用截断选择法，它选择总体中最上面的τ%成员。然后为选定的解建立一个概率模型。通过对构建模型编码的分布进行采样，可以创建新的解决方案。然后使用替换算子将新解合并到原始总体中。例如，在完全替换的情况下，候选解的整个原始总体将被新解替换。图1显示了基于总体的EDA的伪代码。
-123456...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/25</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2021/02/25/-TSP问题/" >
-            
-                <span>[Untitled Post]</span>
-        </a>
-        <div class="abstract-content">
-            解决TSP问题
-TSP问题Traveling Salesman Problem - 旅行商问题，也被称为货郎担问题。假设有一个商人需要拜访n个城市，他必须选择要走的路径，路径的限制是每个城市只能拜访一次，并且最后需要回到出发的城市，路径的选择目标是要求找到所有路径的最小值。
-问题解决把解决问题的形式看成一个函数，则需要找到最值点，而下面介绍的算法都带有一定的随机性，达不到全局最优解的原因是他们陷入局部最优解的凹槽中无法解脱出来。由于解决TSP问题，因此需要找到谷底，即不断地下山。
-贪心法只着眼于眼前，目光短浅的选取下山方向。
-121. 随机构造初始解x02.
-
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/25</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2021/02/25/DE(差分演化算法)/" >
-            
-                <span>[Untitled Post]</span>
-        </a>
-        <div class="abstract-content">
-            算法族。
-DE(差分演化算法)用于求解实数优化问题，求解得到最小值的点。许多问题是不可微分的、不连续的、非线性的，使用经典算法难以得到好的解。因此需要使用启发式的方法来进行问题的求解。DE 可以用来求一个近似最优解。
-基本框架step1:初始化群体，不同搜索空间会有上界和下界，在范围内随机初始化。
-step2: 当未满足迭代停止条件（一般是最大迭代次数）时不断：
-① 变异：随机选择三个不同个体（作为父亲），对三个父代进行加权的差分。
-
-F的取值在0-2之间。
-物理意义：
-
-② 重组：父亲和母亲互相交换一部分信息。
-
-v是变异以后得到的个体，CR是设置的阈值。随机产生随机数r，若r&gt;...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/25</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
         <a class="abstract-title" href = "/2020/07/13/Git-Githubub-eeerinzhang-bilibili/" >
             
                 <span>Git&amp;Githubub_eeerinzhang bilibili</span>
@@ -643,10 +486,189 @@ Initialize  a git repository, g...
         </div>
     </article>
     
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/12/GAN-生成对抗网络/" >
+            
+                <span>GAN_生成对抗网络</span>
+        </a>
+        <div class="abstract-content">
+            GAN的基本思想图像生成：向量-&gt;图像。
+条件生成：控制输出图像的类型。
+Generator： 向量-&gt;生成器-&gt;图像
+Discriminator：图像-&gt;判别器-&gt;分数
+在GAN的训练过程中，通过生成器和判别器的拮抗作用进行物竞天择。
+
+
+可以把生成器比做成学生，判别器作为老师，学生给老师交作业，通过老师的修改和反馈不断修改自己的作业，直到交出一份完美的答卷。
+算法：
+
+
+在每次迭代中，从数据库中采样一些样本。
+s1: 固定生成器G，更新判别器D；
+s2: 固定判别器D，更新生成器G。
+生成器需要学着去愚弄判别器。
+
+
+可以把GAN看成结构学习算法，结构学...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/12</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/12/MOEA测试函数/" >
+            
+                <span>MOEA测试函数</span>
+        </a>
+        <div class="abstract-content">
+            MOEA测试的基本问题
+MOEA测试的具体内容
+多目标优化问题的一个测试函数或者一组测试函数，或一个实际应用问题可以构成对MOEA的测试。
+
+
+如何找到合适的MOEA测试函数
+从已知的MOEA文献或者他人提出和总结的构造测试函数的方法，或者为人熟知的实际问题中找到一个合适的MOEA测试。
+
+
+何时对MOEA进行测试
+在MOEA设计与实现的过程不断地对它进行测试，也可以在一个MOEA完全实现后再对它进行测试
+
+选择MOP时需要考虑的特征
+连续的或非连续的或离散的；
+可导的或不可导的；
+凸的或凹的；
+函数的形态（单峰的，多峰的）；
+数值函数或包含字母与数字的函数；
+二次方的或非二次方的；
+约...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/12</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/12/Archer主题扩展使用/" >
+            
+                <span>Archer主题扩展使用</span>
+        </a>
+        <div class="abstract-content">
+            自定义文章页头图通过配置每篇文章(即.md文件)的头部的header_image字段来修改，如果不填写将采用主题配置中的post_header_image字段，如果post_header_image字段未填写则采用site_header_image字段。
+123456789---title: Tagsdate: 2013-12-24 23:29:53tags:- Foo- Bar- Bazheader_image: /intro/post-bg.jpg---
+
+将 Unsplash 随机图片作为头图API 参数页面：https://source.unsplash.com/
+在 arche...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/12</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/10/platEMO-多目标优化工具箱/" >
+            
+                <span>platEMO_多目标优化工具箱</span>
+        </a>
+        <div class="abstract-content">
+            简介platEMO是Ye Tian等学者写的一款基于MATLAB的多目标优化工具。
+这款工具主要具有以下的几个特点：1.完全由MATLAB开发，不需要任何其它库。2.用户可以显示各种图形，包括结果的pareto front，真实的pareto front等等。3.强大友好的GUI，可以不用编辑任何代码，直接调用主函数main.m即可。4.可以直接生成Excel或者LaTex。
+下载地址github
+该平台使用的详细信息可以在platEMO中的manual.pdf中读取。
+实验室主页 
+下载后，将matlab运行目录设置为该文件夹即可。
+文件夹结构
+Algorithm：
+包括现有的90个流...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/10/VAE-变分自编码器/" >
+            
+                <span>VAE_变分自编码器</span>
+        </a>
+        <div class="abstract-content">
+            简介VAE(Variational Auto-Encoder，VAE)是一种生成网络。
+假如我们有一个带有解卷积层的网络，我们设置输入为值全为1的向量，输出为一张图像。然后，我们可以训练这个网络去减小重构图像和原始图像的平均平方误差。那么训练完后，这个图像的信息就被保留在了网络的参数中。
+
+这次我们用one-hot向量而不是全1向量。我们用[1, 0, 0, 0]代表猫，用[0, 1, 0, 0]代表狗。虽然这要没什么问题，但是我们最多只能储存4张图片。当然，我们也可以增加向量的长度和网络的参数，那么我们可以获得更多的图片。
+但是，这样的向量很稀疏。为了解决这个问题，我们想使用实数值向量...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "ML">ML</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">NEXT &#62;</a>
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">NEXT &#62;</a>
     </nav>
     
 </main>
@@ -999,105 +1021,9 @@ Initialize  a git repository, g...
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 24
+        Total : 16
         </div>
         <!-- search  -->
         
@@ -1107,34 +1033,6 @@ Initialize  a git repository, g...
     
     
     
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2021/02/25/-TSP问题/" >[Untitled Post]</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2021/02/25/DE(差分演化算法)/" >[Untitled Post]</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
@@ -1160,16 +1058,6 @@ Initialize  a git repository, g...
         </li>
     
     
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/25</span><a class="archive-post-title" href= "/2021/02/25/启发式算法/" >[Untitled Post]</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/25</span><a class="archive-post-title" href= "/2021/02/25/latex/" >[Untitled Post]</a>
-        </li>
-    
-    
     
     
     
@@ -1185,12 +1073,17 @@ Initialize  a git repository, g...
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/GAN-生成对抗网络/" >GAN_生成对抗网络</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/Archer主题扩展使用/" >Archer主题扩展使用</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/11</span><a class="archive-post-title" href= "/2020/07/11/多目标优化算法评价指标/" >多目标优化算法评价指标</a>
+            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/MOEA测试函数/" >MOEA测试函数</a>
         </li>
     
     
@@ -1210,64 +1103,7 @@ Initialize  a git repository, g...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/21</span><a class="archive-post-title" href= "/2020/03/21/ROC和AUC/" >ROC和AUC</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">03/18</span><a class="archive-post-title" href= "/2020/03/18/NSGA2/" >NSGA2</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2019 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2019/08/28/Hello-Hexo/" >Hello,Hexo</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2021/02/25/EDA分布估计算法/" >[Untitled Post]</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2020 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/GAN-生成对抗网络/" >GAN_生成对抗网络</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/MOEA测试函数/" >MOEA测试函数</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/21</span><a class="archive-post-title" href= "/2020/03/21/基于AUC最大化的同时进行异常值检测和特征选择的PU分类/" >基于AUC最大化的同时进行异常值检测和特征选择的PU分类</a>
         </li>
     
     
@@ -1292,6 +1128,11 @@ Initialize  a git repository, g...
     
         <li class="archive-post-item">
             <span class="archive-post-date">08/29</span><a class="archive-post-title" href= "/2019/08/29/排序算法/" >排序算法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2019/08/28/Hello-Hexo/" >Hello,Hexo</a>
         </li>
     
     </div>

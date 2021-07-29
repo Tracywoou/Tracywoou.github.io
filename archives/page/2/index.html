@@ -347,222 +347,6 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/12/GAN-生成对抗网络/" >
-            
-                <span>GAN_生成对抗网络</span>
-        </a>
-        <div class="abstract-content">
-            GAN的基本思想图像生成：向量-&gt;图像。
-条件生成：控制输出图像的类型。
-Generator： 向量-&gt;生成器-&gt;图像
-Discriminator：图像-&gt;判别器-&gt;分数
-在GAN的训练过程中，通过生成器和判别器的拮抗作用进行物竞天择。
-
-
-可以把生成器比做成学生，判别器作为老师，学生给老师交作业，通过老师的修改和反馈不断修改自己的作业，直到交出一份完美的答卷。
-算法：
-
-
-在每次迭代中，从数据库中采样一些样本。
-s1: 固定生成器G，更新判别器D；
-s2: 固定判别器D，更新生成器G。
-生成器需要学着去愚弄判别器。
-
-
-可以把GAN看成结构学习算法，结构学...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/12</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/12/MOEA测试函数/" >
-            
-                <span>MOEA测试函数</span>
-        </a>
-        <div class="abstract-content">
-            MOEA测试的基本问题
-MOEA测试的具体内容
-多目标优化问题的一个测试函数或者一组测试函数，或一个实际应用问题可以构成对MOEA的测试。
-
-
-如何找到合适的MOEA测试函数
-从已知的MOEA文献或者他人提出和总结的构造测试函数的方法，或者为人熟知的实际问题中找到一个合适的MOEA测试。
-
-
-何时对MOEA进行测试
-在MOEA设计与实现的过程不断地对它进行测试，也可以在一个MOEA完全实现后再对它进行测试
-
-选择MOP时需要考虑的特征
-连续的或非连续的或离散的；
-可导的或不可导的；
-凸的或凹的；
-函数的形态（单峰的，多峰的）；
-数值函数或包含字母与数字的函数；
-二次方的或非二次方的；
-约...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/12</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/12/Archer主题扩展使用/" >
-            
-                <span>Archer主题扩展使用</span>
-        </a>
-        <div class="abstract-content">
-            自定义文章页头图通过配置每篇文章(即.md文件)的头部的header_image字段来修改，如果不填写将采用主题配置中的post_header_image字段，如果post_header_image字段未填写则采用site_header_image字段。
-123456789---title: Tagsdate: 2013-12-24 23:29:53tags:- Foo- Bar- Bazheader_image: /intro/post-bg.jpg---
-
-将 Unsplash 随机图片作为头图API 参数页面：https://source.unsplash.com/
-在 arche...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/12</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/11/多目标优化算法评价指标/" >
-            
-                <span>多目标优化算法评价指标</span>
-        </a>
-        <div class="abstract-content">
-            对于MOEA的评价主要考虑两个指标：MOEA的效果（它所求得的Pareto最优解集的质量，主要是MOEA的收敛效果和分布效果）和MOEA的效率（CPU时间以及占用的空间资源）。在对于算法进行评价时，通常使用benchmark test problem(有已知解的问题)作为测试用例。
-实验过程通常可以采用实验的方法对于MOEA的性能进行测试和分析。一个好的实验过程包含下列步骤：
-① 确定实验的目的；
-
-针对相同的测试问题对不同的MOEA进行比较实验；
-针对某个MOEA关于它的性能特征进行实验。
-
-所采用的MOEA应具有代表性，如NSGAⅡ、SPEA2、MOEA/D等。
-② 选取合适的MOE...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/10/platEMO-多目标优化工具箱/" >
-            
-                <span>platEMO_多目标优化工具箱</span>
-        </a>
-        <div class="abstract-content">
-            简介platEMO是Ye Tian等学者写的一款基于MATLAB的多目标优化工具。
-这款工具主要具有以下的几个特点：1.完全由MATLAB开发，不需要任何其它库。2.用户可以显示各种图形，包括结果的pareto front，真实的pareto front等等。3.强大友好的GUI，可以不用编辑任何代码，直接调用主函数main.m即可。4.可以直接生成Excel或者LaTex。
-下载地址github
-该平台使用的详细信息可以在platEMO中的manual.pdf中读取。
-实验室主页 
-下载后，将matlab运行目录设置为该文件夹即可。
-文件夹结构
-Algorithm：
-包括现有的90个流...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/10/VAE-变分自编码器/" >
-            
-                <span>VAE_变分自编码器</span>
-        </a>
-        <div class="abstract-content">
-            简介VAE(Variational Auto-Encoder，VAE)是一种生成网络。
-假如我们有一个带有解卷积层的网络，我们设置输入为值全为1的向量，输出为一张图像。然后，我们可以训练这个网络去减小重构图像和原始图像的平均平方误差。那么训练完后，这个图像的信息就被保留在了网络的参数中。
-
-这次我们用one-hot向量而不是全1向量。我们用[1, 0, 0, 0]代表猫，用[0, 1, 0, 0]代表狗。虽然这要没什么问题，但是我们最多只能储存4张图片。当然，我们也可以增加向量的长度和网络的参数，那么我们可以获得更多的图片。
-但是，这样的向量很稀疏。为了解决这个问题，我们想使用实数值向量...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "ML">ML</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
         <a class="abstract-title" href = "/2020/07/10/博客的重新配置/" >
             
                 <span>博客的重新配置</span>
@@ -589,79 +373,6 @@ The auth...
         <a class="post-tag" href="javascript:void(0);" data-tags = "node">node</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "markdown">markdown</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/21/ROC和AUC/" >
-            
-                <span>ROC和AUC</span>
-        </a>
-        <div class="abstract-content">
-            AUC
-Area Under Curve，ROC曲线下的面积，可以用来评估模型整体的排序能力，这个面积的数值不会大于1，由于ROC曲线一般都处于y=x上方，所以AUC的值一般在0.5-1.0之间。
-ROC是什么二分类问题比如LR问题，通过模型可以对于每个样本输出一个概率值，代表每个样本是正样本的概率，ROC是根据这些输出的概率以及样本真实label计算画出的。
-横轴：负正类特异度(FPR)，划分实例中所有负例占所有负例的比例。
-纵轴：真正类率灵敏度(TPR)。
-四种类别TP:正确的正样本数目
-TF:正确的负样本数目
-FP:错误的正样本数目
-FN:错误的负样本数目
-
-真正类率(True P...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "ML">ML</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/21/基于AUC最大化的同时进行异常值检测和特征选择的PU分类/" >
-            
-                <span>基于AUC最大化的同时进行异常值检测和特征选择的PU分类</span>
-        </a>
-        <div class="abstract-content">
-            摘要PU学习的应用十分广泛，可以应用于卫生保健、文本分类以及生物信息领域，对于复杂的数据，一个鲁棒的PU学习算法是十分必要的，因此本文提出了公式化的AUC最大化算法，可以在分类的同时检测错误的标签，去除冗余的特征。
-介绍PU学习：给定少数的正样本和很多的负样本，从中学习一个二分类器。我们考虑了以下三种复杂数据：
-​    数据的不均匀，当存在的正样本少于0.1%时，分类器将所有的样本识别为负的准确率高达99.9%。
-​    标记的正样本存在错误的标签。
-​    样本存在冗余或者无关的特征。
-本文提出的算法，同时考虑了以上三个特点的复杂数据。提出了一个鲁棒的学习框架，可以统一AUC（曲...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
     
 </div>
             
@@ -709,10 +420,138 @@ FN:错误的负样本数目
         </div>
     </article>
     
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/03/18/多目标进化计算/" >
+            
+                <span>多目标进化计算</span>
+        </a>
+        <div class="abstract-content">
+            Pareto改善给定固有的一群人和可分配的资源，从一种分配的状态到另一种状态的变化中，在没有人变坏的情况下，使得至少一个人变得更好。
+也就是说资源分配的理想状态是不可能再有更多的Pareto改善的状态。
+Pareto解在有多个目标时，由于存在目标之间的冲突无法进行比较的情况，一个解在某个目标上是最好的，在其他目标上可能是最差的，一组目标函数最优解的集合是Pareto最优集，形成的曲面为Pareto前沿面。
+进化计算达尔文在进化论中提出了这样一个概念——物竞天择，适者生存。
+进化计算是基于群体的启发式搜索优化问题。
+遗传算法约翰·霍兰德提出了遗传算法，是进化算法的一种。
+Step1:   ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/18</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/03/16/用Hexo和GitHub创建属于自己的博客吧/" >
+            
+                <span>用Hexo和GitHub创建属于自己的博客吧</span>
+        </a>
+        <div class="abstract-content">
+            由于很久没有使用自己的博客，已经忘记了当初的搭建过程和hexo的指令，用这篇博客来温习一下自己搭建博客的过程和遇到的问题。  
+在写博客的文件右击鼠标-&gt;git bash here，使用hexo指令的时候出现了指令不存在的情况。可以通过以下三个步骤进行排查：  
+node -v
+npm -v
+检查本机的环境变量中的系统变量中的path是否包含了与_config.yml在同一个目录的node_modeles文件夹中的.bin文件夹。
+我的电脑里的文件目录是：D:\blog\node_modules\.bin
+好了，下面说一下安装过程：
+安装git下载git，https://git-s...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/16</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/08/29/排序算法/" >
+            
+                <span>排序算法</span>
+        </a>
+        <div class="abstract-content">
+            排序算法排序算法的稳定性：两个相等的数据前后顺序不发生改变。
+冒泡排序每次排序能够确定最后一个元素的位置（将最大的元素移到最后一个位置）算法思想 
+
+代码
+123456789101112131415void Bubble_sort(int *A, int n) &#123;	int flag = 0;	for (int i = n - 1; i &gt;= 0; i--) &#123;		for (int j = 0; j &lt; i; j++) &#123;			if (A[j] &gt; A[j + 1]) &#123;				int temp = A[j];				A[j] = ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/29</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "算法">算法</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/08/28/Hello-Hexo/" >
+            
+                <span>Hello,Hexo</span>
+        </a>
+        <div class="abstract-content">
+            ##2019/08/28
+1printf("hello,world!\n");
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/28</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "others">others</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/">&#60; PREV</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/">NEXT &#62;</a>
+        <a class="extend prev" rel="prev" href="/archives/">&#60; PREV</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
     </nav>
     
 </main>
@@ -983,105 +822,9 @@ FN:错误的负样本数目
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 24
+        Total : 16
         </div>
         <!-- search  -->
         
@@ -1091,34 +834,6 @@ FN:错误的负样本数目
     
     
     
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2021/02/25/-TSP问题/" >[Untitled Post]</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2021/02/25/DE(差分演化算法)/" >[Untitled Post]</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
@@ -1144,16 +859,6 @@ FN:错误的负样本数目
         </li>
     
     
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/25</span><a class="archive-post-title" href= "/2021/02/25/启发式算法/" >[Untitled Post]</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/25</span><a class="archive-post-title" href= "/2021/02/25/latex/" >[Untitled Post]</a>
-        </li>
-    
-    
     
     
     
@@ -1169,12 +874,17 @@ FN:错误的负样本数目
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/GAN-生成对抗网络/" >GAN_生成对抗网络</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/Archer主题扩展使用/" >Archer主题扩展使用</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/11</span><a class="archive-post-title" href= "/2020/07/11/多目标优化算法评价指标/" >多目标优化算法评价指标</a>
+            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/MOEA测试函数/" >MOEA测试函数</a>
         </li>
     
     
@@ -1194,64 +904,7 @@ FN:错误的负样本数目
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/21</span><a class="archive-post-title" href= "/2020/03/21/ROC和AUC/" >ROC和AUC</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">03/18</span><a class="archive-post-title" href= "/2020/03/18/NSGA2/" >NSGA2</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2019 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2019/08/28/Hello-Hexo/" >Hello,Hexo</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2021/02/25/EDA分布估计算法/" >[Untitled Post]</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2020 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/GAN-生成对抗网络/" >GAN_生成对抗网络</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/MOEA测试函数/" >MOEA测试函数</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/21</span><a class="archive-post-title" href= "/2020/03/21/基于AUC最大化的同时进行异常值检测和特征选择的PU分类/" >基于AUC最大化的同时进行异常值检测和特征选择的PU分类</a>
         </li>
     
     
@@ -1276,6 +929,11 @@ FN:错误的负样本数目
     
         <li class="archive-post-item">
             <span class="archive-post-date">08/29</span><a class="archive-post-title" href= "/2019/08/29/排序算法/" >排序算法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2019/08/28/Hello-Hexo/" >Hello,Hexo</a>
         </li>
     
     </div>
