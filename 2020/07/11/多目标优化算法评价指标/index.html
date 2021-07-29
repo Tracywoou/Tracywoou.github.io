@@ -273,7 +273,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">1.4k</span>Reading time: <span class="post-count reading-time">4 min</span></span>
+                        <span>Word count: <span class="post-count word-count">1.5k</span>Reading time: <span class="post-count reading-time">5 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -415,7 +415,7 @@ height:50vh;
 <blockquote>
 <p><strong>所求解集的质量</strong></p>
 <p>对于benchmark测试问题，可以比较所求解集和最优解集的偏差。</p>
-<p>对于没有已知最优解的优化问题，可以采用趋近度评价方法，比较所求解集和参照解集的最小距离来表示（历代非支配集并集的非支配集）。</p>
+<p><u>对于没有已知最优解的优化问题，可以采用趋近度评价方法，比较所求解集和参照解集的最小距离来表示（历代非支配集并集的非支配集）。</u></p>
 </blockquote>
 <blockquote>
 <p><strong>计算效率</strong></p>
@@ -426,7 +426,7 @@ height:50vh;
 <blockquote>
 <p><strong>鲁棒性</strong></p>
 <p>如果一个MOEA只对于某一个具体的问题又很好的求解问题，那么这个MOEA称不上是鲁棒的，一个鲁棒的MOEA应当有比较广泛的应用领域，在求解问题的时候有比较好的稳定性。</p>
-<p>求解问题特征的敏感性、对待数据质量的敏感性以及对于不同参数设置的敏感性也是衡量算法鲁棒性的重要指标。</p>
+<p>求解问题特征的敏感性、对待数据质量的敏感性以及对于不同参数设置的敏感性也是衡量算法鲁棒性的重要指标。 </p>
 </blockquote>
 <p><strong>③ 选取具有代表性的测试用例；</strong></p>
 <blockquote>
@@ -460,11 +460,12 @@ height:50vh;
 <p>综合考虑解集的收敛性和分布性。</p>
 </blockquote>
 <h1 id="性能评估指标"><a href="#性能评估指标" class="headerlink" title="性能评估指标"></a>性能评估指标</h1><h2 id="runtime"><a href="#runtime" class="headerlink" title="runtime"></a>runtime</h2><p>程序运行时间。</p>
-<h2 id="Set-Coverage（C-metric）"><a href="#Set-Coverage（C-metric）" class="headerlink" title="Set Coverage（C-metric）"></a>Set Coverage（C-metric）</h2><p>对于两个近似解集A和B，C(A,B)是B被A中至少一个解支配的解占B中解个数的百分比。C(A,B)=100表示B中所有的解都被A中至少一个解支配。C(A,B)=0表示B中没有解被A中的解支配。C(A,B)不一定等于1-C(B,A)。这样就很清晰了，下面给出公式：</p>
+<h2 id="Set-Coverage（C-metric）"><a href="#Set-Coverage（C-metric）" class="headerlink" title="Set Coverage（C-metric）"></a>Set Coverage（C-metric）</h2><p>对于两个近似解集A和B，C(A,B)是B被A中至少一个解支配的解占B中解个数的百分比。C(A,B)=1表示B中所有的解都被A中至少一个解支配，即 B 的收敛性比 A 差。C(A,B)=0表示B中没有解被A中的解支配，即 B 的收敛性优于 A 。C(A,B)不一定等于1-C(B,A)。这样就很清晰了，下面给出公式：</p>
 <p><img src="//tracywoo.cn/2020/07/11/多目标优化算法评价指标/CS.png" alt="cov"></p>
-<h2 id="GD（Generational-Distance-世代距离"><a href="#GD（Generational-Distance-世代距离" class="headerlink" title="GD（Generational Distance)世代距离"></a>GD（Generational Distance)世代距离</h2><p>该方法是 Van Veldhuizen 和 Lamont 两人于1998 年提出的，该指标表示求出已知的最优边界PFknown和问题真正的最优边界PFtrue之间的间隔距离，该距离表示偏离真正边界的程度，值越大，偏离真正最优边界越远，收敛性越差。公式为：</p>
-<p><img src="//tracywoo.cn/2020/07/11/多目标优化算法评价指标/GD.png" alt="GD"></p>
-<p>其中n是PFknown的向量个数，若结果为0，则说明PFknown和PFtrue重合，若不为0，则表示PFknown偏离PFtrue的程度。</p>
+<p>因为C-metric 的计算是基于支配关系，所以其最大缺点是随着目标数的增多，PF 近似解集中的解均彼此互为非支配解，C-metric 无法度量收敛性。  </p>
+<h2 id="GD（Generational-Distance-世代距离"><a href="#GD（Generational-Distance-世代距离" class="headerlink" title="GD（Generational Distance)世代距离"></a>GD（Generational Distance)世代距离</h2><p>该方法是 Van Veldhuizen 和 Lamont 两人于1998 年提出的，需要预先获得一组在真实 PF 上均匀采样的解集。该指标表示求出<strong>已知的最优边界PFknown和问题真正的最优边界PFtrue之间的间隔距离</strong>，该距离表示偏离真正边界的程度，值越大，偏离真正最优边界越远，收敛性越差。设 P* 为一组在真实 PF 上均匀采样的解集，S 是多目标进化算法求得的 PF 近似解集，则GD 定义如下所示。</p>
+<p><img src="//tracywoo.cn/2020/07/11/多目标优化算法评价指标/GD2.png" alt="GD"></p>
+<p>其中，dist(x, S) 表示S中的个体x 到 P* 上离其最近个体之间的欧氏距离，| S | 是集合 S 的基数。GD 值越小，表示 S具有越好的收敛性，越能逼近整个 PF。</p>
 <h2 id="IGD"><a href="#IGD" class="headerlink" title="IGD"></a>IGD</h2><p>逆世代距离IGD是世代距离GD的逆向映射，它计算问题真正的Pareto最优解集PFtrue中的个体到算法求得的非支配解集PFknown的平均距离。具有较小IGD值的解集更好。它除了能反应解集的收敛性外，还可以很好得反应分布均匀性和广泛性。IGD值越小，多样性和收敛性越好。公式如下：<br><img src="//tracywoo.cn/2020/07/11/多目标优化算法评价指标/IGD.png" alt="IGD"></p>
 <h2 id="HV"><a href="#HV" class="headerlink" title="HV"></a>HV</h2><p>根据Zitzler等人的说法（2003），Hyper Volume指标是唯一已知的一元指标，它可以由其超体积的单个值来评估一个解集的质量， 且是唯一已知的符合帕累托支配概念的指标。 超体积是评估近似解集的收敛性和多样性的综合指标（Zitzler和Thiele 1999）。 因此，给定在n个目标中包含m个点的集合S，解集S的超体积是由S中的至少一个点支配的目标空间的一部分的大小。相对于参考点计算S的超体积，该参考点在每个目标中的比S中的每个点更差（或等于）。 如图8所示，超体积值越大，就认为该解集越好。 超体积的一个主要优点（Zitzler和Thiele 1999; Zitzler等人，2003）是它能够以单个数字得到解与最优集合的接近程度，并在某种程度上得到目标空间上解的分布。缺点是计算消耗过大，且参考点选取对准确定有一定的影响。</p>
 <p><img src="//tracywoo.cn/2020/07/11/多目标优化算法评价指标/HV.png" alt="hv"></p>
@@ -481,7 +482,7 @@ height:50vh;
             <p>Author：<a href="http://tracywoo.cn">Tracy</a>
             <p>原文链接：<a href="http://tracywoo.cn/2020/07/11/多目标优化算法评价指标/">http://tracywoo.cn/2020/07/11/多目标优化算法评价指标/</a>
             <p>发表日期：<a href="http://tracywoo.cn/2020/07/11/多目标优化算法评价指标/">July 11th 2020, 10:33:47 am</a>
-            <p>更新日期：<a href="http://tracywoo.cn/2020/07/11/多目标优化算法评价指标/">July 11th 2020, 10:37:50 pm</a>
+            <p>更新日期：<a href="http://tracywoo.cn/2020/07/11/多目标优化算法评价指标/">July 22nd 2020, 11:07:53 am</a>
             <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用4.0国际许可协议</a>进行许可</p>
         </div>
     
@@ -748,9 +749,161 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 12
+        Total : 24
         </div>
         <!-- search  -->
         
@@ -761,22 +914,84 @@ top:50vh;
     
     
     
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2021/02/25/-TSP问题/" >[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2021/02/25/DE(差分演化算法)/" >[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2021 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/29</span><a class="archive-post-title" href= "/2021/07/29/如何在word中打出好看的公式/" >如何在word中打出好看的公式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/07</span><a class="archive-post-title" href= "/2021/06/07/提取记事本文件中的数字绘制数字变化曲线/" >python提取记事本文件中的数字绘制数字变化曲线</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/25</span><a class="archive-post-title" href= "/2021/02/25/not yet/Wordvec2  BERT/" >[Untitled Post]</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/25</span><a class="archive-post-title" href= "/2021/02/25/not yet/Word2Vec  Skip-gram/" >[Untitled Post]</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/25</span><a class="archive-post-title" href= "/2021/02/25/启发式算法/" >[Untitled Post]</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/25</span><a class="archive-post-title" href= "/2021/02/25/latex/" >[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/GAN-生成对抗网络/" >GAN_生成对抗网络</a>
+            <span class="archive-post-date">07/13</span><a class="archive-post-title" href= "/2020/07/13/Git-Githubub-eeerinzhang-bilibili/" >Git&Githubub_eeerinzhang bilibili</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/Archer主题扩展使用/" >Archer主题扩展使用</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/MOEA测试函数/" >MOEA测试函数</a>
         </li>
     
     
@@ -801,7 +1016,64 @@ top:50vh;
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">03/21</span><a class="archive-post-title" href= "/2020/03/21/ROC和AUC/" >ROC和AUC</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">03/18</span><a class="archive-post-title" href= "/2020/03/18/NSGA2/" >NSGA2</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2019/08/28/Hello-Hexo/" >Hello,Hexo</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2021/02/25/EDA分布估计算法/" >[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2020 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/GAN-生成对抗网络/" >GAN_生成对抗网络</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/MOEA测试函数/" >MOEA测试函数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/21</span><a class="archive-post-title" href= "/2020/03/21/基于AUC最大化的同时进行异常值检测和特征选择的PU分类/" >基于AUC最大化的同时进行异常值检测和特征选择的PU分类</a>
         </li>
     
     
@@ -828,11 +1100,6 @@ top:50vh;
             <span class="archive-post-date">08/29</span><a class="archive-post-title" href= "/2019/08/29/排序算法/" >排序算法</a>
         </li>
     
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2019/08/28/Hello-Hexo/" >Hello,Hexo</a>
-        </li>
-    
     </div>
   </div>
         <div class="sidebar-panel-tags">
@@ -853,6 +1120,8 @@ top:50vh;
         <span class="sidebar-tag-name" data-tags="markdown"><span class="iconfont-archer">&#xe606;</span>markdown</span>
     
         <span class="sidebar-tag-name" data-tags="算法"><span class="iconfont-archer">&#xe606;</span>算法</span>
+    
+        <span class="sidebar-tag-name" data-tags="PGM"><span class="iconfont-archer">&#xe606;</span>PGM</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -887,9 +1156,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="ML"><span class="iconfont-archer">&#xe60a;</span>ML</span>
-    
         <span class="sidebar-category-name" data-categories="博客"><span class="iconfont-archer">&#xe60a;</span>博客</span>
+    
+        <span class="sidebar-category-name" data-categories="ML"><span class="iconfont-archer">&#xe60a;</span>ML</span>
     
         <span class="sidebar-category-name" data-categories="MOEA"><span class="iconfont-archer">&#xe60a;</span>MOEA</span>
     

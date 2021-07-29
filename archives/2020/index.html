@@ -347,6 +347,36 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/13/Git-Githubub-eeerinzhang-bilibili/" >
+            
+                <span>Git&amp;Githubub_eeerinzhang bilibili</span>
+        </a>
+        <div class="abstract-content">
+            Git: Version control system
+让不同的人在不同的地点在不同的时间线编辑file，可以有不同的Branch，通过Merge把大家的file合并。
+Github: Software/ Tool for Git
+Repository/ Git project: 保存文件夹所有的编辑历史。
+Commit: 类似于文件的截图。
+Branch: Master branch, Master branch的分支。
+Git使用git主页下载Git软件。下载完成后，输入git --version，若出现版本则安装成功。
+Initialize  a git repository, g...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/13</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/07/12/GAN-生成对抗网络/" >
             
                 <span>GAN_生成对抗网络</span>
@@ -601,35 +631,33 @@ The auth...
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/18/NSGA2/" >
+        <a class="abstract-title" href = "/2020/03/21/ROC和AUC/" >
             
-                <span>NSGA2</span>
+                <span>ROC和AUC</span>
         </a>
         <div class="abstract-content">
-            NSGA2(Non-dominated sorting in genetic algorithm2)
-相比较NSGA从以下三个部分进行了改善：保留了最优个体；不用设置共享参数；构造Pareto最优解集的时间复杂度有所降低。
-算法的时间开销由三部分组成：
-构造分类子集(Non-dominated sort) O(r(2N)^2)
-计算聚集距离
-构造偏序集：个体之间的偏序 
-非支配集的构造方法为每一个个体p设置两个性质：np记录p支配个体的数目，sp记录被p支配的个体的集合。
+            AUC
+Area Under Curve，ROC曲线下的面积，可以用来评估模型整体的排序能力，这个面积的数值不会大于1，由于ROC曲线一般都处于y=x上方，所以AUC的值一般在0.5-1.0之间。
+ROC是什么二分类问题比如LR问题，通过模型可以对于每个样本输出一个概率值，代表每个样本是正样本的概率，ROC是根据这些输出的概率以及样本真实label计算画出的。
+横轴：负正类特异度(FPR)，划分实例中所有负例占所有负例的比例。
+纵轴：真正类率灵敏度(TPR)。
+四种类别TP:正确的正样本数目
+TF:正确的负样本数目
+FP:错误的正样本数目
+FN:错误的负样本数目
 
-通过一个二重循环计算每个个体的np和sp，则
-
-
-构造非支配集的过程
-1234567891011121314151...
+真正类率(True P...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/18</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/21</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "ML">ML</a>
     
 </div>
             
@@ -642,23 +670,22 @@ The auth...
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/18/多目标进化计算/" >
+        <a class="abstract-title" href = "/2020/03/21/基于AUC最大化的同时进行异常值检测和特征选择的PU分类/" >
             
-                <span>多目标进化计算</span>
+                <span>基于AUC最大化的同时进行异常值检测和特征选择的PU分类</span>
         </a>
         <div class="abstract-content">
-            Pareto改善给定固有的一群人和可分配的资源，从一种分配的状态到另一种状态的变化中，在没有人变坏的情况下，使得至少一个人变得更好。
-也就是说资源分配的理想状态是不可能再有更多的Pareto改善的状态。
-Pareto解在有多个目标时，由于存在目标之间的冲突无法进行比较的情况，一个解在某个目标上是最好的，在其他目标上可能是最差的，一组目标函数最优解的集合是Pareto最优集，形成的曲面为Pareto前沿面。
-进化计算达尔文在进化论中提出了这样一个概念——物竞天择，适者生存。
-进化计算是基于群体的启发式搜索优化问题。
-遗传算法约翰·霍兰德提出了遗传算法，是进化算法的一种。
-Step1:   ...
+            摘要PU学习的应用十分广泛，可以应用于卫生保健、文本分类以及生物信息领域，对于复杂的数据，一个鲁棒的PU学习算法是十分必要的，因此本文提出了公式化的AUC最大化算法，可以在分类的同时检测错误的标签，去除冗余的特征。
+介绍PU学习：给定少数的正样本和很多的负样本，从中学习一个二分类器。我们考虑了以下三种复杂数据：
+​    数据的不均匀，当存在的正样本少于0.1%时，分类器将所有的样本识别为负的准确率高达99.9%。
+​    标记的正样本存在错误的标签。
+​    样本存在冗余或者无关的特征。
+本文提出的算法，同时考虑了以上三个特点的复杂数据。提出了一个鲁棒的学习框架，可以统一AUC（曲...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/18</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/21</span>
             </div>
             <!-- tags  -->
             
@@ -667,41 +694,15 @@ Step1:   ...
         <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
     
 </div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/16/用Hexo和GitHub创建属于自己的博客吧/" >
-            
-                <span>用Hexo和GitHub创建属于自己的博客吧</span>
-        </a>
-        <div class="abstract-content">
-            由于很久没有使用自己的博客，已经忘记了当初的搭建过程和hexo的指令，用这篇博客来温习一下自己搭建博客的过程和遇到的问题。  
-在写博客的文件右击鼠标-&gt;git bash here，使用hexo指令的时候出现了指令不存在的情况。可以通过以下三个步骤进行排查：  
-node -v
-npm -v
-检查本机的环境变量中的系统变量中的path是否包含了与_config.yml在同一个目录的node_modeles文件夹中的.bin文件夹。
-我的电脑里的文件目录是：D:\blog\node_modules\.bin
-好了，下面说一下安装过程：
-安装git下载git，https://git-s...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/16</span>
-            </div>
-            <!-- tags  -->
             
         </div>
     </article>
     
     <!-- paginator  -->
+    
+    <nav class="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/archives/2020/page/2/">2</a><a class="extend next" rel="next" href="/archives/2020/page/2/">NEXT &#62;</a>
+    </nav>
     
 </main>
             <!-- profile -->
@@ -915,9 +916,161 @@ npm -v
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 12
+        Total : 24
         </div>
         <!-- search  -->
         
@@ -928,22 +1081,84 @@ npm -v
     
     
     
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2021/02/25/-TSP问题/" >[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2021/02/25/DE(差分演化算法)/" >[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2021 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/29</span><a class="archive-post-title" href= "/2021/07/29/如何在word中打出好看的公式/" >如何在word中打出好看的公式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/07</span><a class="archive-post-title" href= "/2021/06/07/提取记事本文件中的数字绘制数字变化曲线/" >python提取记事本文件中的数字绘制数字变化曲线</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/25</span><a class="archive-post-title" href= "/2021/02/25/not yet/Wordvec2  BERT/" >[Untitled Post]</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/25</span><a class="archive-post-title" href= "/2021/02/25/not yet/Word2Vec  Skip-gram/" >[Untitled Post]</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/25</span><a class="archive-post-title" href= "/2021/02/25/启发式算法/" >[Untitled Post]</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/25</span><a class="archive-post-title" href= "/2021/02/25/latex/" >[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/GAN-生成对抗网络/" >GAN_生成对抗网络</a>
+            <span class="archive-post-date">07/13</span><a class="archive-post-title" href= "/2020/07/13/Git-Githubub-eeerinzhang-bilibili/" >Git&Githubub_eeerinzhang bilibili</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/Archer主题扩展使用/" >Archer主题扩展使用</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/MOEA测试函数/" >MOEA测试函数</a>
         </li>
     
     
@@ -968,7 +1183,64 @@ npm -v
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">03/21</span><a class="archive-post-title" href= "/2020/03/21/ROC和AUC/" >ROC和AUC</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">03/18</span><a class="archive-post-title" href= "/2020/03/18/NSGA2/" >NSGA2</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2019/08/28/Hello-Hexo/" >Hello,Hexo</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2021/02/25/EDA分布估计算法/" >[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2020 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/GAN-生成对抗网络/" >GAN_生成对抗网络</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/MOEA测试函数/" >MOEA测试函数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/21</span><a class="archive-post-title" href= "/2020/03/21/基于AUC最大化的同时进行异常值检测和特征选择的PU分类/" >基于AUC最大化的同时进行异常值检测和特征选择的PU分类</a>
         </li>
     
     
@@ -995,11 +1267,6 @@ npm -v
             <span class="archive-post-date">08/29</span><a class="archive-post-title" href= "/2019/08/29/排序算法/" >排序算法</a>
         </li>
     
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2019/08/28/Hello-Hexo/" >Hello,Hexo</a>
-        </li>
-    
     </div>
   </div>
         <div class="sidebar-panel-tags">
@@ -1020,6 +1287,8 @@ npm -v
         <span class="sidebar-tag-name" data-tags="markdown"><span class="iconfont-archer">&#xe606;</span>markdown</span>
     
         <span class="sidebar-tag-name" data-tags="算法"><span class="iconfont-archer">&#xe606;</span>算法</span>
+    
+        <span class="sidebar-tag-name" data-tags="PGM"><span class="iconfont-archer">&#xe606;</span>PGM</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -1054,9 +1323,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="ML"><span class="iconfont-archer">&#xe60a;</span>ML</span>
-    
         <span class="sidebar-category-name" data-categories="博客"><span class="iconfont-archer">&#xe60a;</span>博客</span>
+    
+        <span class="sidebar-category-name" data-categories="ML"><span class="iconfont-archer">&#xe60a;</span>ML</span>
     
         <span class="sidebar-category-name" data-categories="MOEA"><span class="iconfont-archer">&#xe60a;</span>MOEA</span>
     
