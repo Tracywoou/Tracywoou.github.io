@@ -415,22 +415,19 @@ height:50vh;
 <p><code>unable to auto-detect email address (got &#39;11647@LAPTOP-2902H8OD.(none)&#39;)</code></p>
 <p>查了各方的资料，一直报错，但是大致知道是因为SSH密钥和电脑的连接出现了问题。最后问题的解决大致流程如下：</p>
 <p>进入系统的SSH文件夹，使用 <code>git bash</code> 设置用户名和邮箱（我不知道是不是和要github中的一致，但是我一开始设置不一致的时候设置了密码，我也不清楚是因为设置了密码访问不成功还是因为不一致导致的）</p>
-<p><em>git config –global user.name “用户名”</em></p>
-<p><em>git config –global user.email “你的邮箱”</em></p>
+<p><em>git config —global user.name “用户名”</em></p>
+<p><em>git config —global user.email “你的邮箱”</em></p>
 <p>设置完毕之后，执行命令<em>ssh-keygen -t rsa -C “github注册邮箱”</em>，执行完成后，会生成一个.ssh文件夹，里面的id_rsa.pub文件内容就是秘钥，那么我们就进入ssh文件夹打开该文件后复制它的内容。进入GitHub个人账户的settings-&gt;SSH and GPG keys，将SSH密钥添加到自己的仓库设置中。</p>
 <p>接着在hexo deploy时如果出现<br><code>The authenticity of host &#39;github.com (192.30.253.112)&#39; can&#39;t be established.</code><br><code>RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.</code><br><code>Are you sure you want to continue connecting (yes/no)?</code></p>
 <p>输入yes回车即可。</p>
 <h2 id="文章撰写的一些基础知识"><a href="#文章撰写的一些基础知识" class="headerlink" title="文章撰写的一些基础知识"></a>文章撰写的一些基础知识</h2><p>新建一篇文章：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;title&quot;</span><br></pre></td></tr></table></figure>
-
 <p>部署发布：</p>
 <p>在站点文件夹中打开 git bash，输入如下命令部署和发布文章</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
-
 <p><strong>建议</strong>：在使用 <code>hexo g</code> 部署之后，可以先使用 <code>hexo s</code> 运行本地站点，然后在浏览器输入地址 <a href="http://lacolhost:4000/" target="_blank" rel="noopener">http://lacolhost:4000/</a> 查看运行结果，检查无误后再使用 <code>hexo d</code> 发布</p>
 <h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p><strong>Markdown 语法：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
-
 <p><strong>Typora 快捷键：</strong></p>
 <blockquote>
 <p>Ctrl+1：一级标题</p>
@@ -443,7 +440,6 @@ height:50vh;
 </blockquote>
 <h3 id="粗体、斜体、删除线和下划线"><a href="#粗体、斜体、删除线和下划线" class="headerlink" title="粗体、斜体、删除线和下划线"></a>粗体、斜体、删除线和下划线</h3><p><strong>Markdown 语法：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*斜体*</span><br><span class="line">**粗体**</span><br><span class="line">***加粗斜体***</span><br><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure>
-
 <p><strong>Typora 快捷键：</strong></p>
 <blockquote>
 <p>Ctrl+I：斜体</p>
@@ -453,14 +449,12 @@ height:50vh;
 </blockquote>
 <h3 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h3><p><strong>Markdown 语法：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 文字引用</span><br></pre></td></tr></table></figure>
-
 <p><strong>Typora 快捷键：</strong> </p>
 <blockquote>
 <p>Ctrl+Shift+Q</p>
 </blockquote>
 <h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p><strong>Markdown 语法：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`行内代码`</span><br></pre></td></tr></table></figure>
-
 <p><strong>Typora 快捷键：</strong></p>
 <blockquote>
 <p>行内代码：Ctrl+Shift+`</p>
@@ -468,17 +462,14 @@ height:50vh;
 </blockquote>
 <h3 id="公式块"><a href="#公式块" class="headerlink" title="公式块"></a>公式块</h3><p><strong>Markdown 语法：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">数学公式</span><br><span class="line">$$</span><br><span class="line">123</span><br></pre></td></tr></table></figure>
-
 <p><strong>Typora 快捷键：</strong> </p>
 <blockquote>
 <p>Ctrl+Shift+M</p>
 </blockquote>
 <h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p><strong>Markdown 语法：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">方法一：---</span><br><span class="line"></span><br><span class="line">方法二：+++</span><br><span class="line"></span><br><span class="line">方法三：***</span><br></pre></td></tr></table></figure>
-
 <h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p><strong>Markdown 语法：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1. 有序列表项</span><br><span class="line"></span><br><span class="line">* 无序列表项</span><br><span class="line"></span><br><span class="line">+ 无序列表项</span><br><span class="line"></span><br><span class="line">- 无序列表项</span><br></pre></td></tr></table></figure>
-
 <p><strong>Typora 快捷键：</strong></p>
 <blockquote>
 <p>有序列表项：Ctrl+Shift+[</p>
@@ -486,40 +477,34 @@ height:50vh;
 </blockquote>
 <h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p><strong>Markdown 语法：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">表头1|表头2</span><br><span class="line">-|-|-</span><br><span class="line">内容11|内容12</span><br><span class="line">内容21|内容22</span><br></pre></td></tr></table></figure>
-
 <p><strong>Typora 快捷键：</strong> Ctrl+T</p>
 <h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><p><strong>Markdown语法：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">方法一：[链接文字](链接地址 &quot;链接描述&quot;)</span><br><span class="line">例如：[示例链接](https://www.example.com/ &quot;示例链接&quot;)</span><br><span class="line"></span><br><span class="line">方法二：&lt;链接地址&gt;</span><br><span class="line">例如：&lt;https://www.example.com/&gt;</span><br></pre></td></tr></table></figure>
-
 <p><strong>Typora快捷键：</strong> </p>
 <blockquote>
 <p> Ctrl+K</p>
 </blockquote>
 <h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p><strong>Markdown语法：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![图片文字](图片地址 &quot;图片描述&quot;)</span><br><span class="line">例如：![示例图片](https://www.example.com/example.PNG &quot;示例图片&quot;)</span><br></pre></td></tr></table></figure>
-
 <p>Typora快捷键： </p>
 <blockquote>
 <p>Ctrl+Shift+I</p>
 </blockquote>
 <p>说明：在 Hexo中 插入图片时，请按照以下的步骤进行设置</p>
 <p>将 站点配置文件 中的 <em>post_asset_folder</em> 选项的值设置为 <em>true</em></p>
-<p>在站点文件夹中打开 <em>git bash*，输入命令 *npm install hexo-asset-image –save</em> 安装插件</p>
+<p>在站点文件夹中打开 <em>git bash</em>，输入命令 <em>npm install hexo-asset-image —save</em> 安装插件</p>
 <p>这样，当使用 hexo new title 创建文章时，将同时在 <em>source/_post</em> 文件夹中生成一个与 <em>title</em> 同名的文件夹，我们只需将图片放进此文件夹中，然后在文章中通过 Markdown 语法进行引用即可</p>
 <p>例如，在资源文件夹（就是那个与 title 同名的文件夹）中添加图片 example.PNG，则可以在对应的文章中使用语句 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![示例图片](title/example.PNG &quot;示例图片&quot;)</span><br></pre></td></tr></table></figure>
-
 <p> 添加图片</p>
 <h2 id="其他设置"><a href="#其他设置" class="headerlink" title="其他设置"></a>其他设置</h2><h3 id="模板设置"><a href="#模板设置" class="headerlink" title="模板设置"></a>模板设置</h3><p>当我们使用命令 <code>hexo new &quot;title&quot;</code> 创建文章时，Hexo 会根据 <code>/scaffolds/post.md</code> 对新文章进行初始化。</p>
 <p>换言之，<code>/scaffolds/post.md</code> 就是新文章的 <strong>模板</strong>，所以我们可以修改它来适应自己的写作习惯</p>
 <p>一个简单的示例如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags: </span><br><span class="line">categories:</span><br></pre></td></tr></table></figure>
-
 <h3 id="头部设置"><a href="#头部设置" class="headerlink" title="头部设置"></a>头部设置</h3><p>在每篇利用 Hexo 创建的文章的开头，都会有对文章进行说明的文字，叫做 <strong>文章头部</strong></p>
 <p>文章的头部除了可以设置文章标题、发布日期等基础信息外，还可以为文章添加标签、分类等</p>
 <p>一个简单的示例如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: Title</span><br><span class="line">date: YYYY-MM-DD HH:MM:SS</span><br><span class="line">tags: [tag1, tag2, ...]</span><br><span class="line">categories: category</span><br></pre></td></tr></table></figure>
-
 <p><strong>注意</strong>：属性和属性值之间必须有一个空格，否则会解析错误。</p>
 <h3 id="首页显示"><a href="#首页显示" class="headerlink" title="首页显示"></a>首页显示</h3><p>在利用 Hexo 框架搭建的博客网站中，首页会显示文章的内容，且默认显示文章的全部内容</p>
 <p>如果当文章太长的时候就会显得十分冗余，所以我们有必要对其进行精简</p>
@@ -944,6 +929,8 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="ML"><span class="iconfont-archer">&#xe606;</span>ML</span>
     
+        <span class="sidebar-tag-name" data-tags="写论文小技巧"><span class="iconfont-archer">&#xe606;</span>写论文小技巧</span>
+    
         <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
     
         <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
@@ -953,10 +940,6 @@ top:50vh;
         <span class="sidebar-tag-name" data-tags="markdown"><span class="iconfont-archer">&#xe606;</span>markdown</span>
     
         <span class="sidebar-tag-name" data-tags="算法"><span class="iconfont-archer">&#xe606;</span>算法</span>
-    
-        <span class="sidebar-tag-name" data-tags="PGM"><span class="iconfont-archer">&#xe606;</span>PGM</span>
-    
-        <span class="sidebar-tag-name" data-tags="写论文小技巧"><span class="iconfont-archer">&#xe606;</span>写论文小技巧</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
