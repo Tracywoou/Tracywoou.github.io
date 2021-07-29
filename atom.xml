@@ -65,50 +65,6 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://tracywoo.cn/2021/02/25/not%20yet/Wordvec2%20%20BERT/"/>
-    <id>http://tracywoo.cn/2021/02/25/not%20yet/Wordvec2%20%20BERT/</id>
-    <published>2021-02-24T19:51:02.124Z</published>
-    <updated>2020-11-27T01:56:46.802Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Wordvec2-BERT"><a href="#Wordvec2-BERT" class="headerlink" title="Wordvec2 | BERT"></a>Wordvec2 | BERT</h1><h2 id="自然语言处理预训练模型"><a href="#自然语言处理预训练模型" class="headerlink" title="自然语言处理预训练模型"></a>自然语言处理预训练模型</h2><p>使语言建模和其他学习问题变得困难的一个基本问题是维数的诅咒。在人们想要对许多离散的随机变量（例如句子中的单词或数据挖掘任务中的离散属性）之间的联合分布建模时，这一点尤其明显。</p><p>举个例子，假如我们有10000个单词的词汇表，我们要对它们进行离散表示，这样用one-hot 编码整个词汇表就需要10000*10000的矩阵，而one-hot编码矩阵存在很多“0”值，显然浪费了绝大部分的内存空间。为了解决维度诅咒带来的问题，人们开始使用低维度的向量空间来表示单词，从而减少运算资源的损耗，这也是预训练模型思想的开端。</p><h2 id="Word2Vec"><a href="#Word2Vec" class="headerlink" title="Word2Vec"></a>Word2Vec</h2><p>Skip-gram模型是Yoshua Bengio等人[1]提出的经典Word2Vec模型之一。Word2Vec模型对NLP任务的效果有显著的提升，并且能够利用更长的上下文。</p><h2 id="BERT"><a href="#BERT" class="headerlink" title="BERT"></a>BERT</h2><p>2018年Jacob Devlin等人[2]提出预训练模型BERT（Bidirectional Encoder Representations from Transformers）。</p><p>BERT被设计为通过在所有层的双向上下文上共同进行条件化来预训练未标记文本的深层双向表示。我们可以在仅一个附加输出层的情况下对经过预训练的BERT模型进行微调，以创建适用于各种任务（例如问题解答和语言推断）的最新模型，进而减少了对NLP任务精心设计特定体系结构的需求。BERT是第一个<strong>基于微调</strong>的表示模型，可在一系列句子级和字符级任务上实现最先进的性能，优于许多特定于任务的体系结构。</p><p>通俗易懂来讲就是我们只需要把BERT当成一个深层次的Word2Vec预训练模型，对于一些特定的任务，我们只需要在BERT之后下接一些网络结构就可以出色地完成这些任务。</p><p>另外，2018年底提出的BERT推动了11项NLP任务的发展。BERT的结构是来自Transformers模型的Encoder，Transformers如图所示。我们从图中可以看到Transformer的内部结构都是由Ashish Vaswani 等人[3]提出的Self-Attention Layer和Layer Normalization的堆叠而产生。</p><h2 id="Self-Attention-Layer原理"><a href="#Self-Attention-Layer原理" class="headerlink" title="Self-Attention Layer原理"></a>Self-Attention Layer原理</h2><p><strong>1) Self-Attention Layer的出现原因</strong></p><p>为了解决RNN、LSTM等常用于处理序列化数据的网络结构无法在GPU中并行加速计算的问题。</p><p><strong>2) Self-Attention Layer的输入</strong></p><p>如图8.2所示：将输入的Input转化成token embedding + segment embedding +position embedding。因为有时候训练样本是由两句话组成，因此“[CLS]”是用来分类输入的两句话是否有上下文关系，而“[SEP]”则是用以分开两句话的标志符。其中，因为这里的Input是英文单词，所以在灌入模型之前，需要用BERT源码的Tokenization工具对每一个单词进行分词，分词后的形式如图 8.2中Input的“Playing”转换成“Play”+“# #ing”，因为英文词汇表是通过词根与词缀的组合来新增单词语义的，所以我们选择用分词方法可以减少整体的词汇表长度。如果是中文字符的话，输入就不需要分词，整段话的每一个字用“空格”隔开即可。</p><p>值得注意的是，模型是无法处理文本字符的，所以不管是英文还是中文，我们都需要通过预训练模型BERT自带的字典vocab.txt将每一个字或者单词转换成字典索引（即id）输入。</p><p>(1) segment embedding的目的：有些任务是两句话一起放入输入X，而segment便是用来区分这两句话的。在Input那里就是用“[SEP]”作为标志符号。而“[CLS]”用来分类输入的两句话是否有上下文关系。</p><p>(2) position embedding的目的：因为我们的网络结构没有RNN 或者LSTM，因此我们无法得到序列的位置信息，所以需要构建一个position embedding。构建position embedding有两种方法：BERT是初始化一个position embedding，然后通过训练将其学出来；而Transformer是通过制定规则来构建一个position embedding：使用正弦函数，位置维度对应曲线，而且方便序列之间的选对位置，使用正弦会比余弦好的原因是可以在训练过程中，将原本序列外拓成比原来序列还要长的序列，如公式（8.1）~（8.2）所示。<img src="//tracywoo.cn/2021/02/25/not yet/Wordvec2  BERT/F:%5Cimgdown%5Cv2-6f01f69b5693df76cebd8aec73c8ec4c_720w.jpg" alt="v2-6f01f69b5693df76cebd8aec73c8ec4c_720w"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Wordvec2-BERT&quot;&gt;&lt;a href=&quot;#Wordvec2-BERT&quot; class=&quot;headerlink&quot; title=&quot;Wordvec2 | BERT&quot;&gt;&lt;/a&gt;Wordvec2 | BERT&lt;/h1&gt;&lt;h2 id=&quot;自然语言处理预训练模型&quot;&gt;&lt;a h
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://tracywoo.cn/2021/02/25/not%20yet/Word2Vec%20%20Skip-gram/"/>
-    <id>http://tracywoo.cn/2021/02/25/not%20yet/Word2Vec%20%20Skip-gram/</id>
-    <published>2021-02-24T19:51:02.124Z</published>
-    <updated>2020-11-27T01:29:15.764Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Word2Vec-Skip-gram"><a href="#Word2Vec-Skip-gram" class="headerlink" title="Word2Vec | Skip-gram"></a>Word2Vec | Skip-gram</h1><h2 id="文本表示"><a href="#文本表示" class="headerlink" title="文本表示"></a>文本表示</h2><p>计算机是无法直接处理文本信息的，所以，在我们构建神经网络之前，要对文本进行一定的处理。</p><p><strong>独热编码（one-hot encode）</strong>虽然能把所有文本用数字表示出来，但是表示文本的矩阵会非常的稀疏，极大地浪费了空间，而且这样一个矩阵放入神经网络训练也会耗费相当多的时间。</p><p>为此，Bengio等人[2]提出了<strong>词向量模型(Word2Vec)</strong>。词向量模型是一种将词的语义映射到向量空间的技术，说白了就是<em>用向量来表示词</em>，但是会比用独热编码用的空间小，而且词与词之间可以通过计算余弦相似度来看两个词的语义是否相近，显然King和Man两个单词语义更加接近，而且通过实验我们知道King-Man+Woman=Queen，验证了词向量模型的有效性。Word2Vec的示意图如图 4.54所示。</p><p><img src="//tracywoo.cn/2021/02/25/not yet/Word2Vec  Skip-gram/C:%5CUsers%5C11647%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201127091429404.png" alt="image-20201127091429404"></p><p>目前Word2Vec技术有好几种:CBOW、Skip-gram和GloVe以及2018年大火的BERT。Skip-gram是输入一个词，预测该词上下文的模型。</p><p><img src="//tracywoo.cn/2021/02/25/not yet/Word2Vec  Skip-gram/C:%5CUsers%5C11647%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201127091617231.png" alt="image-20201127091617231"></p><p>Skip-gram的具体训练过程如下，蓝色代表输入的词，框框代表滑动窗口，用来截取蓝色词的上下文，蓝色词的上下文作为输出，然后形成训练标本（Training Samples），这样我们就得到了{输入和输出}，将他们放入{输入层-隐藏层-输出层}的神经网络训练，我们就能得到Skip-gram模型。因为神经网络不能直接处理文本，因此所有的词都用one-hot encode表示。</p><p><img src="//tracywoo.cn/2021/02/25/not yet/Word2Vec  Skip-gram/F:%5Cimgdown%5Cv2-5af975f51adf94d793018dc8e1876bec_720w.jpg" alt="v2-5af975f51adf94d793018dc8e1876bec_720w"></p><p>Skip-gram的神经网络结构如图所示，隐藏层有300个神经元，输出层用softmax激励函数，通过我们提取的词与其相应的上下文去训练，得到相应的模型。通过Softmax激励函数，输出层每个神经元输出的是概率，加起来等于1。</p><p><img src="//tracywoo.cn/2021/02/25/not yet/Word2Vec  Skip-gram/F:%5Cimgdown%5Cv2-908055fe0361b40898b4423d04140b1c_720w.jpg" alt="v2-908055fe0361b40898b4423d04140b1c_720w"></p><p>但输出层并不是我们关心的，我们去掉模型的输出层，才是我们想要的词向量模型，我们通过隐藏层的权重来表示我们的词。</p><p>如图 所示，现在假设我们有10000个词，每个词用one-hot encode编码，每个词大小就是1*10000，现在我们想用300个特征去表示一个词，那么隐藏层的输入是10000，输出是300（即300个神经元），因此它的权值矩阵大小为10000 * 300。那么我们的词向量模型本质上就变成了矩阵相乘。</p><p><img src="//tracywoo.cn/2021/02/25/not yet/Word2Vec  Skip-gram/F:%5Cimgdown%5Cv2-efea42e3cfbfe0694a310ead96d2c518_720w.png" alt="v2-efea42e3cfbfe0694a310ead96d2c518_720w"></p><p>Keras自带了词向量层embedding layer，所以我们只要将文本处理好，就可以灌入这个层中即可，需要对文本进行预处理，生成符合embedding layer输入格式的词。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Word2Vec-Skip-gram&quot;&gt;&lt;a href=&quot;#Word2Vec-Skip-gram&quot; class=&quot;headerlink&quot; title=&quot;Word2Vec | Skip-gram&quot;&gt;&lt;/a&gt;Word2Vec | Skip-gram&lt;/h1&gt;&lt;h2 i
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>Git&amp;Githubub_eeerinzhang bilibili</title>
     <link href="http://tracywoo.cn/2020/07/13/Git-Githubub-eeerinzhang-bilibili/"/>
     <id>http://tracywoo.cn/2020/07/13/Git-Githubub-eeerinzhang-bilibili/</id>
