@@ -273,7 +273,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">939</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">937</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -479,17 +479,15 @@ MMD(P,Q) = \parallel { \mu _k } (P) - {\mu _k}(Q){\parallel _ { {H_k} } }\\
 {\mu _k}(P) = {E_{Z-P} } [\phi (Z)]
 \end{array}</script><p><em>P</em>的kernal embedding为<script type="math/tex">\phi (Z)</script> 核<script type="math/tex">k</script>的特征图</p>
 <p>当且仅当<script type="math/tex">HSIC(X,Y)=0</script>时，<script type="math/tex">X</script>和<script type="math/tex">Y</script>相互独立。</p>
-<h4 id="偏相关-Partial-correlation"><a href="#偏相关-Partial-correlation" class="headerlink" title="偏相关(Partial correlation)"></a>偏相关(Partial correlation)</h4><p>举例：构造一个图模型</p>
-<script type="math/tex; mode=display">X=$$孩子的身高
-
-$$Y=$$孩子的词汇量
-
-$$Z=$$孩子的年龄
-
-我们会发现我们会在变量之间两两构造联系，但是按照我们的经验构造的图将会是孩子的年龄决定身高和词汇量，这才是可解释的。以上介绍的方法都只能得到前者而不能得到后者，是因为他们只考虑了一对变量之间的联合概率分布。
-
-偏相关就是计算给定随机向量$$Z$$时$$X$$和$$Y$$之间的偏相关。</script><p>\begin{array}{l}<br>\rho (X,Y|Z) = \frac{ {Cov({e_X},{e_Y})} }{ {\sqrt {Var({e_X})} \sqrt {Var({e_Y})} } }\\<br>{e_X} = X - (\beta _X^TZ + {\rm{int}}ercep{t_X})\\<br>{e_Y} = X - (\beta _Y^TZ + {\rm{int}}ercep{t_Y})<br>\end{array}</p>
-<p>$$<br>实质是一个给定条件的皮尔森相关系数。</p>
+<h4 id="偏相关-Partial-correlation"><a href="#偏相关-Partial-correlation" class="headerlink" title="偏相关(Partial correlation)"></a>偏相关(Partial correlation)</h4><p>举例：构造一个图模型：X = 孩子的身高，Y = 孩子的词汇量，Z = 孩子的年龄</p>
+<p>我们会发现我们会在变量之间两两构造联系，但是按照我们的经验构造的图将会是孩子的年龄决定身高和词汇量，这才是可解释的。以上介绍的方法都只能得到前者而不能得到后者，是因为他们只考虑了一对变量之间的联合概率分布。</p>
+<p>偏相关就是计算给定随机向量<script type="math/tex">Z</script>时<script type="math/tex">X</script>和<script type="math/tex">Y</script>之间的偏相关。</p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+\rho (X,Y|Z) = \frac{ {Cov({e_X},{e_Y})} }{ {\sqrt {Var({e_X})} \sqrt {Var({e_Y})} } }\\
+{e_X} = X - (\beta _X^TZ + {\rm{int}}ercep{t_X})\\
+{e_Y} = X - (\beta _Y^TZ + {\rm{int}}ercep{t_Y})
+\end{array}</script><p>实质是一个给定条件的皮尔森相关系数。</p>
 <p>如果假设每个维度变量都是高斯分布的，可以简化计算。</p>
 <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p><img src="//tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/image-20210126162056714.png" alt="image-20210126162056714"></p>
 <h2 id="Preview"><a href="#Preview" class="headerlink" title="Preview"></a>Preview</h2><h4 id="Lecture-2-条件独立图"><a href="#Lecture-2-条件独立图" class="headerlink" title="Lecture 2 条件独立图"></a>Lecture 2 条件独立图</h4><p>别名：条件独立图，马尔可夫网，马尔可夫随机场，无向图。</p>
@@ -509,7 +507,7 @@ $$Z=$$孩子的年龄
             <p>原文作者：<a href="http://tracywoo.cn">Tracy</a>
             <p>原文链接：<a href="http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/">http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/</a>
             <p>发表日期：<a href="http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/">July 29th 2021, 10:06:25 am</a>
-            <p>更新日期：<a href="http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/">July 29th 2021, 11:44:00 am</a>
+            <p>更新日期：<a href="http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/">July 29th 2021, 11:49:10 am</a>
             <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用4.0国际许可协议</a>进行许可</p>
         </div>
     
