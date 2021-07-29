@@ -273,7 +273,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">939</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">940</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -469,14 +469,14 @@ KL(P,Q) = \int\limits_{x \in X} { P (x)\log \frac{ {P (x)} } { {Q (x)}}dx}
 <p>计算两种特殊情况的差异。</p>
 <script type="math/tex; mode=display">
 \begin{array}{l}
-I(X,Y) = KL ({P_{XY}},{P_X}{P_Y})
+I(X,Y) = KL ({P_{XY} },{P_X}{P_Y})
 \end{array}</script><p>当且仅当<script type="math/tex">I(X,Y)=0</script>时，<script type="math/tex">X</script>和<script type="math/tex">Y</script>相互独立。</p>
 <h4 id="希尔伯特-施密特独立性准则"><a href="#希尔伯特-施密特独立性准则" class="headerlink" title="希尔伯特-施密特独立性准则"></a>希尔伯特-施密特独立性准则</h4><h4 id="Hilbert-Schmidt-Independence-Criterion-HSIC"><a href="#Hilbert-Schmidt-Independence-Criterion-HSIC" class="headerlink" title="(Hilbert-Schmidt Independence Criterion, HSIC)"></a>(Hilbert-Schmidt Independence Criterion, HSIC)</h4><p>主要目的是衡量<strong>两个变量的分布差异</strong>，这一点类似于协方差（方差），而对于其本身也是依赖于协方差而构建。</p>
 <script type="math/tex; mode=display">
 \begin{array}{l}
 HSIC(X,Y) = MMD({P_{XY}},{P_X}{P_Y})\\
-MMD(P,Q) = \parallel {\mu _k}(P) - {\mu _k}(Q){\parallel _}\\
-{\mu _k}(P) = {E_{Z-P}}[\phi (Z)]
+MMD(P,Q) = \parallel { \mu _k } (P) - {\mu _k}(Q){\parallel _ { {H_k} } }\\
+{\mu _k}(P) = {E_{Z-P} } [\phi (Z)]
 \end{array}</script><script type="math/tex; mode=display">P$$的kernal embedding
 
 $$\phi (Z)$$ 核$$k$$的特征图
@@ -518,7 +518,7 @@ $$Z=$$孩子的年龄
             <p>原文作者：<a href="http://tracywoo.cn">Tracy</a>
             <p>原文链接：<a href="http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/">http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/</a>
             <p>发表日期：<a href="http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/">July 29th 2021, 10:06:25 am</a>
-            <p>更新日期：<a href="http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/">July 29th 2021, 11:38:57 am</a>
+            <p>更新日期：<a href="http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/">July 29th 2021, 11:41:54 am</a>
             <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用4.0国际许可协议</a>进行许可</p>
         </div>
     
@@ -1031,7 +1031,23 @@ jsonContent:
     
         <script src="/scripts/share.js" async></script>    
      
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
 </html>
 
 
