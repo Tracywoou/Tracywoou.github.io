@@ -273,7 +273,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">919</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">928</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -456,21 +456,21 @@ height:50vh;
 皮尔森相关系数：
 
 
-
- $$\rho (X,Y) = \frac{ {Cov(X,Y)} } { { \sqrt {Var(X)} \sqrt {Var(Y) } } }$$
-
-$${ \mathop{ \rm cov}} (X,Y) = E((X - \mu )(Y - \upsilon ))$$
-
-$${ \mathop{ \rm cov} } (X,Y) = E(X \cdot Y) - \mu \upsilon $$ 
-
+$$
+\begin{array}{l}
+\rho (X,Y) = \frac{ { Cov(X,Y) } } { { \sqrt { Var(X)} \sqrt { Var(Y) } } }\\
+{ \mathop{ \rm cov}} (X,Y) = E((X - \mu )(Y - \upsilon ))\\
+{ \mathop{ \rm cov} } (X,Y) = E(X \cdot Y) - \mu \upsilon
+\end{array}
+$$
 
 
 变量之间的线性相关，从$$X$$到$$Y$$的线性回归：
 
 
-
-$$\beta  = \frac{{Cov(X,Y)}}{{Var(X)}}$$
-
+$$
+\beta  = \frac{{Cov(X,Y)}}{{Var(X)}}
+$$
 
 
 属性：
@@ -490,21 +490,17 @@ $$X,Y$$独立，则$$\rho (X,Y) = 0$$，而$$\rho (X,Y) = 0$$不能推出$$X,Y$$
 （讨论：reverse KL）
 
 
-
-$$KL(P,Q) = \int\limits_{x \in X} {P(x)\log \frac{{P(x)}}{{Q(x)}}dx}$$
-
+$$
+\begin{array}{l}
+KL(P,Q) = \int\limits_{x \in X} {P(x)\log \frac{{P(x)}}{{Q(x)}}dx}
+\end{array}
+$$
 
 
 **互信息**：
 
-计算两种特殊情况的差异。
-
-
-
-$$I(X,Y) = KL({P_{XY}},{P_X}{P_Y})$$
-
-
-
+计算两种特殊情况的差异。</script><p>I(X,Y) = KL({P_{XY}},{P_X}{P_Y})</p>
+<script type="math/tex; mode=display">
 当且仅当$$I(X,Y)=0$$时，$$X$$和$$Y$$相互独立。
 
 
@@ -513,17 +509,11 @@ $$I(X,Y) = KL({P_{XY}},{P_X}{P_Y})$$
 
 #### (Hilbert-Schmidt Independence Criterion, HSIC)
 
-主要目的是衡量**两个变量的分布差异**，这一点类似于协方差（方差），而对于其本身也是依赖于协方差而构建。
+主要目的是衡量**两个变量的分布差异**，这一点类似于协方差（方差），而对于其本身也是依赖于协方差而构建。</script><p>HSIC(X,Y) = MMD({P_{XY}},{P_X}{P_Y})\\<br>MMD(P,Q) = \parallel {\mu _k}(P) - {\mu _k}(Q){\parallel _}\\<br>{\mu _k}(P) = {E_{Z-P}}[\phi (Z)]</p>
+<script type="math/tex; mode=display">
 
 
-
-$$HSIC(X,Y) = MMD({P_{XY}},{P_X}{P_Y})$$
-
-$$MMD(P,Q) = \parallel {\mu _k}(P) - {\mu _k}(Q){\parallel _{{H_k}}}$$
-
-
-
-$${\mu _k}(P) = {E_{Z-P}}[\phi (Z)]$$，$$P$$的kernal embedding
+$$P$$的kernal embedding
 
 $$\phi (Z)$$ 核$$k$$的特征图
 
@@ -564,7 +554,7 @@ $$Z=$$孩子的年龄
             <p>原文作者：<a href="http://tracywoo.cn">Tracy</a>
             <p>原文链接：<a href="http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/">http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/</a>
             <p>发表日期：<a href="http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/">July 29th 2021, 10:06:25 am</a>
-            <p>更新日期：<a href="http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/">July 29th 2021, 11:10:54 am</a>
+            <p>更新日期：<a href="http://tracywoo.cn/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/">July 29th 2021, 11:25:38 am</a>
             <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用4.0国际许可协议</a>进行许可</p>
         </div>
     
