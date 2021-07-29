@@ -347,27 +347,67 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/10/VAE-变分自编码器/" >
+        <a class="abstract-title" href = "/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/" >
             
-                <span>VAE_变分自编码器</span>
+                <span>概率图模型CMU-Lecture1-概率图模型简介</span>
         </a>
         <div class="abstract-content">
-            简介VAE(Variational Auto-Encoder，VAE)是一种生成网络。
-假如我们有一个带有解卷积层的网络，我们设置输入为值全为1的向量，输出为一张图像。然后，我们可以训练这个网络去减小重构图像和原始图像的平均平方误差。那么训练完后，这个图像的信息就被保留在了网络的参数中。
+            PGM lecture1 简介统计基础对于多变量(X_1, X_2,X_3,X_4,X_5,X_6,X_7,X_8)，假设x_i \in \{0,1\}，很自然的，可以把联合分布概率表示为：
 
-这次我们用one-hot向量而不是全1向量。我们用[1, 0, 0, 0]代表猫，用[0, 1, 0, 0]代表狗。虽然这要没什么问题，但是我们最多只能储存4张图片。当然，我们也可以增加向量的长度和网络的参数，那么我们可以获得更多的图片。
-但是，这样的向量很稀疏。为了解决这个问题，我们想使用实数值向量...
+
+
+
+x_1
+x_2
+x_3
+x_4
+x_5
+x_6
+x_7
+x_8
+p
+
+
+
+
+1
+0
+1
+1
+1
+1
+1
+1
+0.2
+
+
+…
+…
+…
+…
+…
+…
+…
+…
+…
+
+
+
+
+此时行数是确定的，即2^8行，这是一个枚举的方法，但是要求我们的数据集需要有足够大的规模，那么才能把每一种可能情况的概率计算出来。
+X和Y可能存在的关系有相关、独立、依赖、因果。
+“Many of them can be meas...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/29</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "ML">ML</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "PGM">PGM</a>
     
 </div>
             

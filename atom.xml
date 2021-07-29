@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tracywoo.cn/"/>
-  <updated>2021-07-29T01:56:32.388Z</updated>
+  <updated>2021-07-29T03:00:18.048Z</updated>
   <id>http://tracywoo.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>概率图模型CMU-Lecture1-概率图模型简介</title>
+    <link href="http://tracywoo.cn/2021/07/29/%E6%A6%82%E7%8E%87%E5%9B%BE%E6%A8%A1%E5%9E%8BCMU-Lecture1-%E6%A6%82%E7%8E%87%E5%9B%BE%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/"/>
+    <id>http://tracywoo.cn/2021/07/29/%E6%A6%82%E7%8E%87%E5%9B%BE%E6%A8%A1%E5%9E%8BCMU-Lecture1-%E6%A6%82%E7%8E%87%E5%9B%BE%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/</id>
+    <published>2021-07-29T02:06:25.000Z</published>
+    <updated>2021-07-29T03:00:18.048Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="PGM-lecture1-简介"><a href="#PGM-lecture1-简介" class="headerlink" title="PGM lecture1 简介"></a>PGM lecture1 简介</h1><h2 id="统计基础"><a href="#统计基础" class="headerlink" title="统计基础"></a>统计基础</h2><p>对于多变量<script type="math/tex">(X_1, X_2,X_3,X_4,X_5,X_6,X_7,X_8)</script>，假设<script type="math/tex">x_i \in \{0,1\}</script>，很自然的，可以把联合分布概率表示为：</p><div class="table-container"><table><thead><tr><th><script type="math/tex">x_1</script></th><th><script type="math/tex">x_2</script></th><th><script type="math/tex">x_3</script></th><th><script type="math/tex">x_4</script></th><th><script type="math/tex">x_5</script></th><th><script type="math/tex">x_6</script></th><th><script type="math/tex">x_7</script></th><th><script type="math/tex">x_8</script></th><th><script type="math/tex">p</script></th></tr></thead><tbody><tr><td>1</td><td>0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0.2</td></tr><tr><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td></tr></tbody></table></div><p>此时行数是确定的，即<script type="math/tex">2^8</script>行，这是一个枚举的方法，但是要求我们的数据集需要有足够大的规模，那么才能把每一种可能情况的概率计算出来。</p><p><script type="math/tex">X</script>和<script type="math/tex">Y</script>可能存在的关系有相关、独立、依赖、因果。</p><p>“Many of them can be measured by <strong>one number summary</strong>”</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;PGM-lecture1-简介&quot;&gt;&lt;a href=&quot;#PGM-lecture1-简介&quot; class=&quot;headerlink&quot; title=&quot;PGM lecture1 简介&quot;&gt;&lt;/a&gt;PGM lecture1 简介&lt;/h1&gt;&lt;h2 id=&quot;统计基础&quot;&gt;&lt;a href
+      
+    
+    </summary>
+    
+    
+    
+      <category term="PGM" scheme="http://tracywoo.cn/tags/PGM/"/>
+    
+  </entry>
   
   <entry>
     <title>如何在word中打出好看的公式</title>

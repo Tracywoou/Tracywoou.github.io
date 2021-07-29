@@ -347,6 +347,79 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/" >
+            
+                <span>概率图模型CMU-Lecture1-概率图模型简介</span>
+        </a>
+        <div class="abstract-content">
+            PGM lecture1 简介统计基础对于多变量(X_1, X_2,X_3,X_4,X_5,X_6,X_7,X_8)，假设x_i \in \{0,1\}，很自然的，可以把联合分布概率表示为：
+
+
+
+
+x_1
+x_2
+x_3
+x_4
+x_5
+x_6
+x_7
+x_8
+p
+
+
+
+
+1
+0
+1
+1
+1
+1
+1
+1
+0.2
+
+
+…
+…
+…
+…
+…
+…
+…
+…
+…
+
+
+
+
+此时行数是确定的，即2^8行，这是一个枚举的方法，但是要求我们的数据集需要有足够大的规模，那么才能把每一种可能情况的概率计算出来。
+X和Y可能存在的关系有相关、独立、依赖、因果。
+“Many of them can be meas...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/29</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "PGM">PGM</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2021/07/29/如何在word中打出好看的公式/" >
             
                 <span>如何在word中打出好看的公式</span>
@@ -620,9 +693,22 @@ word默认的公式字体是Cambria Math，这种字体不如Latex的好看。
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 14
+        Total : 15
         </div>
         <!-- search  -->
         
@@ -635,6 +721,11 @@ word默认的公式字体是Cambria Math，这种字体不如Latex的好看。
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/29</span><a class="archive-post-title" href= "/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/" >概率图模型CMU-Lecture1-概率图模型简介</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -735,8 +826,6 @@ word默认的公式字体是Cambria Math，这种字体不如Latex的好看。
     
         <span class="sidebar-tag-name" data-tags="ML"><span class="iconfont-archer">&#xe606;</span>ML</span>
     
-        <span class="sidebar-tag-name" data-tags="写论文小技巧"><span class="iconfont-archer">&#xe606;</span>写论文小技巧</span>
-    
         <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
     
         <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
@@ -745,7 +834,11 @@ word默认的公式字体是Cambria Math，这种字体不如Latex的好看。
     
         <span class="sidebar-tag-name" data-tags="markdown"><span class="iconfont-archer">&#xe606;</span>markdown</span>
     
+        <span class="sidebar-tag-name" data-tags="写论文小技巧"><span class="iconfont-archer">&#xe606;</span>写论文小技巧</span>
+    
         <span class="sidebar-tag-name" data-tags="算法"><span class="iconfont-archer">&#xe606;</span>算法</span>
+    
+        <span class="sidebar-tag-name" data-tags="PGM"><span class="iconfont-archer">&#xe606;</span>PGM</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -780,9 +873,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="博客"><span class="iconfont-archer">&#xe60a;</span>博客</span>
-    
         <span class="sidebar-category-name" data-categories="ML"><span class="iconfont-archer">&#xe60a;</span>ML</span>
+    
+        <span class="sidebar-category-name" data-categories="博客"><span class="iconfont-archer">&#xe60a;</span>博客</span>
     
         <span class="sidebar-category-name" data-categories="MOEA"><span class="iconfont-archer">&#xe60a;</span>MOEA</span>
     
@@ -819,7 +912,23 @@ jsonContent:
     </div>
     <!-- async load share.js -->
      
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
 </html>
 
 
