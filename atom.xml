@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tracywoo.cn/"/>
-  <updated>2021-07-29T04:05:35.464Z</updated>
+  <updated>2021-07-30T04:23:35.905Z</updated>
   <id>http://tracywoo.cn/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>概率图模型python库 -pgmpy</title>
+    <link href="http://tracywoo.cn/2021/07/30/%E6%A6%82%E7%8E%87%E5%9B%BE%E6%A8%A1%E5%9E%8Bpython%E5%BA%93-pgmpy/"/>
+    <id>http://tracywoo.cn/2021/07/30/%E6%A6%82%E7%8E%87%E5%9B%BE%E6%A8%A1%E5%9E%8Bpython%E5%BA%93-pgmpy/</id>
+    <published>2021-07-30T03:59:36.000Z</published>
+    <updated>2021-07-30T04:23:35.905Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="概率图模型python库-pgmpy"><a href="#概率图模型python库-pgmpy" class="headerlink" title="概率图模型python库 - pgmpy"></a>概率图模型python库 - pgmpy</h1><p>Reference: <a href="https://pgmpy.org/index.html" target="_blank" rel="noopener">https://pgmpy.org/index.html</a></p><h1 id="概率图模型的介绍"><a href="#概率图模型的介绍" class="headerlink" title="概率图模型的介绍"></a>概率图模型的介绍</h1><p>机器学习是一门科学学科，探索可以从数据中学习的算法。此类算法通过从示例输入构建模型并使用该模型进行预测或决策来运行，而不是遵循严格的静态程序指令。</p><p>举个例子，花的种类可以由其萼片长、宽来预测，那么我们可以根据给定的数据集来预测一个新的数据点。那么很自然的想法就是可以是拟合一个能够将输入值映射到花朵类型空间的函数。还有一种做法就是找到变量之间的概率分布，利用分布来得到花朵的类型。</p><p>目前已经有许多用于寻找映射函数的算法：线性回归试图找到一个可以解释数据的线性方程；支持向量机试图找到可以分离数据点的平面；决策树试图找到一组简单的大于和小于方程来对数据进行分类。</p><p>对于分类问题，使用概率模型显然需要计算所有变量之间的联合概率分布，根据我们的新数据点对这些进行边缘概率的求解。</p><p>贝叶斯推理的工作原理是我们在数据上构建一个联合分布，以观察到的变量为条件来计算后验分布，通过查询这个后验分布来预测新数据点的值。但是这种方法的问题在于联合概率分布与每个变量的状态数（基数）呈指数关系。因此，对于具有大量特征或具有高特征基数的问题，由于计算限制，推理成为一项艰巨的任务。例如，对于 10 个随机变量，每个变量有 10 个状态，联合分布的大小将为 <script type="math/tex">10^{10}</script>。</p><p>概率图形模型 (PGM)：PGM 是一种通过利用变量之间的（条件）独立性来紧凑地表示随机变量上的联合概率分布的技术。 PGM 还为我们提供了对这些联合分布进行有效推理的方法。</p><p>每个图形模型都以图结构（可以是有向、无向或两者都有）和与每个图关联的一组参数为特征。</p><p>未完待续..</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;概率图模型python库-pgmpy&quot;&gt;&lt;a href=&quot;#概率图模型python库-pgmpy&quot; class=&quot;headerlink&quot; title=&quot;概率图模型python库 - pgmpy&quot;&gt;&lt;/a&gt;概率图模型python库 - pgmpy&lt;/h1&gt;&lt;p&gt;Re
+      
+    
+    </summary>
+    
+    
+    
+      <category term="pgm" scheme="http://tracywoo.cn/tags/pgm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>因果强化学习 (Casual Reinforcement Learning)</title>
+    <link href="http://tracywoo.cn/2021/07/30/%E5%9B%A0%E6%9E%9C%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-Casual-Reinforcement-Learning/"/>
+    <id>http://tracywoo.cn/2021/07/30/%E5%9B%A0%E6%9E%9C%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-Casual-Reinforcement-Learning/</id>
+    <published>2021-07-30T03:52:56.000Z</published>
+    <updated>2021-08-03T02:47:49.922Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="因果强化学习-Casual-Reinforcement-Learning-Intro"><a href="#因果强化学习-Casual-Reinforcement-Learning-Intro" class="headerlink" title="因果强化学习 (Casual Reinforcement Learning) | Intro"></a>因果强化学习 (Casual Reinforcement Learning) | Intro</h1><p>在统计学中，人们普遍认为关联在逻辑上不等同因果关系。</p><p><img src="//tracywoo.cn/2021/07/30/因果强化学习-Casual-Reinforcement-Learning/CI1.png" alt></p><p>根据莱辛巴赫的共同原因原理：如果两个随机变量 <strong><em>X</em></strong> 和 <strong><em>Y</em></strong> 在统计学上是相互依存的，那么下面的一个因果关系必须成立：</p><ol><li><strong><em>X</em></strong> 导致 <strong><em>Y</em></strong>；</li><li><strong><em>Y</em></strong> 导致 <strong><em>X</em></strong>；</li><li>存在一个随机变量<strong><em>Z</em></strong> ，它是引起 <strong><em>X</em></strong> 和 <strong><em>Y</em></strong>的共同原因。</li></ol><p>因此，与关联相比，因果的关系更进一步，探索变量之间本质的关系，因果推理的根本任务是揭示不同变量之间的因果关系。</p><p>理解一个因果结构使我们需要具备一下能力：</p><ol><li>预测如果某些变量被干预会发生什么；</li><li>评估影响干预及其结果的混杂因素的影响；</li><li>使我们能够预测到之前从未观察到的情况。</li></ol><p>那么Pearl提出过一个因果层级 (Casual hierachy)。</p><p>第一层就是观察变量之间的关系，变量 <strong><em>X</em></strong> 改变的时候，<strong><em>Y</em></strong> 最有可能变成什么。也就是说患一个疾病会带来哪些症状，其实现在大部分的算法都是在做这个事情，比如机器学习中的一些回归算法，包括神经网络的拟合。</p><p>第二层就是对于变量进行干预，当我们强制变量 <strong><em>X</em></strong> 的值为一个特定的值的时候，会对 <strong><em>Y</em></strong> 产生什么影响。也就是如果我吃了阿司匹林，我的头疼能否被治愈；</p><p>第三层是反事实推理，这个层次一直停留在想象层面，也就是最根本的为什么的问题。比如我头疼的前一天熬了一整个通宵，第二天我感到头疼后，吃了阿司匹林，好好的睡了一觉，那这时候治愈我头疼的到底是我恢复的睡眠还是我吃的药呢。</p><p>在干预层面，有一个很著名的推演就是DO-CALCULAS。在我们强制一个变量 <strong><em>X</em></strong> 的值为特定值的时候，其他混淆因素对于他的干扰联系就被切断了，因为无论干扰的因素是什么， <strong><em>X</em></strong> 的值都不会改变。</p><p>在因果推理中实施干预的一个自然想法是利用强化学习中的action概念，agent可以根据当前的状态，通过采取不同的干预来观察环境状态的变化，并获得及时的回报。然而agent的目标是最大化累积的reward，这表明强化学习本身并不具备因果推理的能力，可以用因果推理进行状态之间或者状态和动作之间因果关系的推断来减少状态或者搜索空间，处理混淆，帮助强化学习更有效地学习价值函数或者策略。</p><p>人类总是以一种类似因果强化学习的方式前进，人类与大自然交互总结出规律和经验，然后利用这些经验提高自己在下一次探索中的适应能力，因果强化学习就是模拟人类的行为，从与环境沟通的agent那里学习因果关系，然后根据所学到的因果关系优化其策略。</p><p>一个结构因果模型 (SCM, Structual Casual Model) 由一个四元组 <strong><em><v, u, f, p(u)></v,></em></strong> 组成，其中 <strong><em>V</em></strong> 是内部变量，  <strong><em>U</em></strong> 是外部变量，  <strong><em>F</em></strong> 是给定外部变量和父亲节点时，决定内部节点的函数映射。  <strong><em>P(u)</em></strong> 是外部变量  <strong><em>U</em></strong> 的分布。</p><p>在因果强化学习中，代理可以根据环境给定的结构因果模型通过对变量的干预和观察学习因果图。</p><p>在利用因果推理处理强化问题的时候，主要由三种方法，第一个是Online-learning，也就是agent通过实验来学习P(Y|do(X))。</p><p>第二个是Off-policy learning，也就是代理通过其他代理的干预数据学习。通过其他代理的P(Y|do(X))学习干预后的分布P(Y|do(X))。</p><p>第三个是Do-calculus learning， 也就是代理观察其他代理的行为。通过其他代理的观测数据学习P(Y|do(X))。</p><p>因果强化学习已经有了一个tutorial，在<a href="https://crl.causalai.net/上有相应的视频和文档，在https://stjohngrimbly.com/causal-reinforcement-learning/中有对于tutorial的说明。在这个tutorial中介绍了因果强化学习中的六个任务，也就是" target="_blank" rel="noopener">https://crl.causalai.net/上有相应的视频和文档，在https://stjohngrimbly.com/causal-reinforcement-learning/中有对于tutorial的说明。在这个tutorial中介绍了因果强化学习中的六个任务，也就是</a></p><ol><li>Generalized Policy Learning</li><li>Interventions: Where and When?</li><li>Counterfactual Decision Making</li><li>Generalizability and Robustness of causal claims</li><li>Learning Causal Models by combining observations (L1) and experiments (L2)</li><li>Causal Imitation Learning</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;因果强化学习-Casual-Reinforcement-Learning-Intro&quot;&gt;&lt;a href=&quot;#因果强化学习-Casual-Reinforcement-Learning-Intro&quot; class=&quot;headerlink&quot; title=&quot;因果强化学习 (
+      
+    
+    </summary>
+    
+    
+    
+      <category term="CRL" scheme="http://tracywoo.cn/tags/CRL/"/>
+    
+  </entry>
   
   <entry>
     <title>HEXO 输入公式踩的坑</title>

@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Tracy&#39;s Studio</title>
+    <title>因果强化学习 (Casual Reinforcement Learning) · Tracy&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -77,6 +77,8 @@
 
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -202,14 +204,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Tracy&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">因果强化学习 (Casual Reinforcement Learning)</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Tracy's Studio.</a>
 </header>
@@ -228,17 +239,17 @@ height:50vh;
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Tracy's Studio.
-            <!-- 文章页  -->
+            因果强化学习 (Casual Reinforcement Learning)
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -246,12 +257,49 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-                it's better to burn out than to fade away
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "CRL">CRL</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">1.2k</span>阅读时长: <span class="post-count reading-time">4 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2021/07/30</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -352,374 +400,91 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/10/platEMO-多目标优化工具箱/" >
-            
-                <span>platEMO_多目标优化工具箱</span>
-        </a>
-        <div class="abstract-content">
-            简介platEMO是Ye Tian等学者写的一款基于MATLAB的多目标优化工具。
-这款工具主要具有以下的几个特点：1.完全由MATLAB开发，不需要任何其它库。2.用户可以显示各种图形，包括结果的pareto front，真实的pareto front等等。3.强大友好的GUI，可以不用编辑任何代码，直接调用主函数main.m即可。4.可以直接生成Excel或者LaTex。
-下载地址github
-该平台使用的详细信息可以在platEMO中的manual.pdf中读取。
-实验室主页 
-下载后，将matlab运行目录设置为该文件夹即可。
-文件夹结构
-Algorithm：
-包括现有的90个流...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/10/VAE-变分自编码器/" >
-            
-                <span>VAE_变分自编码器</span>
-        </a>
-        <div class="abstract-content">
-            简介VAE(Variational Auto-Encoder，VAE)是一种生成网络。
-假如我们有一个带有解卷积层的网络，我们设置输入为值全为1的向量，输出为一张图像。然后，我们可以训练这个网络去减小重构图像和原始图像的平均平方误差。那么训练完后，这个图像的信息就被保留在了网络的参数中。
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="因果强化学习-Casual-Reinforcement-Learning-Intro"><a href="#因果强化学习-Casual-Reinforcement-Learning-Intro" class="headerlink" title="因果强化学习 (Casual Reinforcement Learning) | Intro"></a>因果强化学习 (Casual Reinforcement Learning) | Intro</h1><p>在统计学中，人们普遍认为关联在逻辑上不等同因果关系。</p>
+<p><img src="//tracywoo.cn/2021/07/30/因果强化学习-Casual-Reinforcement-Learning/CI1.png" alt></p>
+<p>根据莱辛巴赫的共同原因原理：如果两个随机变量 <strong><em>X</em></strong> 和 <strong><em>Y</em></strong> 在统计学上是相互依存的，那么下面的一个因果关系必须成立：</p>
+<ol>
+<li><strong><em>X</em></strong> 导致 <strong><em>Y</em></strong>；</li>
+<li><strong><em>Y</em></strong> 导致 <strong><em>X</em></strong>；</li>
+<li>存在一个随机变量<strong><em>Z</em></strong> ，它是引起 <strong><em>X</em></strong> 和 <strong><em>Y</em></strong>的共同原因。</li>
+</ol>
+<p>因此，与关联相比，因果的关系更进一步，探索变量之间本质的关系，因果推理的根本任务是揭示不同变量之间的因果关系。</p>
+<p>理解一个因果结构使我们需要具备一下能力：</p>
+<ol>
+<li>预测如果某些变量被干预会发生什么；</li>
+<li>评估影响干预及其结果的混杂因素的影响；</li>
+<li>使我们能够预测到之前从未观察到的情况。</li>
+</ol>
+<p>那么Pearl提出过一个因果层级 (Casual hierachy)。</p>
+<p>第一层就是观察变量之间的关系，变量 <strong><em>X</em></strong> 改变的时候，<strong><em>Y</em></strong> 最有可能变成什么。也就是说患一个疾病会带来哪些症状，其实现在大部分的算法都是在做这个事情，比如机器学习中的一些回归算法，包括神经网络的拟合。</p>
+<p>第二层就是对于变量进行干预，当我们强制变量 <strong><em>X</em></strong> 的值为一个特定的值的时候，会对 <strong><em>Y</em></strong> 产生什么影响。也就是如果我吃了阿司匹林，我的头疼能否被治愈；</p>
+<p>第三层是反事实推理，这个层次一直停留在想象层面，也就是最根本的为什么的问题。比如我头疼的前一天熬了一整个通宵，第二天我感到头疼后，吃了阿司匹林，好好的睡了一觉，那这时候治愈我头疼的到底是我恢复的睡眠还是我吃的药呢。</p>
+<p>在干预层面，有一个很著名的推演就是DO-CALCULAS。在我们强制一个变量 <strong><em>X</em></strong> 的值为特定值的时候，其他混淆因素对于他的干扰联系就被切断了，因为无论干扰的因素是什么， <strong><em>X</em></strong> 的值都不会改变。</p>
+<p>在因果推理中实施干预的一个自然想法是利用强化学习中的action概念，agent可以根据当前的状态，通过采取不同的干预来观察环境状态的变化，并获得及时的回报。然而agent的目标是最大化累积的reward，这表明强化学习本身并不具备因果推理的能力，可以用因果推理进行状态之间或者状态和动作之间因果关系的推断来减少状态或者搜索空间，处理混淆，帮助强化学习更有效地学习价值函数或者策略。</p>
+<p>人类总是以一种类似因果强化学习的方式前进，人类与大自然交互总结出规律和经验，然后利用这些经验提高自己在下一次探索中的适应能力，因果强化学习就是模拟人类的行为，从与环境沟通的agent那里学习因果关系，然后根据所学到的因果关系优化其策略。</p>
+<p>一个结构因果模型 (SCM, Structual Casual Model) 由一个四元组 <strong><em><v, u, f, p(u)></v,></em></strong> 组成，其中 <strong><em>V</em></strong> 是内部变量，  <strong><em>U</em></strong> 是外部变量，  <strong><em>F</em></strong> 是给定外部变量和父亲节点时，决定内部节点的函数映射。  <strong><em>P(u)</em></strong> 是外部变量  <strong><em>U</em></strong> 的分布。</p>
+<p>在因果强化学习中，代理可以根据环境给定的结构因果模型通过对变量的干预和观察学习因果图。</p>
+<p>在利用因果推理处理强化问题的时候，主要由三种方法，第一个是Online-learning，也就是agent通过实验来学习P(Y|do(X))。</p>
+<p>第二个是Off-policy learning，也就是代理通过其他代理的干预数据学习。通过其他代理的P(Y|do(X))学习干预后的分布P(Y|do(X))。</p>
+<p>第三个是Do-calculus learning， 也就是代理观察其他代理的行为。通过其他代理的观测数据学习P(Y|do(X))。</p>
+<p>因果强化学习已经有了一个tutorial，在<a href="https://crl.causalai.net/上有相应的视频和文档，在https://stjohngrimbly.com/causal-reinforcement-learning/中有对于tutorial的说明。在这个tutorial中介绍了因果强化学习中的六个任务，也就是" target="_blank" rel="noopener">https://crl.causalai.net/上有相应的视频和文档，在https://stjohngrimbly.com/causal-reinforcement-learning/中有对于tutorial的说明。在这个tutorial中介绍了因果强化学习中的六个任务，也就是</a></p>
+<ol>
+<li>Generalized Policy Learning</li>
+<li>Interventions: Where and When?</li>
+<li>Counterfactual Decision Making</li>
+<li>Generalizability and Robustness of causal claims</li>
+<li>Learning Causal Models by combining observations (L1) and experiments (L2)</li>
+<li>Causal Imitation Learning</li>
+</ol>
 
-这次我们用one-hot向量而不是全1向量。我们用[1, 0, 0, 0]代表猫，用[0, 1, 0, 0]代表狗。虽然这要没什么问题，但是我们最多只能储存4张图片。当然，我们也可以增加向量的长度和网络的参数，那么我们可以获得更多的图片。
-但是，这样的向量很稀疏。为了解决这个问题，我们想使用实数值向量...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "ML">ML</a>
-    
-</div>
-            
-        </div>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/10/博客的重新配置/" >
-            
-                <span>博客的重新配置</span>
-        </a>
-        <div class="abstract-content">
-            前言换了电脑以后一直没有鼓起勇气重新安装各种软件（怕麻烦本人哈哈哈），阿里云的email提醒我域名该续费了，续完费发现自己又把之前的操作什么的忘得一干二净=-=，于是又开始配置。痛定思痛，以后要好好写博客记录自己的所学所想哈哈哈哈，奥里给，冲鸭！
-问题如何将之前的博客部署到新的电脑上？我是把之前的与博客的相关文件直接复制到新电脑上，重新安装了Git和Node.js，但是此时进入blog文件夹进行hexo部署时一直报错：
-Please make sure you have the correct access rights and the repository exist
-The auth...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://tracywoo.cn">Tracy</a>
+            <p>原文链接：<a href="http://tracywoo.cn/2021/07/30/因果强化学习-Casual-Reinforcement-Learning/">http://tracywoo.cn/2021/07/30/因果强化学习-Casual-Reinforcement-Learning/</a>
+            <p>发表日期：<a href="http://tracywoo.cn/2021/07/30/因果强化学习-Casual-Reinforcement-Learning/">July 30th 2021, 11:52:56 am</a>
+            <p>更新日期：<a href="http://tracywoo.cn/2021/07/30/因果强化学习-Casual-Reinforcement-Learning/">August 3rd 2021, 10:47:49 am</a>
+            <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用4.0国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "hexo">hexo</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "git">git</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "node">node</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "markdown">markdown</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/18/NSGA2/" >
-            
-                <span>NSGA2</span>
-        </a>
-        <div class="abstract-content">
-            NSGA2(Non-dominated sorting in genetic algorithm2)
-相比较NSGA从以下三个部分进行了改善：保留了最优个体；不用设置共享参数；构造Pareto最优解集的时间复杂度有所降低。
-算法的时间开销由三部分组成：
-构造分类子集(Non-dominated sort) O(r(2N)^2)
-计算聚集距离
-构造偏序集：个体之间的偏序 
-非支配集的构造方法为每一个个体p设置两个性质：np记录p支配个体的数目，sp记录被p支配的个体的集合。
-
-通过一个二重循环计算每个个体的np和sp，则
-
-
-构造非支配集的过程
-1234567891011121314151...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/18/多目标进化计算/" >
-            
-                <span>多目标进化计算</span>
-        </a>
-        <div class="abstract-content">
-            Pareto改善给定固有的一群人和可分配的资源，从一种分配的状态到另一种状态的变化中，在没有人变坏的情况下，使得至少一个人变得更好。
-也就是说资源分配的理想状态是不可能再有更多的Pareto改善的状态。
-Pareto解在有多个目标时，由于存在目标之间的冲突无法进行比较的情况，一个解在某个目标上是最好的，在其他目标上可能是最差的，一组目标函数最优解的集合是Pareto最优集，形成的曲面为Pareto前沿面。
-进化计算达尔文在进化论中提出了这样一个概念——物竞天择，适者生存。
-进化计算是基于群体的启发式搜索优化问题。
-遗传算法约翰·霍兰德提出了遗传算法，是进化算法的一种。
-Step1:   ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/16/用Hexo和GitHub创建属于自己的博客吧/" >
-            
-                <span>用Hexo和GitHub创建属于自己的博客吧</span>
-        </a>
-        <div class="abstract-content">
-            由于很久没有使用自己的博客，已经忘记了当初的搭建过程和hexo的指令，用这篇博客来温习一下自己搭建博客的过程和遇到的问题。  
-在写博客的文件右击鼠标-&gt;git bash here，使用hexo指令的时候出现了指令不存在的情况。可以通过以下三个步骤进行排查：  
-node -v
-npm -v
-检查本机的环境变量中的系统变量中的path是否包含了与_config.yml在同一个目录的node_modeles文件夹中的.bin文件夹。
-我的电脑里的文件目录是：D:\blog\node_modules\.bin
-好了，下面说一下安装过程：
-安装git下载git，https://git-s...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/16</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/08/29/排序算法/" >
-            
-                <span>排序算法</span>
-        </a>
-        <div class="abstract-content">
-            排序算法排序算法的稳定性：两个相等的数据前后顺序不发生改变。
-冒泡排序每次排序能够确定最后一个元素的位置（将最大的元素移到最后一个位置）算法思想 
-
-代码
-123456789101112131415void Bubble_sort(int *A, int n) &#123;	int flag = 0;	for (int i = n - 1; i &gt;= 0; i--) &#123;		for (int j = 0; j &lt; i; j++) &#123;			if (A[j] &gt; A[j + 1]) &#123;				int temp = A[j];				A[j] = ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/29</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "算法">算法</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/08/28/Hello-Hexo/" >
-            
-                <span>Hello,Hexo</span>
-        </a>
-        <div class="abstract-content">
-            2019/08/281printf("hello,world!\n");
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/28</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "others">others</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
-    
-    <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/">&#60; PREV</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
-    
-</main>
-            <!-- profile -->
+    <ul class="post-paginator">
+        <li class="next">
             
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src= /avatar/Tracyw.jpg >
-    <div class="profile-name">Tracy</div>
-    
-    <div class="profile-signature">
-        Sigo sí o sí
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2021/07/30/概率图模型python库-pgmpy/" title= "概率图模型python库 -pgmpy">
+                    <div class="nextTitle">概率图模型python库 -pgmpy</div>
+                </a>
             
-                <a href="mailto:tracywoo5@163.com" class="iconfont-archer email" title=email ></a>
+        </li>
+        <li class="previous">
             
-        
-    
-        
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2021/07/29/HEXO-输入公式踩的坑/" title= "HEXO 输入公式踩的坑">
+                    <div class="prevTitle">HEXO 输入公式踩的坑</div>
+                </a>
             
-                <a href="//github.com/Tracywoou" class="iconfont-archer github" target="_blank" title=github></a>
-            
-        
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-        
     
-        
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
     
 
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                
-            
-                
-            
-                
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <a href = "/about" >ABOUT ME</a>
-        </div>
-    
-</div>
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
             
         </div>
         <footer class="footer footer-unloaded">
@@ -795,6 +560,24 @@ npm -v
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#因果强化学习-Casual-Reinforcement-Learning-Intro"><span class="toc-number">1.</span> <span class="toc-text">因果强化学习 (Casual Reinforcement Learning) | Intro</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1238,6 +1021,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({

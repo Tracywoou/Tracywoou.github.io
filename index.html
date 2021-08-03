@@ -360,6 +360,80 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2021/07/30/概率图模型python库-pgmpy/" >
+            
+                <span>概率图模型python库 -pgmpy</span>
+        </a>
+        <div class="abstract-content">
+            概率图模型python库 - pgmpyReference: https://pgmpy.org/index.html
+概率图模型的介绍机器学习是一门科学学科，探索可以从数据中学习的算法。此类算法通过从示例输入构建模型并使用该模型进行预测或决策来运行，而不是遵循严格的静态程序指令。
+举个例子，花的种类可以由其萼片长、宽来预测，那么我们可以根据给定的数据集来预测一个新的数据点。那么很自然的想法就是可以是拟合一个能够将输入值映射到花朵类型空间的函数。还有一种做法就是找到变量之间的概率分布，利用分布来得到花朵的类型。
+目前已经有许多用于寻找映射函数的算法：线性回归试图找到一个可以解释数据的线性...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/30</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "pgm">pgm</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2021/07/30/因果强化学习-Casual-Reinforcement-Learning/" >
+            
+                <span>因果强化学习 (Casual Reinforcement Learning)</span>
+        </a>
+        <div class="abstract-content">
+            因果强化学习 (Casual Reinforcement Learning) | Intro在统计学中，人们普遍认为关联在逻辑上不等同因果关系。
+
+根据莱辛巴赫的共同原因原理：如果两个随机变量 X 和 Y 在统计学上是相互依存的，那么下面的一个因果关系必须成立：
+
+X 导致 Y；
+Y 导致 X；
+存在一个随机变量Z ，它是引起 X 和 Y的共同原因。
+
+因此，与关联相比，因果的关系更进一步，探索变量之间本质的关系，因果推理的根本任务是揭示不同变量之间的因果关系。
+理解一个因果结构使我们需要具备一下能力：
+
+预测如果某些变量被干预会发生什么；
+评估影响干预及其结果的混杂因素的影响；
+使我们...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/30</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "CRL">CRL</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2021/07/29/HEXO-输入公式踩的坑/" >
             
                 <span>HEXO 输入公式踩的坑</span>
@@ -651,76 +725,6 @@ MOEA测试的具体内容
                 <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/12</span>
             </div>
             <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/10/platEMO-多目标优化工具箱/" >
-            
-                <span>platEMO_多目标优化工具箱</span>
-        </a>
-        <div class="abstract-content">
-            简介platEMO是Ye Tian等学者写的一款基于MATLAB的多目标优化工具。
-这款工具主要具有以下的几个特点：1.完全由MATLAB开发，不需要任何其它库。2.用户可以显示各种图形，包括结果的pareto front，真实的pareto front等等。3.强大友好的GUI，可以不用编辑任何代码，直接调用主函数main.m即可。4.可以直接生成Excel或者LaTex。
-下载地址github
-该平台使用的详细信息可以在platEMO中的manual.pdf中读取。
-实验室主页 
-下载后，将matlab运行目录设置为该文件夹即可。
-文件夹结构
-Algorithm：
-包括现有的90个流...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/10/VAE-变分自编码器/" >
-            
-                <span>VAE_变分自编码器</span>
-        </a>
-        <div class="abstract-content">
-            简介VAE(Variational Auto-Encoder，VAE)是一种生成网络。
-假如我们有一个带有解卷积层的网络，我们设置输入为值全为1的向量，输出为一张图像。然后，我们可以训练这个网络去减小重构图像和原始图像的平均平方误差。那么训练完后，这个图像的信息就被保留在了网络的参数中。
-
-这次我们用one-hot向量而不是全1向量。我们用[1, 0, 0, 0]代表猫，用[0, 1, 0, 0]代表狗。虽然这要没什么问题，但是我们最多只能储存4张图片。当然，我们也可以增加向量的长度和网络的参数，那么我们可以获得更多的图片。
-但是，这样的向量很稀疏。为了解决这个问题，我们想使用实数值向量...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "ML">ML</a>
-    
-</div>
             
         </div>
     </article>
@@ -1075,9 +1079,43 @@ Algorithm：
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 16
+        Total : 18
         </div>
         <!-- search  -->
         
@@ -1090,6 +1128,16 @@ Algorithm：
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2021/07/30/因果强化学习-Casual-Reinforcement-Learning/" >因果强化学习 (Casual Reinforcement Learning)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2021/07/30/概率图模型python库-pgmpy/" >概率图模型python库 -pgmpy</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1194,15 +1242,19 @@ Algorithm：
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="ML"><span class="iconfont-archer">&#xe606;</span>ML</span>
+        <span class="sidebar-tag-name" data-tags="others"><span class="iconfont-archer">&#xe606;</span>others</span>
+    
+        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
     
         <span class="sidebar-tag-name" data-tags="MOEA"><span class="iconfont-archer">&#xe606;</span>MOEA</span>
     
-        <span class="sidebar-tag-name" data-tags="others"><span class="iconfont-archer">&#xe606;</span>others</span>
+        <span class="sidebar-tag-name" data-tags="ML"><span class="iconfont-archer">&#xe606;</span>ML</span>
+    
+        <span class="sidebar-tag-name" data-tags="CRL"><span class="iconfont-archer">&#xe606;</span>CRL</span>
+    
+        <span class="sidebar-tag-name" data-tags="算法"><span class="iconfont-archer">&#xe606;</span>算法</span>
     
         <span class="sidebar-tag-name" data-tags="写论文小技巧"><span class="iconfont-archer">&#xe606;</span>写论文小技巧</span>
-    
-        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
     
         <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
     
@@ -1210,7 +1262,7 @@ Algorithm：
     
         <span class="sidebar-tag-name" data-tags="markdown"><span class="iconfont-archer">&#xe606;</span>markdown</span>
     
-        <span class="sidebar-tag-name" data-tags="算法"><span class="iconfont-archer">&#xe606;</span>算法</span>
+        <span class="sidebar-tag-name" data-tags="pgm"><span class="iconfont-archer">&#xe606;</span>pgm</span>
     
         <span class="sidebar-tag-name" data-tags="PGM"><span class="iconfont-archer">&#xe606;</span>PGM</span>
     

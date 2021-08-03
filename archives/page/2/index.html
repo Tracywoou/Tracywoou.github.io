@@ -347,6 +347,76 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/10/platEMO-多目标优化工具箱/" >
+            
+                <span>platEMO_多目标优化工具箱</span>
+        </a>
+        <div class="abstract-content">
+            简介platEMO是Ye Tian等学者写的一款基于MATLAB的多目标优化工具。
+这款工具主要具有以下的几个特点：1.完全由MATLAB开发，不需要任何其它库。2.用户可以显示各种图形，包括结果的pareto front，真实的pareto front等等。3.强大友好的GUI，可以不用编辑任何代码，直接调用主函数main.m即可。4.可以直接生成Excel或者LaTex。
+下载地址github
+该平台使用的详细信息可以在platEMO中的manual.pdf中读取。
+实验室主页 
+下载后，将matlab运行目录设置为该文件夹即可。
+文件夹结构
+Algorithm：
+包括现有的90个流...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/10/VAE-变分自编码器/" >
+            
+                <span>VAE_变分自编码器</span>
+        </a>
+        <div class="abstract-content">
+            简介VAE(Variational Auto-Encoder，VAE)是一种生成网络。
+假如我们有一个带有解卷积层的网络，我们设置输入为值全为1的向量，输出为一张图像。然后，我们可以训练这个网络去减小重构图像和原始图像的平均平方误差。那么训练完后，这个图像的信息就被保留在了网络的参数中。
+
+这次我们用one-hot向量而不是全1向量。我们用[1, 0, 0, 0]代表猫，用[0, 1, 0, 0]代表狗。虽然这要没什么问题，但是我们最多只能储存4张图片。当然，我们也可以增加向量的长度和网络的参数，那么我们可以获得更多的图片。
+但是，这样的向量很稀疏。为了解决这个问题，我们想使用实数值向量...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "ML">ML</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/07/10/博客的重新配置/" >
             
                 <span>博客的重新配置</span>
@@ -815,9 +885,43 @@ npm -v
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 16
+        Total : 18
         </div>
         <!-- search  -->
         
@@ -830,6 +934,16 @@ npm -v
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2021/07/30/因果强化学习-Casual-Reinforcement-Learning/" >因果强化学习 (Casual Reinforcement Learning)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2021/07/30/概率图模型python库-pgmpy/" >概率图模型python库 -pgmpy</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -934,15 +1048,19 @@ npm -v
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="ML"><span class="iconfont-archer">&#xe606;</span>ML</span>
+        <span class="sidebar-tag-name" data-tags="others"><span class="iconfont-archer">&#xe606;</span>others</span>
+    
+        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
     
         <span class="sidebar-tag-name" data-tags="MOEA"><span class="iconfont-archer">&#xe606;</span>MOEA</span>
     
-        <span class="sidebar-tag-name" data-tags="others"><span class="iconfont-archer">&#xe606;</span>others</span>
+        <span class="sidebar-tag-name" data-tags="ML"><span class="iconfont-archer">&#xe606;</span>ML</span>
+    
+        <span class="sidebar-tag-name" data-tags="CRL"><span class="iconfont-archer">&#xe606;</span>CRL</span>
+    
+        <span class="sidebar-tag-name" data-tags="算法"><span class="iconfont-archer">&#xe606;</span>算法</span>
     
         <span class="sidebar-tag-name" data-tags="写论文小技巧"><span class="iconfont-archer">&#xe606;</span>写论文小技巧</span>
-    
-        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
     
         <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
     
@@ -950,7 +1068,7 @@ npm -v
     
         <span class="sidebar-tag-name" data-tags="markdown"><span class="iconfont-archer">&#xe606;</span>markdown</span>
     
-        <span class="sidebar-tag-name" data-tags="算法"><span class="iconfont-archer">&#xe606;</span>算法</span>
+        <span class="sidebar-tag-name" data-tags="pgm"><span class="iconfont-archer">&#xe606;</span>pgm</span>
     
         <span class="sidebar-tag-name" data-tags="PGM"><span class="iconfont-archer">&#xe606;</span>PGM</span>
     
