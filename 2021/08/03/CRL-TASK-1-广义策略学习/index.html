@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Tracy&#39;s Studio</title>
+    <title>CRL | TASK 1 广义策略学习 · Tracy&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -204,12 +204,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Tracy&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">CRL | TASK 1 广义策略学习</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Tracy's Studio.</a>
 </header>
@@ -221,24 +232,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            CRL | TASK 1 广义策略学习
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "CRL">CRL</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">830</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2021/08/03</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -339,116 +400,64 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/18/NSGA2/" >
-            
-                <span>NSGA2</span>
-        </a>
-        <div class="abstract-content">
-            NSGA2(Non-dominated sorting in genetic algorithm2)
-相比较NSGA从以下三个部分进行了改善：保留了最优个体；不用设置共享参数；构造Pareto最优解集的时间复杂度有所降低。
-算法的时间开销由三部分组成：
-构造分类子集(Non-dominated sort) O(r(2N)^2)
-计算聚集距离
-构造偏序集：个体之间的偏序 
-非支配集的构造方法为每一个个体p设置两个性质：np记录p支配个体的数目，sp记录被p支配的个体的集合。
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="CRL-TASK-1-广义策略学习"><a href="#CRL-TASK-1-广义策略学习" class="headerlink" title="CRL | TASK 1 广义策略学习"></a>CRL | TASK 1 广义策略学习</h1><p>关于广义的策略学习，它的任务就是根据一个给定的因果图，学到agent的最佳策略，有一篇文章就是在IJCAI2017上面发表的Transfer Learning in Multi-Armed Bandits。 这篇文章将强化学习中的迁移学习和因果推理的理论相结合，在两个多臂老虎机代理的上下文中完成迁移，作者提供了一个从可用的分布中包含的可用的知识中提取因果界限的方法。</p>
+<p>离线的策略学习设计从一组固定的数据中进行学习，这对于数据的要求很高，而在线的策略学习通常能够及时的学习，但是对于时间有所限制，这种方法需要灵活性没因为数据可能会随着时间的推移而变化。此类代理通常需要大量的时间进行训练，迁移学习旨在应用先前的知识和经验提高学习的性能，解决学习过程中的低效问题，类似与人类如何利用先前的知识来解决新的任务。这个过程中的主要问题就是如何在存在未观察变量的混杂因素的情况下进行迁移学习。</p>
+<p>本文的贡献如下：</p>
+<ol>
+<li>用因果的语言定制了跨多臂赌博机的迁移学习，并将其与识别因果效应和off-policy评估的算法结合起来；</li>
+<li>对于因果效应不可识别的三个经典的任务，提供了一个有效的方法来从可用的分布中提取知识作为预期的奖励的边界（因果边界）。</li>
+<li>提出了两种以因果边界为输入的MAB算法。</li>
+</ol>
+<p>多臂赌博机问题类似于我们去游戏厅玩的游戏，假设我们买了100个游戏币，游戏机上有十个摇杆，每次我们开始游戏的时候都要塞进去一个游戏币，拉动一个摇杆，这个游戏机会以一定的概率吐出几个游戏币。也就是在给定游戏币的情况下，我们每次会选择一个动作，观察拉动摇杆的奖励。那实际情况中呢，所有摇杆的分布是不一样的。在之前的工作中，解决多臂老虎机的方法有基于贪婪和上置信界的算法。</p>
+<p>基于贪婪的方法就是每次我们都选择奖励最多的摇杆，但是产生的问题是我们可能仍然存在未探索过的摇杆，那么应该怎么平衡探索和利用。</p>
+<p>还有一类方法就是基于上置信界的算法。初始状态我们假设每个老虎机的分布都是相同的，这个问题的核心就是我们要探索每个老虎机的平均期望。每一轮选择的时候我们都会选择拥有最大上界的老虎机。上下文赌博机是MAB的一种变体，代理可以观察与奖励信号相关的额外信息。那么随机的MAB代理被赋予一个结构因果模型，X表示手臂的选择，Y表示奖励，</p>
 
-通过一个二重循环计算每个个体的np和sp，则
-
-
-构造非支配集的过程
-1234567891011121314151...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
-    
-</div>
-            
-        </div>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/18/多目标进化计算/" >
-            
-                <span>多目标进化计算</span>
-        </a>
-        <div class="abstract-content">
-            Pareto改善给定固有的一群人和可分配的资源，从一种分配的状态到另一种状态的变化中，在没有人变坏的情况下，使得至少一个人变得更好。
-也就是说资源分配的理想状态是不可能再有更多的Pareto改善的状态。
-Pareto解在有多个目标时，由于存在目标之间的冲突无法进行比较的情况，一个解在某个目标上是最好的，在其他目标上可能是最差的，一组目标函数最优解的集合是Pareto最优集，形成的曲面为Pareto前沿面。
-进化计算达尔文在进化论中提出了这样一个概念——物竞天择，适者生存。
-进化计算是基于群体的启发式搜索优化问题。
-遗传算法约翰·霍兰德提出了遗传算法，是进化算法的一种。
-Step1:   ...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://tracywoo.cn">Tracy</a>
+            <p>原文链接：<a href="http://tracywoo.cn/2021/08/03/CRL-TASK-1-广义策略学习/">http://tracywoo.cn/2021/08/03/CRL-TASK-1-广义策略学习/</a>
+            <p>发表日期：<a href="http://tracywoo.cn/2021/08/03/CRL-TASK-1-广义策略学习/">August 3rd 2021, 10:50:03 am</a>
+            <p>更新日期：<a href="http://tracywoo.cn/2021/08/03/CRL-TASK-1-广义策略学习/">August 3rd 2021, 11:08:38 am</a>
+            <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用4.0国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/16/用Hexo和GitHub创建属于自己的博客吧/" >
-            
-                <span>用Hexo和GitHub创建属于自己的博客吧</span>
-        </a>
-        <div class="abstract-content">
-            由于很久没有使用自己的博客，已经忘记了当初的搭建过程和hexo的指令，用这篇博客来温习一下自己搭建博客的过程和遇到的问题。  
-在写博客的文件右击鼠标-&gt;git bash here，使用hexo指令的时候出现了指令不存在的情况。可以通过以下三个步骤进行排查：  
-node -v
-npm -v
-检查本机的环境变量中的系统变量中的path是否包含了与_config.yml在同一个目录的node_modeles文件夹中的.bin文件夹。
-我的电脑里的文件目录是：D:\blog\node_modules\.bin
-好了，下面说一下安装过程：
-安装git下载git，https://git-s...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/16</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2022/03/25/算法刷题部分复习/" title= "">
+                    <div class="nextTitle">[Untitled Post]</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2021/07/30/概率图模型python库-pgmpy/" title= "概率图模型python库 -pgmpy">
+                    <div class="prevTitle">概率图模型python库 -pgmpy</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -526,6 +535,24 @@ npm -v
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CRL-TASK-1-广义策略学习"><span class="toc-number">1.</span> <span class="toc-text">CRL | TASK 1 广义策略学习</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1012,6 +1039,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

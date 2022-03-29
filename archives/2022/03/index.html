@@ -347,100 +347,25 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/18/NSGA2/" >
+        <a class="abstract-title" href = "/2022/03/25/算法刷题部分复习/" >
             
-                <span>NSGA2</span>
+                <span>[Untitled Post]</span>
         </a>
         <div class="abstract-content">
-            NSGA2(Non-dominated sorting in genetic algorithm2)
-相比较NSGA从以下三个部分进行了改善：保留了最优个体；不用设置共享参数；构造Pareto最优解集的时间复杂度有所降低。
-算法的时间开销由三部分组成：
-构造分类子集(Non-dominated sort) O(r(2N)^2)
-计算聚集距离
-构造偏序集：个体之间的偏序 
-非支配集的构造方法为每一个个体p设置两个性质：np记录p支配个体的数目，sp记录被p支配的个体的集合。
-
-通过一个二重循环计算每个个体的np和sp，则
-
-
-构造非支配集的过程
-1234567891011121314151...
+            算法刷题部分复习参考资料：
+算法复杂度分析时间复杂度时间复杂度$O(1)&lt;O(\log n)&lt;O(n)&lt;O(n \log n)&lt;O(n^2)$.
+对于算法的时间复杂度要学会分析，从而推断程序运行的时间。
+空间复杂度单个变量的空间复杂度是$O(1)$，一维数组的空间复杂度是$O(n)$，二维数组的空间复杂度即为$O(n^2)$。
+递归算法的时间复杂度算法复杂度=递归次数*递归操作次数
+例1 求x的n次方：给定$x$和$n$，求$f(x)=x^n$
+解法1：
+思路：当n=0的时候返回1，否则进入循环，用$res$记录结果，每次都乘上$x$。
+1234567891011...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/18/多目标进化计算/" >
-            
-                <span>多目标进化计算</span>
-        </a>
-        <div class="abstract-content">
-            Pareto改善给定固有的一群人和可分配的资源，从一种分配的状态到另一种状态的变化中，在没有人变坏的情况下，使得至少一个人变得更好。
-也就是说资源分配的理想状态是不可能再有更多的Pareto改善的状态。
-Pareto解在有多个目标时，由于存在目标之间的冲突无法进行比较的情况，一个解在某个目标上是最好的，在其他目标上可能是最差的，一组目标函数最优解的集合是Pareto最优集，形成的曲面为Pareto前沿面。
-进化计算达尔文在进化论中提出了这样一个概念——物竞天择，适者生存。
-进化计算是基于群体的启发式搜索优化问题。
-遗传算法约翰·霍兰德提出了遗传算法，是进化算法的一种。
-Step1:   ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "MOEA">MOEA</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/16/用Hexo和GitHub创建属于自己的博客吧/" >
-            
-                <span>用Hexo和GitHub创建属于自己的博客吧</span>
-        </a>
-        <div class="abstract-content">
-            由于很久没有使用自己的博客，已经忘记了当初的搭建过程和hexo的指令，用这篇博客来温习一下自己搭建博客的过程和遇到的问题。  
-在写博客的文件右击鼠标-&gt;git bash here，使用hexo指令的时候出现了指令不存在的情况。可以通过以下三个步骤进行排查：  
-node -v
-npm -v
-检查本机的环境变量中的系统变量中的path是否包含了与_config.yml在同一个目录的node_modeles文件夹中的.bin文件夹。
-我的电脑里的文件目录是：D:\blog\node_modules\.bin
-好了，下面说一下安装过程：
-安装git下载git，https://git-s...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/16</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/03/25</span>
             </div>
             <!-- tags  -->
             
