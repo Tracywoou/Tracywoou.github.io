@@ -347,26 +347,67 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2021/07/30/概率图模型python库-pgmpy/" >
+        <a class="abstract-title" href = "/2021/07/29/概率图模型CMU-Lecture1-概率图模型简介/" >
             
-                <span>概率图模型python库 -pgmpy</span>
+                <span>概率图模型CMU-Lecture1-概率图模型简介</span>
         </a>
         <div class="abstract-content">
-            概率图模型python库 - pgmpyReference: https://pgmpy.org/index.html
-概率图模型的介绍机器学习是一门科学学科，探索可以从数据中学习的算法。此类算法通过从示例输入构建模型并使用该模型进行预测或决策来运行，而不是遵循严格的静态程序指令。
-举个例子，花的种类可以由其萼片长、宽来预测，那么我们可以根据给定的数据集来预测一个新的数据点。那么很自然的想法就是可以是拟合一个能够将输入值映射到花朵类型空间的函数。还有一种做法就是找到变量之间的概率分布，利用分布来得到花朵的类型。
-目前已经有许多用于寻找映射函数的算法：线性回归试图找到一个可以解释数据的线性...
+            PGM lecture1 简介统计基础对于多变量(X_1, X_2,X_3,X_4,X_5,X_6,X_7,X_8)，假设x_i \in \{0,1\}，很自然的，可以把联合分布概率表示为：
+
+
+
+
+x_1
+x_2
+x_3
+x_4
+x_5
+x_6
+x_7
+x_8
+p
+
+
+
+
+1
+0
+1
+1
+1
+1
+1
+1
+0.2
+
+
+…
+…
+…
+…
+…
+…
+…
+…
+…
+
+
+
+
+此时行数是确定的，即2^8行，这是一个枚举的方法，但是要求我们的数据集需要有足够大的规模，那么才能把每一种可能情况的概率计算出来。
+变量可能存在的关系有相关、独立、依赖、因果。
+“Many of them can be measu...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/30</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/29</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "pgm">pgm</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "PGM">PGM</a>
     
 </div>
             
@@ -695,24 +736,9 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 21
+        Total : 20
         </div>
         <!-- search  -->
         
@@ -853,20 +879,6 @@
             <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2019/08/28/Hello-Hexo/" >Hello,Hexo</a>
         </li>
     
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2022/03/25/算法刷题部分复习/" >[Untitled Post]</a>
-        </li>
-    
     </div>
   </div>
         <div class="sidebar-panel-tags">
@@ -980,6 +992,15 @@ jsonContent:
         var all = MathJax.Hub.getAllJax();
         for (var i = 0; i < all.length; ++i)
             all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>
+
+
+ent().parentNode.className += ' has-jax';
     });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
