@@ -347,6 +347,37 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2022/03/29/算法题部分复习/" >
+            
+                <span>算法题部分复习</span>
+        </a>
+        <div class="abstract-content">
+            算法刷题部分复习参考资料：
+算法复杂度分析时间复杂度时间复杂度$O(1)&lt;O(\log n)&lt;O(n)&lt;O(n \log n)&lt;O(n^2)$.
+对于算法的时间复杂度要学会分析，从而推断程序运行的时间。
+空间复杂度单个变量的空间复杂度是$O(1)$，一维数组的空间复杂度是$O(n)$，二维数组的空间复杂度即为$O(n^2)$。
+递归算法的时间复杂度算法复杂度=递归次数*递归操作次数
+例1 求x的n次方：给定$x$和$n$，求$f(x)=x^n$
+解法1：
+思路：当n=0的时候返回1，否则进入循环，用$res$记录结果，每次都乘上$x$。
+1234567891011...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/03/29</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2022/03/25/算法刷题部分复习/" >
             
                 <span>[Untitled Post]</span>
@@ -694,9 +725,24 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 20
+        Total : 21
         </div>
         <!-- search  -->
         
@@ -706,6 +752,20 @@
     
     
     
+    
+    <div class="archive-year"> 2022 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/29</span><a class="archive-post-title" href= "/2022/03/29/算法题部分复习/" >算法题部分复习</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
@@ -846,11 +906,11 @@
     
         <span class="sidebar-tag-name" data-tags="others"><span class="iconfont-archer">&#xe606;</span>others</span>
     
+        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
+    
         <span class="sidebar-tag-name" data-tags="MOEA"><span class="iconfont-archer">&#xe606;</span>MOEA</span>
     
         <span class="sidebar-tag-name" data-tags="ML"><span class="iconfont-archer">&#xe606;</span>ML</span>
-    
-        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
     
         <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
     
@@ -858,9 +918,9 @@
     
         <span class="sidebar-tag-name" data-tags="markdown"><span class="iconfont-archer">&#xe606;</span>markdown</span>
     
-        <span class="sidebar-tag-name" data-tags="写论文小技巧"><span class="iconfont-archer">&#xe606;</span>写论文小技巧</span>
-    
         <span class="sidebar-tag-name" data-tags="算法"><span class="iconfont-archer">&#xe606;</span>算法</span>
+    
+        <span class="sidebar-tag-name" data-tags="写论文小技巧"><span class="iconfont-archer">&#xe606;</span>写论文小技巧</span>
     
         <span class="sidebar-tag-name" data-tags="PGM"><span class="iconfont-archer">&#xe606;</span>PGM</span>
     
@@ -938,7 +998,23 @@ jsonContent:
     </div>
     <!-- async load share.js -->
      
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
 </html>
 
 
